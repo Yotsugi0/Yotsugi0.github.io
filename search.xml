@@ -1,76 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Learn-Markdown</title>
-    <url>/2021/02/11/Learn-Markdown/</url>
-    <content><![CDATA[<h1 id="Markdown学习"><a href="#Markdown学习" class="headerlink" title="Markdown学习"></a>Markdown学习</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#+空格+一级标题</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">##+空格+二级标题</span><br></pre></td></tr></table></figure>
-<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p><em>Hello,World</em>       </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">斜体：两边加*</span><br></pre></td></tr></table></figure>
-<p><strong>Hello,World</strong>    </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">粗体：两边加**</span><br></pre></td></tr></table></figure>
-<p><strong><em>Hello,World</em></strong>      </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">斜体加粗：两边加***</span><br></pre></td></tr></table></figure>
-<p><del>Hello,World</del>       </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">废弃：两边加~~</span><br></pre></td></tr></table></figure>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote>
-<p>test    </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; 引用 </span><br></pre></td></tr></table></figure>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---或***</span><br></pre></td></tr></table></figure>
-<hr>
-<hr>
-<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p><a href="www.baidu.com">百度</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[名称]+（地址）</span><br></pre></td></tr></table></figure>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="http://i1.hdslb.com/bfs/archive/27783c10b1cd234cee180a34a88903a2dabc24eb.jpg@380w_240h_100Q_1c.webp" alt="图片"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![名称]+（本地地址或虚拟地址）</span><br></pre></td></tr></table></figure>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ol>
-<li>A</li>
-<li>B</li>
-<li>C</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.+空格</span><br></pre></td></tr></table></figure>
-<ul>
-<li>A</li>
-<li>B</li>
-<li>C</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-+空格</span><br></pre></td></tr></table></figure>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
-<thead>
-<tr>
-<th>名字</th>
-<th>年龄</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>java</td>
-<td>26</td>
-</tr>
-</tbody></table>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">| 名字 | 年龄 |</span><br><span class="line">| ---- | ---- |</span><br><span class="line">| java | 26 |</span><br></pre></td></tr></table></figure>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">···+java : tab上面的 ·</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Markdowm</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2021/02/10/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Hexo搭建博客+部署Github</title>
     <url>/2021/02/12/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-%E9%83%A8%E7%BD%B2Github/</url>
     <content><![CDATA[<h1 id="Hexo搭建博客"><a href="#Hexo搭建博客" class="headerlink" title="Hexo搭建博客"></a>Hexo搭建博客</h1><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h3><p>去 <a href="https://git-scm.com/">Git官网</a> 下载 64-bit Git for Windows Setup</p>
@@ -147,6 +77,62 @@
       </categories>
   </entry>
   <entry>
+    <title>Learn-Markdown</title>
+    <url>/2021/02/11/Learn-Markdown/</url>
+    <content><![CDATA[<h1 id="Markdown学习"><a href="#Markdown学习" class="headerlink" title="Markdown学习"></a>Markdown学习</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#+空格+一级标题</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">##+空格+二级标题</span><br></pre></td></tr></table></figure>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p><em>Hello,World</em>       </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">斜体：两边加*</span><br></pre></td></tr></table></figure>
+<p><strong>Hello,World</strong>    </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">粗体：两边加**</span><br></pre></td></tr></table></figure>
+<p><strong><em>Hello,World</em></strong>      </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">斜体加粗：两边加***</span><br></pre></td></tr></table></figure>
+<p><del>Hello,World</del>       </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">废弃：两边加~~</span><br></pre></td></tr></table></figure>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote>
+<p>test    </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; 引用 </span><br></pre></td></tr></table></figure>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---或***</span><br></pre></td></tr></table></figure>
+<hr>
+<hr>
+<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p><a href="www.baidu.com">百度</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[名称]+（地址）</span><br></pre></td></tr></table></figure>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="http://i1.hdslb.com/bfs/archive/27783c10b1cd234cee180a34a88903a2dabc24eb.jpg@380w_240h_100Q_1c.webp" alt="图片"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![名称]+（本地地址或虚拟地址）</span><br></pre></td></tr></table></figure>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ol>
+<li>A</li>
+<li>B</li>
+<li>C</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.+空格</span><br></pre></td></tr></table></figure>
+<ul>
+<li>A</li>
+<li>B</li>
+<li>C</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-+空格</span><br></pre></td></tr></table></figure>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
+<thead>
+<tr>
+<th>名字</th>
+<th>年龄</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>java</td>
+<td>26</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">| 名字 | 年龄 |</span><br><span class="line">| ---- | ---- |</span><br><span class="line">| java | 26 |</span><br></pre></td></tr></table></figure>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">···+java : tab上面的 ·</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Markdowm</category>
+      </categories>
+  </entry>
+  <entry>
     <title>一篇博文</title>
     <url>/2021/02/11/%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/</url>
     <content><![CDATA[<h2 id="建站（折腾）历程"><a href="#建站（折腾）历程" class="headerlink" title="建站（折腾）历程"></a>建站（折腾）历程</h2><p>​        建这个博客的起因是想记录和总结学到的知识点，其实自己并没有记录和总结的习惯，一个教训就是之前学习java没有及时总结到后期忘记前面的知识点复习起来很痛苦，这次我在边复习java和学习新的知识时边在自己的博客上做些总结。</p>
@@ -162,5 +148,43 @@
         <tag>java</tag>
         <tag>ACG</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/02/10/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>基本的Dos命令</title>
+    <url>/2021/02/13/%E5%9F%BA%E6%9C%AC%E7%9A%84Dos%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="磁盘操作"><a href="#磁盘操作" class="headerlink" title="磁盘操作"></a>磁盘操作</h1><h2 id="盘符切换"><a href="#盘符切换" class="headerlink" title="盘符切换"></a>盘符切换</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">d:			#格式 &quot;需要切换的盘符：&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="查看文件"><a href="#查看文件" class="headerlink" title="查看文件"></a>查看文件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">dir 			#查看当前目录下的所有文件</span><br></pre></td></tr></table></figure>
+<h2 id="切换目录-change-directory"><a href="#切换目录-change-directory" class="headerlink" title="切换目录(change directory)"></a>切换目录(change directory)</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd</span><br><span class="line">cd &#x2F;d f:		#切换到f盘 &#x2F;d 是参数		   </span><br><span class="line">cd..			#返回上一级</span><br><span class="line">cd\ 			#返回根目录</span><br></pre></td></tr></table></figure>
+<h2 id="创建和删除目录"><a href="#创建和删除目录" class="headerlink" title="创建和删除目录"></a>创建和删除目录</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">md		创建目录   ( mkdir )</span><br><span class="line">rd		删除空目录  ( rmdir )</span><br><span class="line">	</span><br><span class="line">rd&#x2F;s&#x2F;q 盘符:\某个文件夹  （强制删除文件文件夹和文件夹内所有文件）</span><br></pre></td></tr></table></figure>
+<h2 id="创建和删除文件"><a href="#创建和删除文件" class="headerlink" title="创建和删除文件"></a>创建和删除文件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd&gt;		创建文件 （ cd&gt;a.txt ）	</span><br><span class="line">del		删除文件 （ del a.txt ）	</span><br><span class="line">	</span><br><span class="line">del&#x2F;f&#x2F;s&#x2F;q 盘符:\文件名  （强制删除文件，文件名必须加文件后缀名）</span><br></pre></td></tr></table></figure>
+<h2 id="复制文件"><a href="#复制文件" class="headerlink" title="复制文件"></a>复制文件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">copy 源文件 新文件位置</span><br><span class="line"></span><br><span class="line">	将当前目录下的 1.txt 文件复制到 bak 目录下，</span><br><span class="line">	就输入 copy 1.txt bak\</span><br><span class="line">	</span><br><span class="line">	将当前目录下的 1.txt 这个文件复制到 bak 目录下，</span><br><span class="line">	并且更名为 a.txt，就输入 copy 1.txt bak\a.txt</span><br></pre></td></tr></table></figure>
+<h2 id="移动文件"><a href="#移动文件" class="headerlink" title="移动文件"></a>移动文件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">move D:\a.txt F:\</span><br></pre></td></tr></table></figure>
+<h2 id="清屏（clear-screen-）"><a href="#清屏（clear-screen-）" class="headerlink" title="清屏（clear screen ）"></a>清屏（clear screen ）</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cls</span><br></pre></td></tr></table></figure>
+<h2 id="退出终端"><a href="#退出终端" class="headerlink" title="退出终端"></a>退出终端</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">exit</span><br></pre></td></tr></table></figure>
+<h2 id="查看电脑的ip"><a href="#查看电脑的ip" class="headerlink" title="查看电脑的ip"></a>查看电脑的ip</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ipconfig</span><br></pre></td></tr></table></figure>
+<h2 id="ping-命令"><a href="#ping-命令" class="headerlink" title="ping 命令"></a>ping 命令</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ping www.baidu.com</span><br></pre></td></tr></table></figure>
+<h2 id="打开应用"><a href="#打开应用" class="headerlink" title="打开应用"></a>打开应用</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">calc</span><br><span class="line">mspaint</span><br><span class="line">notepad</span><br></pre></td></tr></table></figure>
+
+
+
+
+]]></content>
+      <categories>
+        <category>Dos</category>
+      </categories>
   </entry>
 </search>
