@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Learn-Markdown</title>
+    <url>/2021/02/11/Learn-Markdown/</url>
+    <content><![CDATA[<h1 id="Markdown学习"><a href="#Markdown学习" class="headerlink" title="Markdown学习"></a>Markdown学习</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#+空格+一级标题</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">##+空格+二级标题</span><br></pre></td></tr></table></figure>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p><em>Hello,World</em>       </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">斜体：两边加*</span><br></pre></td></tr></table></figure>
+<p><strong>Hello,World</strong>    </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">粗体：两边加**</span><br></pre></td></tr></table></figure>
+<p><strong><em>Hello,World</em></strong>      </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">斜体加粗：两边加***</span><br></pre></td></tr></table></figure>
+<p><del>Hello,World</del>       </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">废弃：两边加~~</span><br></pre></td></tr></table></figure>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote>
+<p>test    </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; 引用 </span><br></pre></td></tr></table></figure>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---或***</span><br></pre></td></tr></table></figure>
+<hr>
+<hr>
+<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p><a href="www.baidu.com">百度</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[名称]+（地址）</span><br></pre></td></tr></table></figure>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="http://i1.hdslb.com/bfs/archive/27783c10b1cd234cee180a34a88903a2dabc24eb.jpg@380w_240h_100Q_1c.webp" alt="图片"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![名称]+（本地地址或虚拟地址）</span><br></pre></td></tr></table></figure>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ol>
+<li>A</li>
+<li>B</li>
+<li>C</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.+空格</span><br></pre></td></tr></table></figure>
+<ul>
+<li>A</li>
+<li>B</li>
+<li>C</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-+空格</span><br></pre></td></tr></table></figure>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
+<thead>
+<tr>
+<th>名字</th>
+<th>年龄</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>java</td>
+<td>26</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">| 名字 | 年龄 |</span><br><span class="line">| ---- | ---- |</span><br><span class="line">| java | 26 |</span><br></pre></td></tr></table></figure>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">···+java : tab上面的 ·</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Markdowm</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Hexo搭建博客+部署Github</title>
     <url>/2021/02/12/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-%E9%83%A8%E7%BD%B2Github/</url>
     <content><![CDATA[<h1 id="Hexo搭建博客"><a href="#Hexo搭建博客" class="headerlink" title="Hexo搭建博客"></a>Hexo搭建博客</h1><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h3><p>去 <a href="https://git-scm.com/">Git官网</a> 下载 64-bit Git for Windows Setup</p>
@@ -77,60 +133,117 @@
       </categories>
   </entry>
   <entry>
-    <title>Learn-Markdown</title>
-    <url>/2021/02/11/Learn-Markdown/</url>
-    <content><![CDATA[<h1 id="Markdown学习"><a href="#Markdown学习" class="headerlink" title="Markdown学习"></a>Markdown学习</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#+空格+一级标题</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">##+空格+二级标题</span><br></pre></td></tr></table></figure>
-<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p><em>Hello,World</em>       </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">斜体：两边加*</span><br></pre></td></tr></table></figure>
-<p><strong>Hello,World</strong>    </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">粗体：两边加**</span><br></pre></td></tr></table></figure>
-<p><strong><em>Hello,World</em></strong>      </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">斜体加粗：两边加***</span><br></pre></td></tr></table></figure>
-<p><del>Hello,World</del>       </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">废弃：两边加~~</span><br></pre></td></tr></table></figure>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote>
-<p>test    </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; 引用 </span><br></pre></td></tr></table></figure>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---或***</span><br></pre></td></tr></table></figure>
-<hr>
-<hr>
-<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p><a href="www.baidu.com">百度</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[名称]+（地址）</span><br></pre></td></tr></table></figure>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="http://i1.hdslb.com/bfs/archive/27783c10b1cd234cee180a34a88903a2dabc24eb.jpg@380w_240h_100Q_1c.webp" alt="图片"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![名称]+（本地地址或虚拟地址）</span><br></pre></td></tr></table></figure>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ol>
-<li>A</li>
-<li>B</li>
-<li>C</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.+空格</span><br></pre></td></tr></table></figure>
+    <title>StudyNotes_day1</title>
+    <url>/2021/02/15/StudyNotes_day1/</url>
+    <content><![CDATA[<h1 id="计算机存储单元"><a href="#计算机存储单元" class="headerlink" title="计算机存储单元"></a>计算机存储单元</h1><p>位（bit）：一个数字0或1，代表一位，数据存储的最小单位</p>
+<p>字节（Byte）：每逢8位是一个字节</p>
+<p>1 Byte = 8 bit</p>
+<p>1 KB = 1024 Byte</p>
+<p>1 MB = 1024 KB</p>
+<h1 id="字节与字符的区别"><a href="#字节与字符的区别" class="headerlink" title="字节与字符的区别"></a>字节与字符的区别</h1><p>字节(Byte)是计量单位，表示数据量多少，是计算机信息技术用于计量存储容量的一种计量单位，通常情况下一字节等于八位。</p>
+<p>字符(Character)计算机中使用的字母、数字、字和符号，比如’A’、’B’、’$’、’&amp;’等。</p>
+<p>ASCII 码中，一个英文字母（不分大小写）为一个字节，一个中文汉字为两个字节。</p>
+<p>数字和字符的对照关系表（编码表）</p>
+<h1 id="关键字和标识符"><a href="#关键字和标识符" class="headerlink" title="关键字和标识符"></a>关键字和标识符</h1><p>关键字：是电脑语言里事先定义的，有特别意义的标识符</p>
+<p>关键字特征：完全小写的字母，在编辑器中有颜色</p>
+<p>String不是关键字，是数据类型中的引用类型，是java中的一个类</p>
+<p>标识符：自定义内容，比如类的名字、方法的名字和变量的名字等</p>
+<p>标识符的命名规则：（硬性要求）</p>
 <ul>
-<li>A</li>
-<li>B</li>
-<li>C</li>
+<li>标识符可以包含26个英文字母（区分大小写）、0-9数字、$(美元符号)和 _（下划线）</li>
+<li>标识符不能以数字开头</li>
+<li>标识符不能是关键字</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-+空格</span><br></pre></td></tr></table></figure>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
-<thead>
-<tr>
-<th>名字</th>
-<th>年龄</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>java</td>
-<td>26</td>
-</tr>
-</tbody></table>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">| 名字 | 年龄 |</span><br><span class="line">| ---- | ---- |</span><br><span class="line">| java | 26 |</span><br></pre></td></tr></table></figure>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">···+java : tab上面的 ·</span><br></pre></td></tr></table></figure>
+<p>标识符的命名规范：（软性建议）</p>
+<ul>
+<li>类名规范：首字母大写，后面每个单词首字母大写（大驼峰式），HelloWorld</li>
+<li>变量名规范：首字母小写，后面每个单词首字母小写（小驼峰式），helloWorld</li>
+<li>方法名规范：同变量名</li>
+</ul>
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>Java的数据类型分为两大类</p>
+<ul>
+<li>基本类型：整数、浮点数、字符、布尔</li>
+<li>引用类型：类、接口、数组、字符串(String)、Lambda</li>
+</ul>
+<p>数据类型转换</p>
+<p>​    低——————————————————————&gt;高</p>
+<p>​    byte,short,char——&gt;int——&gt;long——&gt;float——&gt;double</p>
+<p>自动转换：低到高</p>
+<p>强制转换：高到低    （类型）变量名</p>
+<p>注意点：</p>
+<ul>
+<li>不能对布尔值进行转换</li>
+<li>不能把对象类型转换成不相干的类型</li>
+<li>在把高容量转到低容量的时候，强制转换</li>
+<li>转换的时候可能存在内存溢出，或者精度问题</li>
+</ul>
 ]]></content>
       <categories>
-        <category>Markdowm</category>
+        <category>javaSE</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Windows容易忘记但好用的快捷键</title>
+    <url>/2021/02/14/Windows%E5%AE%B9%E6%98%93%E5%BF%98%E8%AE%B0%E4%BD%86%E5%A5%BD%E7%94%A8%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    <content><![CDATA[<h1 id="Windows容易忘记但好用的快捷键"><a href="#Windows容易忘记但好用的快捷键" class="headerlink" title="Windows容易忘记但好用的快捷键"></a>Windows容易忘记但好用的快捷键</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Win+Shift+S				Windows自带截图</span><br><span class="line">Win+PrintScreen				截取当前屏幕到剪贴板，并保存截屏图片文件到“图片”文件夹中</span><br><span class="line">Win+D					显示桌面</span><br><span class="line">Win+E					打开文件管理器</span><br><span class="line">Win+I					打开Windows10设置</span><br><span class="line">Win+S					搜索</span><br><span class="line">Win+T					快速切换任务栏程序</span><br><span class="line">Win+Ctrl+D				创建一个新的虚拟桌面</span><br><span class="line">Win+Ctrl+左&#x2F;右	   	   		切换虚拟桌面</span><br><span class="line">Win+Ctrl+F4			  	关闭虚拟桌面</span><br><span class="line">Ctrl+Shift+Esc				开任务管理</span><br><span class="line">Ctrl+Shift+N				新建文件夹</span><br><span class="line">shift+del				彻底删除</span><br></pre></td></tr></table></figure>
+
+
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title>StudyNotes_day2</title>
+    <url>/2021/02/16/StudyNotes_day2/</url>
+    <content><![CDATA[<h1 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h1><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>​    java程序运行期间固定不变的数据</p>
+<p>分类：</p>
+<ul>
+<li>整数常量        例如：100， 0 ， -100</li>
+<li>小数常量        例如：1.1， 0.0 ， -1.1</li>
+<li>布尔常量                    true,false</li>
+<li>字符常量        例如:   ‘a’,’A’,’9’</li>
+<li>字符串常量    例如：”abc”,”a”,”123”</li>
+<li>空常量                         null,代表没有任何数据</li>
+</ul>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>​    程序运行期间，内容可以发生改变的量</p>
+<p>创建一个变量的一步到位格式：</p>
+<p>数据类型    变量名称    =    数据值</p>
+<p>​    </p>
+]]></content>
+      <categories>
+        <category>javaSE</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>StudyNotes_day3</title>
+    <url>/2021/04/05/StudyNotes_day3/</url>
+    <content><![CDATA[<h1 id="算数运算符-加号的多种用法"><a href="#算数运算符-加号的多种用法" class="headerlink" title="算数运算符_加号的多种用法"></a>算数运算符_加号的多种用法</h1><p>四则运算当中的加号“+”有常见的三种用法：</p>
+<ol>
+<li>对于数值来说，那就是加法</li>
+<li>对于字符char类型来说，在计算之前，char会被提升成为int，然后再计算<br>char类型字符，int类型数字，之间的对照关系表：ASCII、Unicode</li>
+<li>对于字符串String（首字母大写，不是关键字）来说，加号代表字符串拼接（连接）操作<br> 任何数据类型和字符串进行连接时，结果都会变成字符串</li>
+</ol>
+<h1 id="算数运算符-自增自减运算符"><a href="#算数运算符-自增自减运算符" class="headerlink" title="算数运算符_自增自减运算符"></a>算数运算符_自增自减运算符</h1><p>自增运算符： ++<br>自减运算符： –</p>
+<p>基本含义：让一个变量涨一个数字1，或者让一个变量降一个数字1使用格式：写在变量名称之前，或者写在变量名称之后，例如：++num，也可以num++<br>使用方法：<br>      1.单独使用：不和其他操作混合，自己独立成为一个步骤<br>      2.混合使用：和其他操作混合，例如与赋值混合，或者与打印操作混合，等<br>使用区别：<br>      1.在单独使用的时候，前++和后++没有任何区别，也就是 ++num 和 num++ 是完全一样的<br>     2.在混合使用的时候，有【重大区别】<br>          A、如果是【前++】，那么变量【立刻马上+1】，然后拿着结果进行使用      【先加后用】<br>        B、如果是【后++】，难么首先使用变量本来的数值，【然后再让变量+1】    【先用后加】<br>        总计：[先加减，后使用]，[先使用，后加减]</p>
+<p>注意事项：<br>     只有变量才能使用自增、自减运算符，常量不可发生改变，所以不能用</p>
+]]></content>
+      <categories>
+        <category>javaSE</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/02/10/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>一篇博文</title>
@@ -150,20 +263,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2021/02/10/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>基本的Dos命令</title>
     <url>/2021/02/13/%E5%9F%BA%E6%9C%AC%E7%9A%84Dos%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="磁盘操作"><a href="#磁盘操作" class="headerlink" title="磁盘操作"></a>磁盘操作</h1><h2 id="盘符切换"><a href="#盘符切换" class="headerlink" title="盘符切换"></a>盘符切换</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">d:			#格式 &quot;需要切换的盘符：&quot;</span><br></pre></td></tr></table></figure>
@@ -177,7 +276,8 @@
 <h2 id="退出终端"><a href="#退出终端" class="headerlink" title="退出终端"></a>退出终端</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">exit</span><br></pre></td></tr></table></figure>
 <h2 id="查看电脑的ip"><a href="#查看电脑的ip" class="headerlink" title="查看电脑的ip"></a>查看电脑的ip</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ipconfig</span><br></pre></td></tr></table></figure>
 <h2 id="ping-命令"><a href="#ping-命令" class="headerlink" title="ping 命令"></a>ping 命令</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ping www.baidu.com</span><br></pre></td></tr></table></figure>
-<h2 id="打开应用"><a href="#打开应用" class="headerlink" title="打开应用"></a>打开应用</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">calc</span><br><span class="line">mspaint</span><br><span class="line">notepad</span><br></pre></td></tr></table></figure>
+<h2 id="打开应用"><a href="#打开应用" class="headerlink" title="打开应用"></a>打开应用</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">calc			计算器</span><br><span class="line">mspaint			画板</span><br><span class="line">notepad			记事本</span><br><span class="line">control			控制面板</span><br></pre></td></tr></table></figure>
+<h2 id="shutdown-命令"><a href="#shutdown-命令" class="headerlink" title="shutdown 命令"></a>shutdown 命令</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">shutdown -s -t 0		#-s参数：关机	-t参数：执行时间</span><br><span class="line">shutdown -r -t 0		#重启</span><br><span class="line">shutdown -l				#注销</span><br></pre></td></tr></table></figure>
 
 
 
