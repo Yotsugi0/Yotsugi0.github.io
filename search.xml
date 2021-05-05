@@ -1,62 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Learn-Markdown</title>
-    <url>/2021/02/11/Learn-Markdown/</url>
-    <content><![CDATA[<h1 id="Markdown学习"><a href="#Markdown学习" class="headerlink" title="Markdown学习"></a>Markdown学习</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#+空格+一级标题</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">##+空格+二级标题</span><br></pre></td></tr></table></figure>
-<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p><em>Hello,World</em>       </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">斜体：两边加*</span><br></pre></td></tr></table></figure>
-<p><strong>Hello,World</strong>    </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">粗体：两边加**</span><br></pre></td></tr></table></figure>
-<p><strong><em>Hello,World</em></strong>      </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">斜体加粗：两边加***</span><br></pre></td></tr></table></figure>
-<p><del>Hello,World</del>       </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">废弃：两边加~~</span><br></pre></td></tr></table></figure>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote>
-<p>test    </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; 引用 </span><br></pre></td></tr></table></figure>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---或***</span><br></pre></td></tr></table></figure>
-<hr>
-<hr>
-<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p><a href="www.baidu.com">百度</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[名称]+（地址）</span><br></pre></td></tr></table></figure>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="http://i1.hdslb.com/bfs/archive/27783c10b1cd234cee180a34a88903a2dabc24eb.jpg@380w_240h_100Q_1c.webp" alt="图片"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![名称]+（本地地址或虚拟地址）</span><br></pre></td></tr></table></figure>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ol>
-<li>A</li>
-<li>B</li>
-<li>C</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.+空格</span><br></pre></td></tr></table></figure>
-<ul>
-<li>A</li>
-<li>B</li>
-<li>C</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-+空格</span><br></pre></td></tr></table></figure>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
-<thead>
-<tr>
-<th>名字</th>
-<th>年龄</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>java</td>
-<td>26</td>
-</tr>
-</tbody></table>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">| 名字 | 年龄 |</span><br><span class="line">| ---- | ---- |</span><br><span class="line">| java | 26 |</span><br></pre></td></tr></table></figure>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">···+java : tab上面的 ·</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Markdowm</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Hexo搭建博客+部署Github</title>
     <url>/2021/02/12/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-%E9%83%A8%E7%BD%B2Github/</url>
     <content><![CDATA[<h1 id="Hexo搭建博客"><a href="#Hexo搭建博客" class="headerlink" title="Hexo搭建博客"></a>Hexo搭建博客</h1><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h3><p>去 <a href="https://git-scm.com/">Git官网</a> 下载 64-bit Git for Windows Setup</p>
@@ -133,6 +77,62 @@
       </categories>
   </entry>
   <entry>
+    <title>Learn-Markdown</title>
+    <url>/2021/02/11/Learn-Markdown/</url>
+    <content><![CDATA[<h1 id="Markdown学习"><a href="#Markdown学习" class="headerlink" title="Markdown学习"></a>Markdown学习</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#+空格+一级标题</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">##+空格+二级标题</span><br></pre></td></tr></table></figure>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p><em>Hello,World</em>       </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">斜体：两边加*</span><br></pre></td></tr></table></figure>
+<p><strong>Hello,World</strong>    </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">粗体：两边加**</span><br></pre></td></tr></table></figure>
+<p><strong><em>Hello,World</em></strong>      </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">斜体加粗：两边加***</span><br></pre></td></tr></table></figure>
+<p><del>Hello,World</del>       </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">废弃：两边加~~</span><br></pre></td></tr></table></figure>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote>
+<p>test    </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; 引用 </span><br></pre></td></tr></table></figure>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---或***</span><br></pre></td></tr></table></figure>
+<hr>
+<hr>
+<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p><a href="www.baidu.com">百度</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[名称]+（地址）</span><br></pre></td></tr></table></figure>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="http://i1.hdslb.com/bfs/archive/27783c10b1cd234cee180a34a88903a2dabc24eb.jpg@380w_240h_100Q_1c.webp" alt="图片"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![名称]+（本地地址或虚拟地址）</span><br></pre></td></tr></table></figure>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ol>
+<li>A</li>
+<li>B</li>
+<li>C</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.+空格</span><br></pre></td></tr></table></figure>
+<ul>
+<li>A</li>
+<li>B</li>
+<li>C</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-+空格</span><br></pre></td></tr></table></figure>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
+<thead>
+<tr>
+<th>名字</th>
+<th>年龄</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>java</td>
+<td>26</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">| 名字 | 年龄 |</span><br><span class="line">| ---- | ---- |</span><br><span class="line">| java | 26 |</span><br></pre></td></tr></table></figure>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">···+java : tab上面的 ·</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Markdowm</category>
+      </categories>
+  </entry>
+  <entry>
     <title>StudyNotes_day4</title>
     <url>/2021/05/05/StudyNotes-day4/</url>
     <content><![CDATA[<h1 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h1><p>与（并且）    &amp;&amp;    全都是true,才是true；否则就是false</p>
@@ -158,6 +158,28 @@
 <p>注意事项：</p>
 <p>1.必须同时保证表达式A和表达式B都符合左侧数据类型的要求</p>
 <p>2.三元运算符的结果必须被使用</p>
+]]></content>
+      <categories>
+        <category>javaSE</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>StudyNotes_day2</title>
+    <url>/2021/02/16/StudyNotes_day2/</url>
+    <content><![CDATA[<h1 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h1><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>​    java程序运行期间固定不变的数据</p>
+<p>分类：</p>
+<ul>
+<li>整数常量        例如：100， 0 ， -100</li>
+<li>小数常量        例如：1.1， 0.0 ， -1.1</li>
+<li>布尔常量                    true,false</li>
+<li>字符常量        例如:   ‘a’,’A’,’9’</li>
+<li>字符串常量    例如：”abc”,”a”,”123”</li>
+<li>空常量                         null,代表没有任何数据</li>
+</ul>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>​    程序运行期间，内容可以发生改变的量</p>
+<p>创建一个变量的一步到位格式：</p>
+<p>数据类型    变量名称    =    数据值</p>
+<p>​    </p>
 ]]></content>
       <categories>
         <category>javaSE</category>
@@ -214,28 +236,6 @@
       </categories>
   </entry>
   <entry>
-    <title>StudyNotes_day2</title>
-    <url>/2021/02/16/StudyNotes_day2/</url>
-    <content><![CDATA[<h1 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h1><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>​    java程序运行期间固定不变的数据</p>
-<p>分类：</p>
-<ul>
-<li>整数常量        例如：100， 0 ， -100</li>
-<li>小数常量        例如：1.1， 0.0 ， -1.1</li>
-<li>布尔常量                    true,false</li>
-<li>字符常量        例如:   ‘a’,’A’,’9’</li>
-<li>字符串常量    例如：”abc”,”a”,”123”</li>
-<li>空常量                         null,代表没有任何数据</li>
-</ul>
-<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>​    程序运行期间，内容可以发生改变的量</p>
-<p>创建一个变量的一步到位格式：</p>
-<p>数据类型    变量名称    =    数据值</p>
-<p>​    </p>
-]]></content>
-      <categories>
-        <category>javaSE</category>
-      </categories>
-  </entry>
-  <entry>
     <title>StudyNotes_day3</title>
     <url>/2021/04/05/StudyNotes_day3/</url>
     <content><![CDATA[<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><p>算数运算符、赋值运算符、比较运算符、逻辑运算符、三元运算符</p>
@@ -264,20 +264,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2021/02/10/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>一篇博文</title>
     <url>/2021/02/11/%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/</url>
     <content><![CDATA[<h2 id="建站（折腾）历程"><a href="#建站（折腾）历程" class="headerlink" title="建站（折腾）历程"></a>建站（折腾）历程</h2><p>​        建这个博客的起因是想记录和总结学到的知识点，其实自己并没有记录和总结的习惯，一个教训就是之前学习java没有及时总结到后期忘记前面的知识点复习起来很痛苦，这次我在边复习java和学习新的知识时边在自己的博客上做些总结。</p>
@@ -293,6 +279,20 @@
         <tag>java</tag>
         <tag>ACG</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/02/10/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>基本的Dos命令</title>
