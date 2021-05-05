@@ -1,82 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo搭建博客+部署Github</title>
-    <url>/2021/02/12/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-%E9%83%A8%E7%BD%B2Github/</url>
-    <content><![CDATA[<h1 id="Hexo搭建博客"><a href="#Hexo搭建博客" class="headerlink" title="Hexo搭建博客"></a>Hexo搭建博客</h1><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h3><p>去 <a href="https://git-scm.com/">Git官网</a> 下载 64-bit Git for Windows Setup</p>
-<p>检验是否安装成功：回到电脑桌面，鼠标右击如果看到Git GUI Here和Git Bash Here则安装成功</p>
-<h3 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h3><p><strong>Git安装之后需要进行一些基本信息设置</strong>     <strong>打开Git Bash</strong> </p>
-<ul>
-<li>设置用户名：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git  config --global  user.name  &#39;github的用户名&#39;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>设置用户邮箱：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git  config --global  user.email  &#39;注册时候的邮箱&#39;</span><br></pre></td></tr></table></figure>
-<p>注意：该配置会在github主页上显示谁提交了该文件</p>
-<ul>
-<li>配置ok之后，我们用如下命令来看看是否配置成功</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
-<p>注意：git  config –global 参数，有了这个参数表示这台机器上所有的git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和邮箱</p>
-<p><strong>配置SSH key</strong></p>
-<p>为什么要配置这个呢？因为你提交代码肯定要拥有你的github权限才可以，但是直接使用用户名和密码太不安全了，所以我们使用ssh key来解决本地和服务器的连接问题。如果使用SSH，就可以记住用户名，并创建属于自己的密码来保证安全操作，还有神奇的一招可以“不用输入密码”</p>
-<ol>
-<li>检查本机已存在的ssh密钥</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd ~&#x2F;.ssh</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>创建一对新的SSH密钥(keys)</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮件地址&quot;</span><br></pre></td></tr></table></figure>
-<p>直接回车，则将密钥按默认文件进行存储。此时也可以输入特定的文件名，比如/c/Users/you/.ssh/github_rsa</p>
-<p>接着，根据提示，你需要输入密码和确认密码（说到这里，如果你很放心，其实可以不用密码，就是到输密码的地方，都直接回车，所以每次push就只管回车就行了。所谓的最安全的密码，就是没有密码)</p>
-<p>最终会生成一个文件在用户目录下，打开用户目录，找到<code>.ssh\id_rsa.pub</code>文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key:将刚复制的内容粘贴到key那里，title随便填，保存</p>
-<ol start="3">
-<li>测试是否成功</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-<p>如果提示<code>Are you sure you want to continue connecting (yes/no)?</code>，输入yes，如果看到下面信息，就说明成功：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Hi username! You’ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
-<h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><h3 id="Node-js安装"><a href="#Node-js安装" class="headerlink" title="Node.js安装"></a>Node.js安装</h3><p>去 <a href="https://nodejs.org/en/">Node.js官网</a> 下载 Windows (x64) 长期支持版 Long Term Support (LTS) schedule</p>
-<p>安装完成后打开 Git Bash 查看版本号验证是否安装成功</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">v14.15.5</span><br></pre></td></tr></table></figure>
-<p>Node.js 中自带了 npm 包管理工具，在 Git Bash 中查看 npm 版本</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm -v</span><br><span class="line">6.14.11</span><br></pre></td></tr></table></figure>
-<p>由于 npm 代码仓库的服务器在国外，为了下载速度快使用淘宝的 npm 代码仓库，通过 npm 安装 cnpm</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-<p>查看版本验证是否安装成功</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm -v</span><br></pre></td></tr></table></figure>
-<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><h3 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h3><p>打开 Git Bash，使用 cnpm 安装 Hexo</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>检测</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
-<h3 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h3><p>Hexo 安装完成后,在本地磁盘新建Blog目录，如：D:\Programming\Blog ，这个目录存放的东西就是以后操作博客的东西</p>
-<h3 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h3><p>进入Blog目录，右键 Git Bash Here ,初始化命令只用一次，后面不会再用到</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init </span><br></pre></td></tr></table></figure>
-<p>此时，会在 Blogs 目录下生成相应的项目文件</p>
-<p>需要记住的几个常用命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean  #清理缓存文件</span><br><span class="line">hexo  g     #生成博客静态文件</span><br><span class="line">hexo  s     #运行本地服务器</span><br><span class="line">hexo  d     #上传到服务器</span><br></pre></td></tr></table></figure>
-<h3 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo  s</span><br></pre></td></tr></table></figure>
-<p><a href="http://localhost:4000/">http://localhost:4000</a> </p>
-<p>这样就可以在本地4000端口查看自己的博客了，初始自带默认主体。</p>
-<p>至此完成了 Hexo 搭建博客，接下来部署到 Github 上，就可以通过外网访问自己的博客了。</p>
-<h1 id="部署Github"><a href="#部署Github" class="headerlink" title="部署Github"></a>部署Github</h1><p>首先登录 GitHub，创建新 public 仓库，仓库名称一定要是自己昵称+github.io</p>
-<p>接下来在Blog目录下安装一个hexo部署插件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-<p>找到Blog文件中的  _config.yml  文件,使用编译器打开,拉到最下面找到并修改deploy</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: github仓库地址</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>更改以后进行保存</p>
-<p>将本地文件部署到github新建的仓库中</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo  d</span><br></pre></td></tr></table></figure>
-<p>通过访问  自己的仓库名  就可以访问部署到github上的blog了</p>
-]]></content>
-      <categories>
-        <category>博客</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Learn-Markdown</title>
     <url>/2021/02/11/Learn-Markdown/</url>
     <content><![CDATA[<h1 id="Markdown学习"><a href="#Markdown学习" class="headerlink" title="Markdown学习"></a>Markdown学习</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#+空格+一级标题</span><br></pre></td></tr></table></figure>
@@ -205,37 +129,6 @@
       </categories>
   </entry>
   <entry>
-    <title>StudyNotes_day3</title>
-    <url>/2021/04/05/StudyNotes_day3/</url>
-    <content><![CDATA[<h1 id="算数运算符-加号的多种用法"><a href="#算数运算符-加号的多种用法" class="headerlink" title="算数运算符_加号的多种用法"></a>算数运算符_加号的多种用法</h1><p>四则运算当中的加号“+”有常见的三种用法：</p>
-<ol>
-<li>对于数值来说，那就是加法</li>
-<li>对于字符char类型来说，在计算之前，char会被提升成为int，然后再计算<br>char类型字符，int类型数字，之间的对照关系表：ASCII、Unicode</li>
-<li>对于字符串String（首字母大写，不是关键字）来说，加号代表字符串拼接（连接）操作<br> 任何数据类型和字符串进行连接时，结果都会变成字符串</li>
-</ol>
-<h1 id="算数运算符-自增自减运算符"><a href="#算数运算符-自增自减运算符" class="headerlink" title="算数运算符_自增自减运算符"></a>算数运算符_自增自减运算符</h1><p>自增运算符： ++<br>自减运算符： –</p>
-<p>基本含义：让一个变量涨一个数字1，或者让一个变量降一个数字1使用格式：写在变量名称之前，或者写在变量名称之后，例如：++num，也可以num++<br>使用方法：<br>      1.单独使用：不和其他操作混合，自己独立成为一个步骤<br>      2.混合使用：和其他操作混合，例如与赋值混合，或者与打印操作混合，等<br>使用区别：<br>      1.在单独使用的时候，前++和后++没有任何区别，也就是 ++num 和 num++ 是完全一样的<br>     2.在混合使用的时候，有【重大区别】<br>          A、如果是【前++】，那么变量【立刻马上+1】，然后拿着结果进行使用      【先加后用】<br>        B、如果是【后++】，难么首先使用变量本来的数值，【然后再让变量+1】    【先用后加】<br>        总计：[先加减，后使用]，[先使用，后加减]</p>
-<p>注意事项：<br>     只有变量才能使用自增、自减运算符，常量不可发生改变，所以不能用</p>
-]]></content>
-      <categories>
-        <category>javaSE</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2021/02/10/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Windows容易忘记但好用的快捷键</title>
     <url>/2021/02/14/Windows%E5%AE%B9%E6%98%93%E5%BF%98%E8%AE%B0%E4%BD%86%E5%A5%BD%E7%94%A8%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
     <content><![CDATA[<h1 id="Windows容易忘记但好用的快捷键"><a href="#Windows容易忘记但好用的快捷键" class="headerlink" title="Windows容易忘记但好用的快捷键"></a>Windows容易忘记但好用的快捷键</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Win+Shift+S				Windows自带截图</span><br><span class="line">Win+PrintScreen				截取当前屏幕到剪贴板，并保存截屏图片文件到“图片”文件夹中</span><br><span class="line">Win+D					显示桌面</span><br><span class="line">Win+E					打开文件管理器</span><br><span class="line">Win+I					打开Windows10设置</span><br><span class="line">Win+S					搜索</span><br><span class="line">Win+T					快速切换任务栏程序</span><br><span class="line">Win+Ctrl+D				创建一个新的虚拟桌面</span><br><span class="line">Win+Ctrl+左&#x2F;右	   	   		切换虚拟桌面</span><br><span class="line">Win+Ctrl+F4			  	关闭虚拟桌面</span><br><span class="line">Ctrl+Shift+Esc				开任务管理</span><br><span class="line">Ctrl+Shift+N				新建文件夹</span><br><span class="line">shift+del				彻底删除</span><br></pre></td></tr></table></figure>
@@ -244,6 +137,82 @@
 
 
 ]]></content>
+  </entry>
+  <entry>
+    <title>Hexo搭建博客+部署Github</title>
+    <url>/2021/02/12/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-%E9%83%A8%E7%BD%B2Github/</url>
+    <content><![CDATA[<h1 id="Hexo搭建博客"><a href="#Hexo搭建博客" class="headerlink" title="Hexo搭建博客"></a>Hexo搭建博客</h1><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h3><p>去 <a href="https://git-scm.com/">Git官网</a> 下载 64-bit Git for Windows Setup</p>
+<p>检验是否安装成功：回到电脑桌面，鼠标右击如果看到Git GUI Here和Git Bash Here则安装成功</p>
+<h3 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h3><p><strong>Git安装之后需要进行一些基本信息设置</strong>     <strong>打开Git Bash</strong> </p>
+<ul>
+<li>设置用户名：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git  config --global  user.name  &#39;github的用户名&#39;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>设置用户邮箱：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git  config --global  user.email  &#39;注册时候的邮箱&#39;</span><br></pre></td></tr></table></figure>
+<p>注意：该配置会在github主页上显示谁提交了该文件</p>
+<ul>
+<li>配置ok之后，我们用如下命令来看看是否配置成功</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
+<p>注意：git  config –global 参数，有了这个参数表示这台机器上所有的git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和邮箱</p>
+<p><strong>配置SSH key</strong></p>
+<p>为什么要配置这个呢？因为你提交代码肯定要拥有你的github权限才可以，但是直接使用用户名和密码太不安全了，所以我们使用ssh key来解决本地和服务器的连接问题。如果使用SSH，就可以记住用户名，并创建属于自己的密码来保证安全操作，还有神奇的一招可以“不用输入密码”</p>
+<ol>
+<li>检查本机已存在的ssh密钥</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd ~&#x2F;.ssh</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>创建一对新的SSH密钥(keys)</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮件地址&quot;</span><br></pre></td></tr></table></figure>
+<p>直接回车，则将密钥按默认文件进行存储。此时也可以输入特定的文件名，比如/c/Users/you/.ssh/github_rsa</p>
+<p>接着，根据提示，你需要输入密码和确认密码（说到这里，如果你很放心，其实可以不用密码，就是到输密码的地方，都直接回车，所以每次push就只管回车就行了。所谓的最安全的密码，就是没有密码)</p>
+<p>最终会生成一个文件在用户目录下，打开用户目录，找到<code>.ssh\id_rsa.pub</code>文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key:将刚复制的内容粘贴到key那里，title随便填，保存</p>
+<ol start="3">
+<li>测试是否成功</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>如果提示<code>Are you sure you want to continue connecting (yes/no)?</code>，输入yes，如果看到下面信息，就说明成功：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Hi username! You’ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+<h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><h3 id="Node-js安装"><a href="#Node-js安装" class="headerlink" title="Node.js安装"></a>Node.js安装</h3><p>去 <a href="https://nodejs.org/en/">Node.js官网</a> 下载 Windows (x64) 长期支持版 Long Term Support (LTS) schedule</p>
+<p>安装完成后打开 Git Bash 查看版本号验证是否安装成功</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">v14.15.5</span><br></pre></td></tr></table></figure>
+<p>Node.js 中自带了 npm 包管理工具，在 Git Bash 中查看 npm 版本</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm -v</span><br><span class="line">6.14.11</span><br></pre></td></tr></table></figure>
+<p>由于 npm 代码仓库的服务器在国外，为了下载速度快使用淘宝的 npm 代码仓库，通过 npm 安装 cnpm</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<p>查看版本验证是否安装成功</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm -v</span><br></pre></td></tr></table></figure>
+<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><h3 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h3><p>打开 Git Bash，使用 cnpm 安装 Hexo</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>检测</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+<h3 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h3><p>Hexo 安装完成后,在本地磁盘新建Blog目录，如：D:\Programming\Blog ，这个目录存放的东西就是以后操作博客的东西</p>
+<h3 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h3><p>进入Blog目录，右键 Git Bash Here ,初始化命令只用一次，后面不会再用到</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init </span><br></pre></td></tr></table></figure>
+<p>此时，会在 Blogs 目录下生成相应的项目文件</p>
+<p>需要记住的几个常用命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean  #清理缓存文件</span><br><span class="line">hexo  g     #生成博客静态文件</span><br><span class="line">hexo  s     #运行本地服务器</span><br><span class="line">hexo  d     #上传到服务器</span><br></pre></td></tr></table></figure>
+<h3 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo  s</span><br></pre></td></tr></table></figure>
+<p><a href="http://localhost:4000/">http://localhost:4000</a> </p>
+<p>这样就可以在本地4000端口查看自己的博客了，初始自带默认主体。</p>
+<p>至此完成了 Hexo 搭建博客，接下来部署到 Github 上，就可以通过外网访问自己的博客了。</p>
+<h1 id="部署Github"><a href="#部署Github" class="headerlink" title="部署Github"></a>部署Github</h1><p>首先登录 GitHub，创建新 public 仓库，仓库名称一定要是自己昵称+github.io</p>
+<p>接下来在Blog目录下安装一个hexo部署插件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<p>找到Blog文件中的  _config.yml  文件,使用编译器打开,拉到最下面找到并修改deploy</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: github仓库地址</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>更改以后进行保存</p>
+<p>将本地文件部署到github新建的仓库中</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo  d</span><br></pre></td></tr></table></figure>
+<p>通过访问  自己的仓库名  就可以访问部署到github上的blog了</p>
+]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
   </entry>
   <entry>
     <title>一篇博文</title>
@@ -261,6 +230,37 @@
         <tag>java</tag>
         <tag>ACG</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/02/10/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>StudyNotes_day3</title>
+    <url>/2021/04/05/StudyNotes_day3/</url>
+    <content><![CDATA[<h1 id="算数运算符-加号的多种用法"><a href="#算数运算符-加号的多种用法" class="headerlink" title="算数运算符_加号的多种用法"></a>算数运算符_加号的多种用法</h1><p>四则运算当中的加号“+”有常见的三种用法：</p>
+<ol>
+<li>对于数值来说，那就是加法</li>
+<li>对于字符char类型来说，在计算之前，char会被提升成为int，然后再计算<br>char类型字符，int类型数字，之间的对照关系表：ASCII、Unicode</li>
+<li>对于字符串String（首字母大写，不是关键字）来说，加号代表字符串拼接（连接）操作<br> 任何数据类型和字符串进行连接时，结果都会变成字符串</li>
+</ol>
+<h1 id="算数运算符-自增自减运算符"><a href="#算数运算符-自增自减运算符" class="headerlink" title="算数运算符_自增自减运算符"></a>算数运算符_自增自减运算符</h1><p>自增运算符： ++<br>自减运算符： –</p>
+<p>基本含义：让一个变量涨一个数字1，或者让一个变量降一个数字1使用格式：写在变量名称之前，或者写在变量名称之后，例如：++num，也可以num++<br>使用方法：<br>      1.单独使用：不和其他操作混合，自己独立成为一个步骤<br>      2.混合使用：和其他操作混合，例如与赋值混合，或者与打印操作混合，等<br>使用区别：<br>      1.在单独使用的时候，前++和后++没有任何区别，也就是 ++num 和 num++ 是完全一样的<br>     2.在混合使用的时候，有【重大区别】<br>          A、如果是【前++】，那么变量【立刻马上+1】，然后拿着结果进行使用      【先加后用】<br>        B、如果是【后++】，难么首先使用变量本来的数值，【然后再让变量+1】    【先用后加】<br>        总计：[先加减，后使用]，[先使用，后加减]</p>
+<p>注意事项：<br>     只有变量才能使用自增、自减运算符，常量不可发生改变，所以不能用</p>
+]]></content>
+      <categories>
+        <category>javaSE</category>
+      </categories>
   </entry>
   <entry>
     <title>基本的Dos命令</title>
