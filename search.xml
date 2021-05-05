@@ -57,37 +57,6 @@
       </categories>
   </entry>
   <entry>
-    <title>StudyNotes_day4</title>
-    <url>/2021/05/05/StudyNotes-day4/</url>
-    <content><![CDATA[<h1 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h1><p>与（并且）    &amp;&amp;    全都是true,才是true；否则就是false</p>
-<p>或（或者）    ||    至少一个是true,就是true；全都是false，才是false</p>
-<p>非（取反）    ！    本来是true,变成false；本来是false,变成true</p>
-<p>与”&amp;&amp;”，或”||”，具有短路效果；如果根据左边已经判断得到最终结果，那么右边的代码将不再执行，从而节省一定性能。</p>
-<p>注意事项：</p>
-<p>1.逻辑运算符只能用于boolean值</p>
-<p>2.与、或需要左右各自有一个boolean值，但是取反只要有唯一的一个boolean值即可</p>
-<p>3.与、或两种运算符，如果有多个条件，可以连续写</p>
-<p>两个条件：条件A    &amp;&amp;    条件B</p>
-<p>多个条件：条件A    &amp;&amp;    条件B    &amp;&amp;    条件C</p>
-<h1 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h1><p>一元运算符：只需要一个数据就可以进行操作的运算符。例如：取反！、自增++、自减–</p>
-<p>二元运算符：需要两个数据才可以进行操作的运算符。例如：加法+、赋值=</p>
-<p>三元运算符：需要三个数据才可以进行操作的运算符。</p>
-<p>格式：</p>
-<p>数据类型    变量名称    =    条件判断    ？    表达式A    ：    表达式B;</p>
-<p>流程：</p>
-<p>首先判断条件是否成立：</p>
-<p>​        如果成立为true，那么将表达式A的值赋值给左侧的变量；</p>
-<p>​        如果成立为false，那么将表达式B的值赋值给左侧的变量；</p>
-<p>二者选其一。</p>
-<p>注意事项：</p>
-<p>1.必须同时保证表达式A和表达式B都符合左侧数据类型的要求</p>
-<p>2.三元运算符的结果必须被使用</p>
-]]></content>
-      <categories>
-        <category>javaSE</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Hexo搭建博客+部署Github</title>
     <url>/2021/02/12/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-%E9%83%A8%E7%BD%B2Github/</url>
     <content><![CDATA[<h1 id="Hexo搭建博客"><a href="#Hexo搭建博客" class="headerlink" title="Hexo搭建博客"></a>Hexo搭建博客</h1><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h3><p>去 <a href="https://git-scm.com/">Git官网</a> 下载 64-bit Git for Windows Setup</p>
@@ -161,6 +130,37 @@
 ]]></content>
       <categories>
         <category>博客</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>StudyNotes_day4</title>
+    <url>/2021/05/05/StudyNotes-day4/</url>
+    <content><![CDATA[<h1 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h1><p>与（并且）    &amp;&amp;    全都是true,才是true；否则就是false</p>
+<p>或（或者）    ||    至少一个是true,就是true；全都是false，才是false</p>
+<p>非（取反）    ！    本来是true,变成false；本来是false,变成true</p>
+<p>与”&amp;&amp;”，或”||”，具有短路效果；如果根据左边已经判断得到最终结果，那么右边的代码将不再执行，从而节省一定性能。</p>
+<p>注意事项：</p>
+<p>1.逻辑运算符只能用于boolean值</p>
+<p>2.与、或需要左右各自有一个boolean值，但是取反只要有唯一的一个boolean值即可</p>
+<p>3.与、或两种运算符，如果有多个条件，可以连续写</p>
+<p>两个条件：条件A    &amp;&amp;    条件B</p>
+<p>多个条件：条件A    &amp;&amp;    条件B    &amp;&amp;    条件C</p>
+<h1 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h1><p>一元运算符：只需要一个数据就可以进行操作的运算符。例如：取反！、自增++、自减–</p>
+<p>二元运算符：需要两个数据才可以进行操作的运算符。例如：加法+、赋值=</p>
+<p>三元运算符：需要三个数据才可以进行操作的运算符。</p>
+<p>格式：</p>
+<p>数据类型    变量名称    =    条件判断    ？    表达式A    ：    表达式B;</p>
+<p>流程：</p>
+<p>首先判断条件是否成立：</p>
+<p>​        如果成立为true，那么将表达式A的值赋值给左侧的变量；</p>
+<p>​        如果成立为false，那么将表达式B的值赋值给左侧的变量；</p>
+<p>二者选其一。</p>
+<p>注意事项：</p>
+<p>1.必须同时保证表达式A和表达式B都符合左侧数据类型的要求</p>
+<p>2.三元运算符的结果必须被使用</p>
+]]></content>
+      <categories>
+        <category>javaSE</category>
       </categories>
   </entry>
   <entry>
