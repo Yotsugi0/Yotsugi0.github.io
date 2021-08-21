@@ -164,26 +164,55 @@
       </categories>
   </entry>
   <entry>
-    <title>StudyNotes_day2</title>
-    <url>/2021/02/16/StudyNotes_day2/</url>
-    <content><![CDATA[<h1 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h1><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>​    java程序运行期间固定不变的数据</p>
-<p>分类：</p>
-<ul>
-<li>整数常量        例如：100， 0 ， -100</li>
-<li>小数常量        例如：1.1， 0.0 ， -1.1</li>
-<li>布尔常量                    true,false</li>
-<li>字符常量        例如:   ‘a’,’A’,’9’</li>
-<li>字符串常量    例如：”abc”,”a”,”123”</li>
-<li>空常量                         null,代表没有任何数据</li>
+    <title>StudyNotes-day5</title>
+    <url>/2021/05/31/StudyNotes-day5/</url>
+    <content><![CDATA[<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1><ol>
+<li><p><strong>什么是流程控制</strong></p>
+<p>流程控制是指“程序代码执行的顺序”，即这些代码哪行先执行，哪行后执行，某行执行完了之后再执行哪行</p>
+</li>
+<li><p><strong>流程控制的结构</strong></p>
+<blockquote>
+<p>顺序: 从上到下执行代码<br>选择: 有选择的执行代码<br>循环: 循环执行某一段代码</p>
+</blockquote>
+<p>由图灵提出，图灵认为世界上任何复杂的问题，总可以用上面三种流程控制进行编程实现.(这个可以证明的)</p>
+</li>
+</ol>
+<h3 id="选择结构"><a href="#选择结构" class="headerlink" title="选择结构"></a>选择结构</h3><h5 id="判断语句：if语句"><a href="#判断语句：if语句" class="headerlink" title="判断语句：if语句"></a>判断语句：if语句</h5><ul>
+<li>if语句第一种格式</li>
 </ul>
-<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>​    程序运行期间，内容可以发生改变的量</p>
-<p>创建一个变量的一步到位格式：</p>
-<p>数据类型    变量名称    =    数据值</p>
-<p>​    </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if(关系表达式)&#123;</span><br><span class="line">	语句体;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>if语句第二种格式</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if(关系表达式)&#123;</span><br><span class="line">	语句体1;</span><br><span class="line">&#125;else&#123;</span><br><span class="line">	语句体2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>if语句第三种格式</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if(判断条件1)&#123;</span><br><span class="line">	执行语句1;</span><br><span class="line">&#125;else if(判断条件2)&#123;</span><br><span class="line">	执行语句2;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">&#125;else if(判断条件n)&#123;</span><br><span class="line">	执行语句n;</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">	执行语句n+1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="选择语句：switch语句"><a href="#选择语句：switch语句" class="headerlink" title="选择语句：switch语句"></a>选择语句：switch语句</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">switch(表达式)&#123;</span><br><span class="line">	case 常量1：</span><br><span class="line">		语句体1;</span><br><span class="line">		break;</span><br><span class="line">	case 常量2：</span><br><span class="line">		语句体2;</span><br><span class="line">		break;</span><br><span class="line">	...</span><br><span class="line">	default:</span><br><span class="line">		语句体n+1;</span><br><span class="line">		break;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><ul>
+<li>for</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">for(初始化表达式①;布尔表达式②;步进表达式④)&#123;</span><br><span class="line">	循环体③</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>while</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">初始化表达式①</span><br><span class="line">while(布尔表达式②)&#123;</span><br><span class="line">	循环体③</span><br><span class="line">	步进表达式④</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>do-while</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">初始化表达式①</span><br><span class="line">	do&#123;</span><br><span class="line">	循环体③</span><br><span class="line">	步进表达式④</span><br><span class="line">&#125;while(布尔表达式②)</span><br></pre></td></tr></table></figure>
+<p>break</p>
+<p>continue</p>
 ]]></content>
       <categories>
         <category>javaSE</category>
       </categories>
+  </entry>
+  <entry>
+    <title>StudyNotes-day6</title>
+    <url>/2021/06/30/StudyNotes-day6/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>StudyNotes_day1</title>
@@ -236,6 +265,28 @@
       </categories>
   </entry>
   <entry>
+    <title>StudyNotes_day2</title>
+    <url>/2021/02/16/StudyNotes_day2/</url>
+    <content><![CDATA[<h1 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h1><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>​    java程序运行期间固定不变的数据</p>
+<p>分类：</p>
+<ul>
+<li>整数常量        例如：100， 0 ， -100</li>
+<li>小数常量        例如：1.1， 0.0 ， -1.1</li>
+<li>布尔常量                    true,false</li>
+<li>字符常量        例如:   ‘a’,’A’,’9’</li>
+<li>字符串常量    例如：”abc”,”a”,”123”</li>
+<li>空常量                         null,代表没有任何数据</li>
+</ul>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>​    程序运行期间，内容可以发生改变的量</p>
+<p>创建一个变量的一步到位格式：</p>
+<p>数据类型    变量名称    =    数据值</p>
+<p>​    </p>
+]]></content>
+      <categories>
+        <category>javaSE</category>
+      </categories>
+  </entry>
+  <entry>
     <title>StudyNotes_day3</title>
     <url>/2021/04/05/StudyNotes_day3/</url>
     <content><![CDATA[<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><p>算数运算符、赋值运算符、比较运算符、逻辑运算符、三元运算符</p>
@@ -264,6 +315,20 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2021/02/10/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>一篇博文</title>
     <url>/2021/02/11/%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/</url>
     <content><![CDATA[<h2 id="建站（折腾）历程"><a href="#建站（折腾）历程" class="headerlink" title="建站（折腾）历程"></a>建站（折腾）历程</h2><p>​        建这个博客的起因是想记录和总结学到的知识点，其实自己并没有记录和总结的习惯，一个教训就是之前学习java没有及时总结到后期忘记前面的知识点复习起来很痛苦，这次我在边复习java和学习新的知识时边在自己的博客上做些总结。</p>
@@ -279,20 +344,6 @@
         <tag>java</tag>
         <tag>ACG</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2021/02/10/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>基本的Dos命令</title>
