@@ -133,6 +133,59 @@
       </categories>
   </entry>
   <entry>
+    <title>StudyNotes-day6</title>
+    <url>/2021/09/08/StudyNotes-day6/</url>
+    <content><![CDATA[<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><h2 id="方法的定义格式"><a href="#方法的定义格式" class="headerlink" title="方法的定义格式"></a>方法的定义格式</h2><p>定义方法的完整格式：</p>
+<p>​    </p>
+<p>修饰符     返回值类型      方法名称      (参数类型     参数名称）{<br>            方法体；<br>            return 返回值；<br>}</p>
+<p>​    </p>
+<p>修饰符：public    static</p>
+<p>返回值类型：也就是方法最终产生的数据是什么类型</p>
+<p>方法名称：方法的名字，规则和变量一样，小驼峰</p>
+<p>参数类型：进入方法的数据是什么类型</p>
+<p>参数名称：进入方法的数据对应的变量名称</p>
+<p>ps:参数如果有多个，使用逗号进行分隔</p>
+<p>方法体：方法需要做的事情，若干行代码</p>
+<p>return:两个作用，第一停止当前方法，第二讲后面的返回值还给调用处</p>
+<p>返回值：也就是方法执行后最终产生的数据结果</p>
+<p>注意：return后面的“返回值”，必须和方法名称前面的“返回值类型”保持对应。</p>
+]]></content>
+      <categories>
+        <category>javaSE</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>StudyNotes_day4</title>
+    <url>/2021/05/05/StudyNotes-day4/</url>
+    <content><![CDATA[<h1 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h1><p>与（并且）    &amp;&amp;    全都是true,才是true；否则就是false</p>
+<p>或（或者）    ||    至少一个是true,就是true；全都是false，才是false</p>
+<p>非（取反）    ！    本来是true,变成false；本来是false,变成true</p>
+<p>与”&amp;&amp;”，或”||”，具有短路效果；如果根据左边已经判断得到最终结果，那么右边的代码将不再执行，从而节省一定性能。</p>
+<p>注意事项：</p>
+<p>1.逻辑运算符只能用于boolean值</p>
+<p>2.与、或需要左右各自有一个boolean值，但是取反只要有唯一的一个boolean值即可</p>
+<p>3.与、或两种运算符，如果有多个条件，可以连续写</p>
+<p>两个条件：条件A    &amp;&amp;    条件B</p>
+<p>多个条件：条件A    &amp;&amp;    条件B    &amp;&amp;    条件C</p>
+<h1 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h1><p>一元运算符：只需要一个数据就可以进行操作的运算符。例如：取反！、自增++、自减–</p>
+<p>二元运算符：需要两个数据才可以进行操作的运算符。例如：加法+、赋值=</p>
+<p>三元运算符：需要三个数据才可以进行操作的运算符。</p>
+<p>格式：</p>
+<p>数据类型    变量名称    =    条件判断    ？    表达式A    ：    表达式B;</p>
+<p>流程：</p>
+<p>首先判断条件是否成立：</p>
+<p>​        如果成立为true，那么将表达式A的值赋值给左侧的变量；</p>
+<p>​        如果成立为false，那么将表达式B的值赋值给左侧的变量；</p>
+<p>二者选其一。</p>
+<p>注意事项：</p>
+<p>1.必须同时保证表达式A和表达式B都符合左侧数据类型的要求</p>
+<p>2.三元运算符的结果必须被使用</p>
+]]></content>
+      <categories>
+        <category>javaSE</category>
+      </categories>
+  </entry>
+  <entry>
     <title>StudyNotes-day5</title>
     <url>/2021/05/31/StudyNotes-day5/</url>
     <content><![CDATA[<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1><ol>
@@ -173,57 +226,6 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">初始化表达式①</span><br><span class="line">	do&#123;</span><br><span class="line">	循环体③</span><br><span class="line">	步进表达式④</span><br><span class="line">&#125;while(布尔表达式②)</span><br></pre></td></tr></table></figure>
 <p>break</p>
 <p>continue</p>
-]]></content>
-      <categories>
-        <category>javaSE</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>StudyNotes_day4</title>
-    <url>/2021/05/05/StudyNotes-day4/</url>
-    <content><![CDATA[<h1 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h1><p>与（并且）    &amp;&amp;    全都是true,才是true；否则就是false</p>
-<p>或（或者）    ||    至少一个是true,就是true；全都是false，才是false</p>
-<p>非（取反）    ！    本来是true,变成false；本来是false,变成true</p>
-<p>与”&amp;&amp;”，或”||”，具有短路效果；如果根据左边已经判断得到最终结果，那么右边的代码将不再执行，从而节省一定性能。</p>
-<p>注意事项：</p>
-<p>1.逻辑运算符只能用于boolean值</p>
-<p>2.与、或需要左右各自有一个boolean值，但是取反只要有唯一的一个boolean值即可</p>
-<p>3.与、或两种运算符，如果有多个条件，可以连续写</p>
-<p>两个条件：条件A    &amp;&amp;    条件B</p>
-<p>多个条件：条件A    &amp;&amp;    条件B    &amp;&amp;    条件C</p>
-<h1 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h1><p>一元运算符：只需要一个数据就可以进行操作的运算符。例如：取反！、自增++、自减–</p>
-<p>二元运算符：需要两个数据才可以进行操作的运算符。例如：加法+、赋值=</p>
-<p>三元运算符：需要三个数据才可以进行操作的运算符。</p>
-<p>格式：</p>
-<p>数据类型    变量名称    =    条件判断    ？    表达式A    ：    表达式B;</p>
-<p>流程：</p>
-<p>首先判断条件是否成立：</p>
-<p>​        如果成立为true，那么将表达式A的值赋值给左侧的变量；</p>
-<p>​        如果成立为false，那么将表达式B的值赋值给左侧的变量；</p>
-<p>二者选其一。</p>
-<p>注意事项：</p>
-<p>1.必须同时保证表达式A和表达式B都符合左侧数据类型的要求</p>
-<p>2.三元运算符的结果必须被使用</p>
-]]></content>
-      <categories>
-        <category>javaSE</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>StudyNotes-day6</title>
-    <url>/2021/09/08/StudyNotes-day6/</url>
-    <content><![CDATA[<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><h2 id="方法的定义格式"><a href="#方法的定义格式" class="headerlink" title="方法的定义格式"></a>方法的定义格式</h2><p>定义方法的完整格式：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">修饰符  返回值类型  方法名称  （参数类型 参数名称）&#123;</span><br><span class="line">	方法体；</span><br><span class="line">	return 返回值；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>修饰符：public    static</p>
-<p>返回值类型：也就是方法最终产生的数据是什么类型</p>
-<p>方法名称：方法的名字，规则和变量一样，小驼峰</p>
-<p>参数类型：进入方法的数据是什么类型</p>
-<p>参数名称：进入方法的数据对应的变量名称</p>
-<p>ps:参数如果有多个，使用逗号进行分隔</p>
-<p>方法体：方法需要做的事情，若干行代码</p>
-<p>return:两个作用，第一停止当前方法，第二讲后面的返回值还给调用处</p>
-<p>返回值：也就是方法执行后最终产生的数据结果</p>
-<p>注意：return后面的“返回值”，必须和方法名称前面的“返回值类型”保持对应。</p>
 ]]></content>
       <categories>
         <category>javaSE</category>
