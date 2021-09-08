@@ -164,6 +164,26 @@
       </categories>
   </entry>
   <entry>
+    <title>StudyNotes-day6</title>
+    <url>/2021/09/08/StudyNotes-day6/</url>
+    <content><![CDATA[<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><h2 id="方法的定义格式"><a href="#方法的定义格式" class="headerlink" title="方法的定义格式"></a>方法的定义格式</h2><p>定义方法的完整格式：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">修饰符	返回值类型 方法名称（参数类型	参数名称，...）&#123;</span><br><span class="line">	方法体；</span><br><span class="line">	return	返回值；</span><br><span class="line">&#125;	</span><br></pre></td></tr></table></figure>
+<p>修饰符：public    static</p>
+<p>返回值类型：也就是方法最终产生的数据是什么类型</p>
+<p>方法名称：方法的名字，规则和变量一样，小驼峰</p>
+<p>参数类型：进入方法的数据是什么类型</p>
+<p>参数名称：进入方法的数据对应的变量名称</p>
+<p>ps:参数如果有多个，使用逗号进行分隔</p>
+<p>方法体：方法需要做的事情，若干行代码</p>
+<p>return:两个作用，第一停止当前方法，第二讲后面的返回值还给调用处</p>
+<p>返回值：也就是方法执行后最终产生的数据结果</p>
+<p>注意：return后面的“返回值”，必须和方法名称前面的“返回值类型”保持对应。</p>
+]]></content>
+      <categories>
+        <category>javaSE</category>
+      </categories>
+  </entry>
+  <entry>
     <title>StudyNotes-day5</title>
     <url>/2021/05/31/StudyNotes-day5/</url>
     <content><![CDATA[<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1><ol>
@@ -208,11 +228,6 @@
       <categories>
         <category>javaSE</category>
       </categories>
-  </entry>
-  <entry>
-    <title>StudyNotes-day6</title>
-    <url>/2021/06/30/StudyNotes-day6/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>StudyNotes_day2</title>
@@ -329,23 +344,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>一篇博文</title>
-    <url>/2021/02/11/%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/</url>
-    <content><![CDATA[<h2 id="建站（折腾）历程"><a href="#建站（折腾）历程" class="headerlink" title="建站（折腾）历程"></a>建站（折腾）历程</h2><p>​        建这个博客的起因是想记录和总结学到的知识点，其实自己并没有记录和总结的习惯，一个教训就是之前学习java没有及时总结到后期忘记前面的知识点复习起来很痛苦，这次我在边复习java和学习新的知识时边在自己的博客上做些总结。</p>
-<p>​         这个博客是用hexo博客框架搭建的，并部署到了自己的Github上，第一个使用的主题是diaspora，很好看的一个主题，修改后搭建了一个自己的ACG主题博客。博客的搭建和部署过程还是比较的顺利，但主题是真的折腾了好久，还是有部分配置不会弄。下一篇博客会总结下hexo+github方式搭建博客。</p>
-<p>​        </p>
-<p>​        </p>
-]]></content>
-      <categories>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>java</tag>
-        <tag>ACG</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>基本的Dos命令</title>
     <url>/2021/02/13/%E5%9F%BA%E6%9C%AC%E7%9A%84Dos%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="磁盘操作"><a href="#磁盘操作" class="headerlink" title="磁盘操作"></a>磁盘操作</h1><h2 id="盘符切换"><a href="#盘符切换" class="headerlink" title="盘符切换"></a>盘符切换</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">d:			#格式 &quot;需要切换的盘符：&quot;</span><br></pre></td></tr></table></figure>
@@ -369,5 +367,22 @@
       <categories>
         <category>Dos</category>
       </categories>
+  </entry>
+  <entry>
+    <title>一篇博文</title>
+    <url>/2021/02/11/%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/</url>
+    <content><![CDATA[<h2 id="建站（折腾）历程"><a href="#建站（折腾）历程" class="headerlink" title="建站（折腾）历程"></a>建站（折腾）历程</h2><p>​        建这个博客的起因是想记录和总结学到的知识点，其实自己并没有记录和总结的习惯，一个教训就是之前学习java没有及时总结到后期忘记前面的知识点复习起来很痛苦，这次我在边复习java和学习新的知识时边在自己的博客上做些总结。</p>
+<p>​         这个博客是用hexo博客框架搭建的，并部署到了自己的Github上，第一个使用的主题是diaspora，很好看的一个主题，修改后搭建了一个自己的ACG主题博客。博客的搭建和部署过程还是比较的顺利，但主题是真的折腾了好久，还是有部分配置不会弄。下一篇博客会总结下hexo+github方式搭建博客。</p>
+<p>​        </p>
+<p>​        </p>
+]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>java</tag>
+        <tag>ACG</tag>
+      </tags>
   </entry>
 </search>
