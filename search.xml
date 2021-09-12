@@ -1,62 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Learn-Markdown</title>
-    <url>/2021/02/11/Learn-Markdown/</url>
-    <content><![CDATA[<h1 id="Markdown学习"><a href="#Markdown学习" class="headerlink" title="Markdown学习"></a>Markdown学习</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#+空格+一级标题</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">##+空格+二级标题</span><br></pre></td></tr></table></figure>
-<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p><em>Hello,World</em>       </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">斜体：两边加*</span><br></pre></td></tr></table></figure>
-<p><strong>Hello,World</strong>    </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">粗体：两边加**</span><br></pre></td></tr></table></figure>
-<p><strong><em>Hello,World</em></strong>      </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">斜体加粗：两边加***</span><br></pre></td></tr></table></figure>
-<p><del>Hello,World</del>       </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">废弃：两边加~~</span><br></pre></td></tr></table></figure>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote>
-<p>test    </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; 引用 </span><br></pre></td></tr></table></figure>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---或***</span><br></pre></td></tr></table></figure>
-<hr>
-<hr>
-<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p><a href="www.baidu.com">百度</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[名称]+（地址）</span><br></pre></td></tr></table></figure>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="http://i1.hdslb.com/bfs/archive/27783c10b1cd234cee180a34a88903a2dabc24eb.jpg@380w_240h_100Q_1c.webp" alt="图片"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![名称]+（本地地址或虚拟地址）</span><br></pre></td></tr></table></figure>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ol>
-<li>A</li>
-<li>B</li>
-<li>C</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.+空格</span><br></pre></td></tr></table></figure>
-<ul>
-<li>A</li>
-<li>B</li>
-<li>C</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-+空格</span><br></pre></td></tr></table></figure>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
-<thead>
-<tr>
-<th>名字</th>
-<th>年龄</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>java</td>
-<td>26</td>
-</tr>
-</tbody></table>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">| 名字 | 年龄 |</span><br><span class="line">| ---- | ---- |</span><br><span class="line">| java | 26 |</span><br></pre></td></tr></table></figure>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">···+java : tab上面的 ·</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Markdowm</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Hexo搭建博客+部署Github</title>
     <url>/2021/02/12/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-%E9%83%A8%E7%BD%B2Github/</url>
     <content><![CDATA[<h1 id="Hexo搭建博客"><a href="#Hexo搭建博客" class="headerlink" title="Hexo搭建博客"></a>Hexo搭建博客</h1><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h3><p>去 <a href="https://git-scm.com/">Git官网</a> 下载 64-bit Git for Windows Setup</p>
@@ -133,99 +77,97 @@
       </categories>
   </entry>
   <entry>
-    <title>StudyNotes-day5</title>
-    <url>/2021/05/31/StudyNotes-day5/</url>
-    <content><![CDATA[<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1><ol>
-<li><p><strong>什么是流程控制</strong></p>
-<p>流程控制是指“程序代码执行的顺序”，即这些代码哪行先执行，哪行后执行，某行执行完了之后再执行哪行</p>
-</li>
-<li><p><strong>流程控制的结构</strong></p>
-<blockquote>
-<p>顺序: 从上到下执行代码<br>选择: 有选择的执行代码<br>循环: 循环执行某一段代码</p>
+    <title>Learn-Markdown</title>
+    <url>/2021/02/11/Learn-Markdown/</url>
+    <content><![CDATA[<h1 id="Markdown学习"><a href="#Markdown学习" class="headerlink" title="Markdown学习"></a>Markdown学习</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#+空格+一级标题</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">##+空格+二级标题</span><br></pre></td></tr></table></figure>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p><em>Hello,World</em>       </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">斜体：两边加*</span><br></pre></td></tr></table></figure>
+<p><strong>Hello,World</strong>    </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">粗体：两边加**</span><br></pre></td></tr></table></figure>
+<p><strong><em>Hello,World</em></strong>      </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">斜体加粗：两边加***</span><br></pre></td></tr></table></figure>
+<p><del>Hello,World</del>       </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">废弃：两边加~~</span><br></pre></td></tr></table></figure>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote>
+<p>test    </p>
 </blockquote>
-<p>由图灵提出，图灵认为世界上任何复杂的问题，总可以用上面三种流程控制进行编程实现.(这个可以证明的)</p>
-</li>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; 引用 </span><br></pre></td></tr></table></figure>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---或***</span><br></pre></td></tr></table></figure>
+<hr>
+<hr>
+<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p><a href="www.baidu.com">百度</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[名称]+（地址）</span><br></pre></td></tr></table></figure>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="http://i1.hdslb.com/bfs/archive/27783c10b1cd234cee180a34a88903a2dabc24eb.jpg@380w_240h_100Q_1c.webp" alt="图片"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![名称]+（本地地址或虚拟地址）</span><br></pre></td></tr></table></figure>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ol>
+<li>A</li>
+<li>B</li>
+<li>C</li>
 </ol>
-<h3 id="选择结构"><a href="#选择结构" class="headerlink" title="选择结构"></a>选择结构</h3><h5 id="判断语句：if语句"><a href="#判断语句：if语句" class="headerlink" title="判断语句：if语句"></a>判断语句：if语句</h5><ul>
-<li>if语句第一种格式</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if(关系表达式)&#123;</span><br><span class="line">	语句体;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.+空格</span><br></pre></td></tr></table></figure>
 <ul>
-<li>if语句第二种格式</li>
+<li>A</li>
+<li>B</li>
+<li>C</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if(关系表达式)&#123;</span><br><span class="line">	语句体1;</span><br><span class="line">&#125;else&#123;</span><br><span class="line">	语句体2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>if语句第三种格式</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if(判断条件1)&#123;</span><br><span class="line">	执行语句1;</span><br><span class="line">&#125;else if(判断条件2)&#123;</span><br><span class="line">	执行语句2;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">&#125;else if(判断条件n)&#123;</span><br><span class="line">	执行语句n;</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">	执行语句n+1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="选择语句：switch语句"><a href="#选择语句：switch语句" class="headerlink" title="选择语句：switch语句"></a>选择语句：switch语句</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">switch(表达式)&#123;</span><br><span class="line">	case 常量1：</span><br><span class="line">		语句体1;</span><br><span class="line">		break;</span><br><span class="line">	case 常量2：</span><br><span class="line">		语句体2;</span><br><span class="line">		break;</span><br><span class="line">	...</span><br><span class="line">	default:</span><br><span class="line">		语句体n+1;</span><br><span class="line">		break;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><ul>
-<li>for</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">for(初始化表达式①;布尔表达式②;步进表达式④)&#123;</span><br><span class="line">	循环体③</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>while</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">初始化表达式①</span><br><span class="line">while(布尔表达式②)&#123;</span><br><span class="line">	循环体③</span><br><span class="line">	步进表达式④</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>do-while</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">初始化表达式①</span><br><span class="line">	do&#123;</span><br><span class="line">	循环体③</span><br><span class="line">	步进表达式④</span><br><span class="line">&#125;while(布尔表达式②)</span><br></pre></td></tr></table></figure>
-<p>break</p>
-<p>continue</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-+空格</span><br></pre></td></tr></table></figure>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
+<thead>
+<tr>
+<th>名字</th>
+<th>年龄</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>java</td>
+<td>26</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">| 名字 | 年龄 |</span><br><span class="line">| ---- | ---- |</span><br><span class="line">| java | 26 |</span><br></pre></td></tr></table></figure>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">···+java : tab上面的 ·</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>javaSE</category>
+        <category>Markdowm</category>
       </categories>
   </entry>
   <entry>
-    <title>StudyNotes_day4</title>
-    <url>/2021/05/05/StudyNotes-day4/</url>
-    <content><![CDATA[<h1 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h1><p>与（并且）    &amp;&amp;    全都是true,才是true；否则就是false</p>
-<p>或（或者）    ||    至少一个是true,就是true；全都是false，才是false</p>
-<p>非（取反）    ！    本来是true,变成false；本来是false,变成true</p>
-<p>与”&amp;&amp;”，或”||”，具有短路效果；如果根据左边已经判断得到最终结果，那么右边的代码将不再执行，从而节省一定性能。</p>
-<p>注意事项：</p>
-<p>1.逻辑运算符只能用于boolean值</p>
-<p>2.与、或需要左右各自有一个boolean值，但是取反只要有唯一的一个boolean值即可</p>
-<p>3.与、或两种运算符，如果有多个条件，可以连续写</p>
-<p>两个条件：条件A    &amp;&amp;    条件B</p>
-<p>多个条件：条件A    &amp;&amp;    条件B    &amp;&amp;    条件C</p>
-<h1 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h1><p>一元运算符：只需要一个数据就可以进行操作的运算符。例如：取反！、自增++、自减–</p>
-<p>二元运算符：需要两个数据才可以进行操作的运算符。例如：加法+、赋值=</p>
-<p>三元运算符：需要三个数据才可以进行操作的运算符。</p>
+    <title>StudyNotes_day9</title>
+    <url>/2021/09/12/StudyNotes-day9/</url>
+    <content><![CDATA[<h1 id="面向对象三大特征之封装性"><a href="#面向对象三大特征之封装性" class="headerlink" title="面向对象三大特征之封装性"></a>面向对象三大特征之封装性</h1><p>面向对象三大特征：封装、继承、多态</p>
+<p>​    </p>
+<p>封装性在Java当中的体现：</p>
+<p>1.方法就是一种封装</p>
+<p>2.关键字private也是一种封装</p>
+<p>​    </p>
+<p>封装就是将一些细节信息隐藏起来，对于外界不可见</p>
+<h2 id="private关键字的作用及使用"><a href="#private关键字的作用及使用" class="headerlink" title="private关键字的作用及使用"></a>private关键字的作用及使用</h2><p>一旦使用了private进行修饰，那么本类当中仍然可以随意访问</p>
+<p>但是超出了本类范围之外就不能直接访问</p>
+<p>private关键字提高代码的安全性</p>
+<p>​    </p>
+<p>间接访问private成员变量，就是定义一对Getter/Setter方法</p>
+<p>必须叫setXxx或getXxx命名规则</p>
+<p>对于Getter，不能有参数，返回值类型和成员变量对应</p>
+<p>对于Setter，不能有返回值，参数类型和成员变量对应</p>
+<h2 id="this关键字的作用"><a href="#this关键字的作用" class="headerlink" title="this关键字的作用"></a>this关键字的作用</h2><p>当方法的局部变量和类的成员变量重名的时候，根据“就近原则”，优先使用局部变量</p>
+<p>如果需要访问本类当中的成员变量，需要使用格式：</p>
+<p>this.成员变量名</p>
+<p>​    </p>
+<p>“通过谁调用的方法，谁就是this”</p>
+<h2 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h2><p>构造方法是专门用来创建对象的方法，当通过关键字new来创建对象时，其实就是在调用构造方法</p>
 <p>格式：</p>
-<p>数据类型    变量名称    =    条件判断    ？    表达式A    ：    表达式B;</p>
-<p>流程：</p>
-<p>首先判断条件是否成立：</p>
-<p>​        如果成立为true，那么将表达式A的值赋值给左侧的变量；</p>
-<p>​        如果成立为false，那么将表达式B的值赋值给左侧的变量；</p>
-<p>二者选其一。</p>
-<p>注意事项：</p>
-<p>1.必须同时保证表达式A和表达式B都符合左侧数据类型的要求</p>
-<p>2.三元运算符的结果必须被使用</p>
-]]></content>
-      <categories>
-        <category>javaSE</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>StudyNotes-day6</title>
-    <url>/2021/09/08/StudyNotes-day6/</url>
-    <content><![CDATA[<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><h2 id="方法的定义格式"><a href="#方法的定义格式" class="headerlink" title="方法的定义格式"></a>方法的定义格式</h2><p>定义方法的完整格式：</p>
+<p>public 类名称（参数类型    参数名称）{</p>
+<p>​    方法体</p>
+<p>}</p>
+<h2 id="定义一个标准的类"><a href="#定义一个标准的类" class="headerlink" title="定义一个标准的类"></a>定义一个标准的类</h2><p>一个标准的类通常要拥有下面四个组成部分：</p>
 <p>​    </p>
-<p>修饰符     返回值类型      方法名称      (参数类型     参数名称）{<br>            方法体；<br>            return 返回值；<br>}</p>
+<p>1.所有的成员变量都要使用private关键字来修饰</p>
+<p>2.为每一个成员变量编写一对儿Getter/Setter方法</p>
+<p>3.编写一个无参数的构造方法</p>
+<p>4.编写一个全参数的构造方法</p>
 <p>​    </p>
-<p>修饰符：public    static</p>
-<p>返回值类型：也就是方法最终产生的数据是什么类型</p>
-<p>方法名称：方法的名字，规则和变量一样，小驼峰</p>
-<p>参数类型：进入方法的数据是什么类型</p>
-<p>参数名称：进入方法的数据对应的变量名称</p>
-<p>ps:参数如果有多个，使用逗号进行分隔</p>
-<p>方法体：方法需要做的事情，若干行代码</p>
-<p>return:两个作用，第一停止当前方法，第二讲后面的返回值还给调用处</p>
-<p>返回值：也就是方法执行后最终产生的数据结果</p>
-<p>注意：return后面的“返回值”，必须和方法名称前面的“返回值类型”保持对应。</p>
+<p>这样标准的类也叫做Java Bean</p>
 ]]></content>
       <categories>
         <category>javaSE</category>
@@ -322,6 +264,277 @@
       </categories>
   </entry>
   <entry>
+    <title>StudyNotes_day4</title>
+    <url>/2021/05/05/StudyNotes_day4/</url>
+    <content><![CDATA[<h1 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h1><p>与（并且）    &amp;&amp;    全都是true,才是true；否则就是false</p>
+<p>或（或者）    ||    至少一个是true,就是true；全都是false，才是false</p>
+<p>非（取反）    ！    本来是true,变成false；本来是false,变成true</p>
+<p>与”&amp;&amp;”，或”||”，具有短路效果；如果根据左边已经判断得到最终结果，那么右边的代码将不再执行，从而节省一定性能。</p>
+<p>注意事项：</p>
+<p>1.逻辑运算符只能用于boolean值</p>
+<p>2.与、或需要左右各自有一个boolean值，但是取反只要有唯一的一个boolean值即可</p>
+<p>3.与、或两种运算符，如果有多个条件，可以连续写</p>
+<p>两个条件：条件A    &amp;&amp;    条件B</p>
+<p>多个条件：条件A    &amp;&amp;    条件B    &amp;&amp;    条件C</p>
+<h1 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h1><p>一元运算符：只需要一个数据就可以进行操作的运算符。例如：取反！、自增++、自减–</p>
+<p>二元运算符：需要两个数据才可以进行操作的运算符。例如：加法+、赋值=</p>
+<p>三元运算符：需要三个数据才可以进行操作的运算符。</p>
+<p>格式：</p>
+<p>数据类型    变量名称    =    条件判断    ？    表达式A    ：    表达式B;</p>
+<p>流程：</p>
+<p>首先判断条件是否成立：</p>
+<p>​        如果成立为true，那么将表达式A的值赋值给左侧的变量；</p>
+<p>​        如果成立为false，那么将表达式B的值赋值给左侧的变量；</p>
+<p>二者选其一。</p>
+<p>注意事项：</p>
+<p>1.必须同时保证表达式A和表达式B都符合左侧数据类型的要求</p>
+<p>2.三元运算符的结果必须被使用</p>
+]]></content>
+      <categories>
+        <category>javaSE</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>StudyNotes-day5</title>
+    <url>/2021/05/31/StudyNotes_day5/</url>
+    <content><![CDATA[<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1><ol>
+<li><p><strong>什么是流程控制</strong></p>
+<p>流程控制是指“程序代码执行的顺序”，即这些代码哪行先执行，哪行后执行，某行执行完了之后再执行哪行</p>
+</li>
+<li><p><strong>流程控制的结构</strong></p>
+<blockquote>
+<p>顺序: 从上到下执行代码<br>选择: 有选择的执行代码<br>循环: 循环执行某一段代码</p>
+</blockquote>
+<p>由图灵提出，图灵认为世界上任何复杂的问题，总可以用上面三种流程控制进行编程实现.(这个可以证明的)</p>
+</li>
+</ol>
+<h3 id="选择结构"><a href="#选择结构" class="headerlink" title="选择结构"></a>选择结构</h3><h5 id="判断语句：if语句"><a href="#判断语句：if语句" class="headerlink" title="判断语句：if语句"></a>判断语句：if语句</h5><ul>
+<li>if语句第一种格式</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(关系表达式)&#123;</span><br><span class="line">	语句体;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>if语句第二种格式</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(关系表达式)&#123;</span><br><span class="line">	语句体<span class="number">1</span>;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	语句体<span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>if语句第三种格式</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(判断条件<span class="number">1</span>)&#123;</span><br><span class="line">	执行语句<span class="number">1</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(判断条件<span class="number">2</span>)&#123;</span><br><span class="line">	执行语句<span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(判断条件n)&#123;</span><br><span class="line">	执行语句n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line">	执行语句n+<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="选择语句：switch语句"><a href="#选择语句：switch语句" class="headerlink" title="选择语句：switch语句"></a>选择语句：switch语句</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span>(表达式)&#123;</span><br><span class="line">	<span class="keyword">case</span> 常量<span class="number">1</span>：</span><br><span class="line">		语句体<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> 常量<span class="number">2</span>：</span><br><span class="line">		语句体<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	...</span><br><span class="line">	<span class="keyword">default</span>:</span><br><span class="line">		语句体n+<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><ul>
+<li>for</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(初始化表达式①;布尔表达式②;步进表达式④)&#123;</span><br><span class="line">	循环体③</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>while</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">初始化表达式①</span><br><span class="line"><span class="keyword">while</span>(布尔表达式②)&#123;</span><br><span class="line">	循环体③</span><br><span class="line">	步进表达式④</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>do-while</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">初始化表达式①</span><br><span class="line">	<span class="keyword">do</span>&#123;</span><br><span class="line">	循环体③</span><br><span class="line">	步进表达式④</span><br><span class="line">&#125;<span class="keyword">while</span>(布尔表达式②)</span><br></pre></td></tr></table></figure>
+<p>break</p>
+<p>continue</p>
+]]></content>
+      <categories>
+        <category>javaSE</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>StudyNotes-day6</title>
+    <url>/2021/09/08/StudyNotes_day6/</url>
+    <content><![CDATA[<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><h2 id="方法的定义格式"><a href="#方法的定义格式" class="headerlink" title="方法的定义格式"></a>方法的定义格式</h2><p>定义方法的完整格式：</p>
+<p>​    </p>
+<p>修饰符     返回值类型      方法名称      (参数类型     参数名称）{<br>            方法体；<br>            return 返回值；<br>}</p>
+<p>​    </p>
+<p>修饰符：public    static</p>
+<p>返回值类型：也就是方法最终产生的数据是什么类型</p>
+<p>方法名称：方法的名字，规则和变量一样，小驼峰</p>
+<p>参数类型：进入方法的数据是什么类型</p>
+<p>参数名称：进入方法的数据对应的变量名称</p>
+<p>ps:参数如果有多个，使用逗号进行分隔</p>
+<p>方法体：方法需要做的事情，若干行代码</p>
+<p>return:两个作用，第一停止当前方法，第二讲后面的返回值还给调用处</p>
+<p>返回值：也就是方法执行后最终产生的数据结果</p>
+<p>注意：return后面的“返回值”，必须和方法名称前面的“返回值类型”保持对应。</p>
+<p>​    </p>
+<p>方法三要素：</p>
+<p>返回值类型</p>
+<p>方法名</p>
+<p>参数列表</p>
+<p>​    </p>
+<p>方法调用的三种格式：</p>
+<p>1.单独调用：方法名称(参数);</p>
+<p>2.打印调用：System.out.println(方法名称（参数）);</p>
+<p>3.赋值调用：数据类型    变量名称    =    方法名称(参数)；</p>
+<p>​        </p>
+<h1 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h1><p>方法重载（overload）:多个方法的名称一样，但是参数列表不一样</p>
+<p>好处：只需要记住唯一一个方法名，就可以实现类似的多个功能</p>
+<p>​    </p>
+<p>方法重载与下列因素相关：</p>
+<p>1.参数个数不同</p>
+<p>2.参数类型不同</p>
+<p>3.参数的多类型顺序不同</p>
+<p>​    </p>
+<p>方法重载与下列因素无关：</p>
+<p>1.与参数的名称无关</p>
+<p>2.与方法的返回值类型无关</p>
+]]></content>
+      <categories>
+        <category>javaSE</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>StudyNotes-day7</title>
+    <url>/2021/09/11/StudyNotes_day7/</url>
+    <content><![CDATA[<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>数组的概念：是一种容器，可以同时存放多个数据值</p>
+<p>​    </p>
+<p>数组的特点：</p>
+<p>1.数组是一种引用类型</p>
+<p>2.数组当中的多个数据，类型必须统一</p>
+<p>3.数组的长度在程序运行期间不可改变</p>
+<p>​    </p>
+<p>动态初始化（指定长度）：在创建数组的时候，直接指定数组当中的数据元素个数</p>
+<p>静态初始化（指定内容）：在创建数组的时候，不直接指定数据个数多少，而是直接将具体的数据内容进行指定</p>
+<p>​    </p>
+<h2 id="数组的定义格式-动态初始化"><a href="#数组的定义格式-动态初始化" class="headerlink" title="数组的定义格式_动态初始化"></a>数组的定义格式_动态初始化</h2><p>数据类型[]    数组名称    =    new    数据类型[数组长度];</p>
+<p>​    </p>
+<p>解析含义:</p>
+<p>左侧数据类型：也就是数组当中存放的数据，全都是统一的什么类型</p>
+<p>左侧的中括号：代表是一个数组</p>
+<p>左侧数组名称：给数组取一个名字</p>
+<p>右侧的new：代表创建数组的动作</p>
+<p>右侧数据类型：必须和左边的数据类型保持一致</p>
+<p>右侧中括号的长度：也就是数组中，到底可以保存多少个数据，是一个int数字</p>
+<p>​    </p>
+<h2 id="数组的定义格式-静态初始化"><a href="#数组的定义格式-静态初始化" class="headerlink" title="数组的定义格式_静态初始化"></a>数组的定义格式_静态初始化</h2><p>数据类型[]    数组名称    =    new    数据类型[]{ 元素1, 元素2, …};</p>
+<p>​    </p>
+<p>注意事项：</p>
+<p>虽然静态初始化没有直接告诉长度，但是根据大括号里面的具体内容，也可以算出长度</p>
+<p>​    </p>
+<h2 id="数组的定义格式-省略的静态初始化"><a href="#数组的定义格式-省略的静态初始化" class="headerlink" title="数组的定义格式_省略的静态初始化"></a>数组的定义格式_省略的静态初始化</h2><p>数据类型[]    数组名称    =    { 元素1, 元素2, …};</p>
+<p>​    </p>
+<p>注意事项：</p>
+<p>1.动态初始化和静态初始化标准格式可以拆分成两个步骤</p>
+<p>2.静态初始化一旦使用省略格式，就不能拆分成两个步骤</p>
+<p>​    </p>
+<h2 id="获取数组元素"><a href="#获取数组元素" class="headerlink" title="获取数组元素"></a>获取数组元素</h2><p>格式：数组名称[索引值]</p>
+<p>索引值从0开始，一直到“数组长度-1”为止</p>
+<h2 id="获取数组长度"><a href="#获取数组长度" class="headerlink" title="获取数组长度"></a>获取数组长度</h2><p>格式：数组名称.length</p>
+<p>​    </p>
+<h2 id="数组的遍历输出"><a href="#数组的遍历输出" class="headerlink" title="数组的遍历输出"></a>数组的遍历输出</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.length; i++)&#123;</span><br><span class="line">	System.out.println(array[i]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//array.fori</span></span><br></pre></td></tr></table></figure>
+<p>​    </p>
+<h2 id="数组作为方法参数-传递地址"><a href="#数组作为方法参数-传递地址" class="headerlink" title="数组作为方法参数_传递地址"></a>数组作为方法参数_传递地址</h2><p>数组可以作为方法的参数</p>
+<p>当调用方法时候，向方法的小括号进行传参，传递进去的其实是数组的地址值</p>
+<p>​    </p>
+<h2 id="数组作为方法返回值-返回地址"><a href="#数组作为方法返回值-返回地址" class="headerlink" title="数组作为方法返回值_返回地址"></a>数组作为方法返回值_返回地址</h2><p>任何数据类型都能作为方法的参数类型，或者返回值类型</p>
+<p>数组作为方法的参数，传递进去的其实是数组的地址值</p>
+<p>数组作为方法的返回值，返回的其实也是数组的地址值</p>
+]]></content>
+      <categories>
+        <category>javaSE</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>StudyNotes-day8</title>
+    <url>/2021/09/12/StudyNotes_day8/</url>
+    <content><![CDATA[<h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><h2 id="面向对象思想的概述"><a href="#面向对象思想的概述" class="headerlink" title="面向对象思想的概述"></a>面向对象思想的概述</h2><p>面向过程：当需要实现一个功能的时候，每一个具体的步骤都要亲力亲为，详细处理每一个细节</p>
+<p>面向对象：但需要实现一个功能的时候，不关心具体的步骤，而是找一个已经具有该功能的人，来帮我做事</p>
+<p>​    </p>
+<p>面向过程：强调步骤</p>
+<p>面向对象：强调对象</p>
+<p>​    </p>
+<p>特点：</p>
+<p>面向对象思想是一种更符合我们思考习惯的思想，他可以将复杂的事情简单化，并将我们从执行者变成了指挥者</p>
+<p>​    </p>
+<p>面向对象三大基本特征：封装、继承、多态</p>
+<h2 id="类和对象的关系"><a href="#类和对象的关系" class="headerlink" title="类和对象的关系"></a>类和对象的关系</h2><h3 id="什么是类"><a href="#什么是类" class="headerlink" title="什么是类"></a>什么是类</h3><ul>
+<li><p>类：是一组相关属性和行为的集合，可以看成是一类事物的模板，使用事物的属性特征和行为来描述该类事物</p>
+</li>
+<li><p>属性：就是该事物的状态信息</p>
+</li>
+<li><p>行为：就是该事物能够做什么</p>
+</li>
+</ul>
+<p>举例：小猫</p>
+<p>​        属性：名字、体重、年龄、颜色</p>
+<p>​        行为：走、跑、叫</p>
+<h3 id="什么是对象"><a href="#什么是对象" class="headerlink" title="什么是对象"></a>什么是对象</h3><ul>
+<li>对象：是一类事物的具体体现，对象是类的一个实例，必然具备该类事物的属性和行为</li>
+</ul>
+<p>现实中，一类事物的一个实例：一只小猫</p>
+<p>举例：一只小猫</p>
+<p>​        属性：tom、5kg、2years、yellow</p>
+<p>​        行为：溜墙根走、蹦跶的跑、喵喵叫</p>
+<h3 id="类和对象的关系-1"><a href="#类和对象的关系-1" class="headerlink" title="类和对象的关系"></a>类和对象的关系</h3><ul>
+<li><p>类是对一类事物的描述，是<strong>抽象的</strong></p>
+</li>
+<li><p>对象是一类事物的实例，是<strong>具体的</strong></p>
+</li>
+<li><p><strong>类是对象的模板，对象是类的实例</strong></p>
+</li>
+</ul>
+<h2 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h2><h3 id="事物与类的对比"><a href="#事物与类的对比" class="headerlink" title="事物与类的对比"></a>事物与类的对比</h3><p>现实世界的一类事物：</p>
+<p>​        <strong>属性</strong>：事物的状态信息</p>
+<p>​        <strong>行为</strong>：事物能够做什么</p>
+<p>java中class描述事物也是如此：</p>
+<p>​        <strong>成员变量</strong>：对应事物的<strong>属性</strong></p>
+<p>​        <strong>成员方法</strong>：对象事物的<strong>行为</strong></p>
+<h3 id="类的定义格式"><a href="#类的定义格式" class="headerlink" title="类的定义格式"></a>类的定义格式</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ClassName</span> </span>&#123;</span><br><span class="line">	<span class="comment">//成员变量</span></span><br><span class="line">	<span class="comment">//成员方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意事项：</p>
+<p>1.成员变量是直接定义在类当中的，在方法外边</p>
+<p>2.成员方法不要写static</p>
+<h2 id="对象的创建及其使用"><a href="#对象的创建及其使用" class="headerlink" title="对象的创建及其使用"></a>对象的创建及其使用</h2><p>通常情况下，一个类并不能直接使用，需要根据类创建一个对象，才能使用</p>
+<p>1.导包：也就是指出需要使用的类，在什么位置</p>
+<p>import 包名称.类名称</p>
+<p>import com.company.demo.Student;</p>
+<p>对于和当前类属于同一个包的情况，可以省略导包语句</p>
+<p>​    </p>
+<p>2.创建，格式：</p>
+<p>类名称    对象名称    =    new    类名称（）；</p>
+<p>Student    stu    =    new    Student();</p>
+<p>​    </p>
+<p>3.使用，分为两种情况</p>
+<p>使用成员变量：对象名.成员变量</p>
+<p>使用成员方法：对象名.成员方法（参数）</p>
+<p>（也就是，想用谁，就用对象名点儿谁。）</p>
+<h2 id="使用对象类型作为方法的参数"><a href="#使用对象类型作为方法的参数" class="headerlink" title="使用对象类型作为方法的参数"></a>使用对象类型作为方法的参数</h2><p>当一个对象作为参数，传递到方法当中时，实际上传递进去的是对象地址值</p>
+<h2 id="使用对象类型作为方法的返回值"><a href="#使用对象类型作为方法的返回值" class="headerlink" title="使用对象类型作为方法的返回值"></a>使用对象类型作为方法的返回值</h2><p>当使用一个对象类型作为方法的返回值时，返回值其实就是对象的地址值</p>
+<h2 id="成员变量和局部变量的区别"><a href="#成员变量和局部变量的区别" class="headerlink" title="成员变量和局部变量的区别"></a>成员变量和局部变量的区别</h2><p>1.定义的位置不一样</p>
+<p>局部变量：在方法的内部</p>
+<p>成员变量：在方法的外边，直接写在类当中</p>
+<p>​    </p>
+<p>2.作用范围不一样</p>
+<p>局部变量：只有方法当中才可以使用，出了方法就不能再用</p>
+<p>成员变量：整个类都可以通用</p>
+<p>​    </p>
+<p>3.默认值不一样</p>
+<p>局部变量：没有默认值，如果要想使用，必须手动进行赋值</p>
+<p>成员变量：如果没有赋值，会有默认值，规则和数组一样</p>
+<p>​    </p>
+<p>4.内存的位置不一样</p>
+<p>局部变量：位于栈内存</p>
+<p>成员变量：位于堆内存</p>
+<p>​    </p>
+<p>5.生命周期不一样</p>
+<p>局部变量：随着方法进栈而诞生，随着方法出栈而消失</p>
+<p>成员变量：随着对象创建而诞生，随着对象被垃圾回收而消失</p>
+]]></content>
+      <categories>
+        <category>javaSE</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Windows容易忘记但好用的快捷键</title>
+    <url>/2021/02/14/Windows%E5%AE%B9%E6%98%93%E5%BF%98%E8%AE%B0%E4%BD%86%E5%A5%BD%E7%94%A8%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    <content><![CDATA[<h1 id="Windows容易忘记但好用的快捷键"><a href="#Windows容易忘记但好用的快捷键" class="headerlink" title="Windows容易忘记但好用的快捷键"></a>Windows容易忘记但好用的快捷键</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Win+Shift+S				Windows自带截图</span><br><span class="line">Win+PrintScreen				截取当前屏幕到剪贴板，并保存截屏图片文件到“图片”文件夹中</span><br><span class="line">Win+D					显示桌面</span><br><span class="line">Win+E					打开文件管理器</span><br><span class="line">Win+I					打开Windows10设置</span><br><span class="line">Win+S					搜索</span><br><span class="line">Win+T					快速切换任务栏程序</span><br><span class="line">Win+Ctrl+D				创建一个新的虚拟桌面</span><br><span class="line">Win+Ctrl+左&#x2F;右	   	   		切换虚拟桌面</span><br><span class="line">Win+Ctrl+F4			  	关闭虚拟桌面</span><br><span class="line">Ctrl+Shift+Esc				开任务管理</span><br><span class="line">Ctrl+Shift+N				新建文件夹</span><br><span class="line">shift+del				彻底删除</span><br></pre></td></tr></table></figure>
+
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2021/02/10/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -333,16 +546,6 @@
 <p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Windows容易忘记但好用的快捷键</title>
-    <url>/2021/02/14/Windows%E5%AE%B9%E6%98%93%E5%BF%98%E8%AE%B0%E4%BD%86%E5%A5%BD%E7%94%A8%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
-    <content><![CDATA[<h1 id="Windows容易忘记但好用的快捷键"><a href="#Windows容易忘记但好用的快捷键" class="headerlink" title="Windows容易忘记但好用的快捷键"></a>Windows容易忘记但好用的快捷键</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Win+Shift+S				Windows自带截图</span><br><span class="line">Win+PrintScreen				截取当前屏幕到剪贴板，并保存截屏图片文件到“图片”文件夹中</span><br><span class="line">Win+D					显示桌面</span><br><span class="line">Win+E					打开文件管理器</span><br><span class="line">Win+I					打开Windows10设置</span><br><span class="line">Win+S					搜索</span><br><span class="line">Win+T					快速切换任务栏程序</span><br><span class="line">Win+Ctrl+D				创建一个新的虚拟桌面</span><br><span class="line">Win+Ctrl+左&#x2F;右	   	   		切换虚拟桌面</span><br><span class="line">Win+Ctrl+F4			  	关闭虚拟桌面</span><br><span class="line">Ctrl+Shift+Esc				开任务管理</span><br><span class="line">Ctrl+Shift+N				新建文件夹</span><br><span class="line">shift+del				彻底删除</span><br></pre></td></tr></table></figure>
-
-
-
-
 ]]></content>
   </entry>
   <entry>
