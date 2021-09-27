@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>StudyNotes_day12 - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="字符串字符串概述和特点java.lang.String类代表字符串
+API当中说：Java程序中的所有字符串字母值（如“abc”）都作为此类的实例实现
+其实就是说：程序当中所有的双引号字符串，都是S,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">StudyNotes_day12</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">StudyNotes_day12</h1>
+        <div class="stuff">
+            <span>九月 15, 2021</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><h2 id="字符串概述和特点"><a href="#字符串概述和特点" class="headerlink" title="字符串概述和特点"></a>字符串概述和特点</h2><p>java.lang.String类代表字符串</p>
+<p>API当中说：Java程序中的所有字符串字母值（如“abc”）都作为此类的实例实现</p>
+<p>其实就是说：程序当中所有的双引号字符串，都是String类的对象（就算没有new,也照样是）</p>
+<p>​    </p>
+<p>字符串的特点：</p>
+<p>1.字符串的内容永不可变【重点】</p>
+<p>2.正因为字符串不可改变，所以字符串是可以共享的</p>
+<p>3.字符串效果上相当于char[ ]字符数组，但是底层原理是byte[ ]字节数组</p>
+<h2 id="字符串的构造方法和直接创建"><a href="#字符串的构造方法和直接创建" class="headerlink" title="字符串的构造方法和直接创建"></a>字符串的构造方法和直接创建</h2><p>创建字符串的常见3+1种方式：</p>
+<p>三种构造方法：</p>
+<p>public String()：创建一个空白字符串，不含任何内容</p>
+<p>public String(char[ ] array)：根据字符数组的内容，来创建对应的字符串</p>
+<p>public String(byte[ ] array)：根据字节数组的内容，来创建对应的字符串</p>
+<p>一种直接创建：</p>
+<p>String str = “Hello”; //右边直接用双引号</p>
+<p>注意：直接写上双引号，就是字符串对象</p>
+<h2 id="字符串常量池"><a href="#字符串常量池" class="headerlink" title="字符串常量池"></a>字符串常量池</h2><p>1.对于引用类型来说，==进行的是地址值的比较</p>
+<p>2.双引号直接写的字符串在常量池当中，new的不在池当中</p>
+<h2 id="字符串的比较方法"><a href="#字符串的比较方法" class="headerlink" title="字符串的比较方法"></a>字符串的比较方法</h2><p>==是进行对象的地址值的比较，如果确实需要字符串的内容比较，可以使用两个方法：</p>
+<p>public boolean equals(Object obj)：参数可以是任何对象，只有参数是一个字符串且内容相同的才会给true，否则返回false</p>
+<p>注意事项：</p>
+<p><strong>1.任何对象都能用Object进行接收</strong></p>
+<p>2.equals方法具有对称性，也就是a.equals(b)和b.equals(a)等效</p>
+<p>3.如果比较双方一个常量一个变量，推荐把常量字符串写在前面</p>
+<p>推荐：“abc”.equals(str)    不推荐：str.equals(“abc”)当str=null时出现空指针异常</p>
+<p>​    </p>
+<p>public boolean equalsIgnoreCase(String str)：忽略大小写，进行内容比较</p>
+<h2 id="字符串的获取相关方法"><a href="#字符串的获取相关方法" class="headerlink" title="字符串的获取相关方法"></a>字符串的获取相关方法</h2><p>public int length()：获取字符串当中含有的字符个数，拿到字符串长度</p>
+<p>public String concat(String str)：将当前字符串和参数字符串拼接，返回值新的字符串</p>
+<p>public char charAt(int index)：获取指定索引位置的单个字符（索引从0开始）</p>
+<p>public int indexOf(String str)：查找参数字符串在本字符串当中首次出现的位置，如果没有返回-1值</p>
+<h2 id="字符串的截取方法"><a href="#字符串的截取方法" class="headerlink" title="字符串的截取方法"></a>字符串的截取方法</h2><p>public String substring(int index)：截取从参数位置一直到字符串末尾，返回新字符串</p>
+<p>public String substring(int begin, int end)：截取从begin开始，一直到end结束，中间的字符串</p>
+<p>备注：[begin, end )，包含左边，不包含右边</p>
+<h2 id="字符串的转换相关方法"><a href="#字符串的转换相关方法" class="headerlink" title="字符串的转换相关方法"></a>字符串的转换相关方法</h2><p>public char[ ] toCharArray()：将当前字符串拆分成为字符数组作为返回值</p>
+<p>public byte[ ] getBytes()：获得当前字符串底层的字节数组</p>
+<p>public String replace(CharSequence oldString, CharSequence newString)：将所有出现的老字符串替换成新的字符串，返回替换之后的结果新字符串</p>
+<h2 id="字符串的分割方法"><a href="#字符串的分割方法" class="headerlink" title="字符串的分割方法"></a>字符串的分割方法</h2><p>public String[ ] split(String regex)：按照参数的规则，将字符串切分成为若干部分</p>
+<p>注意事项：</p>
+<p>split方法的参数是一个正则表达式</p>
+<h1 id="静态static关键字"><a href="#静态static关键字" class="headerlink" title="静态static关键字"></a>静态static关键字</h1><p>概述：一旦用了static 关键字，那么这样的内容不再属于对象自己，而是属于类的，所以凡是本类的对象，都共享同一份</p>
+<p>无论是成员变量，还是成员方法，如果有了static，都推荐使用类名称进行调用</p>
+<p>静态变量：类名称. 静态变量</p>
+<p>静态方法：类名称. 静态方法（）</p>
+<p>注意事项：</p>
+<p>1.静态不能直接访问非静态</p>
+<p>原因：在内存当中时【先】有的静态内容，【后】有的非静态内容</p>
+<p>“先人不知道后人，但是后人知道先人”</p>
+<p>2.静态方法当中不能用this</p>
+<p>原因：this代表当前对象，通过谁调用的方法，谁就是当前对象</p>
+<p>静态代码块：</p>
+<p>格式：</p>
+<p>public class 类名称{</p>
+<p>​    static {</p>
+<p>​        //静态代码的内容</p>
+<p>​    }</p>
+<p>}</p>
+<p>特点：当第一次用到本类时，静态代码块执行唯一的一次</p>
+<p>静态内容总是优先于非静态，所以静态代码比构造方法先执行</p>
+<p>​    </p>
+<p>静态代码块的典型用途：</p>
+<p>用来一次性地对静态成员变量进行赋值</p>
+<h1 id="数组工具类Arrays"><a href="#数组工具类Arrays" class="headerlink" title="数组工具类Arrays"></a>数组工具类Arrays</h1><p>java.util.Arrays是一个与数组相关的工具类，里面提供了大量静态方法，用来实现数组常见的操作</p>
+<p>​    </p>
+<p>public static String toString(数组)：将参赛数组变成字符串，按照默认格式：[元素1， 元素2， 元素3 … ]</p>
+<p>public static void sort(数组)：按照默认升序（从小到大）对数组的元素进行排序</p>
+<p>备注：</p>
+<p>1.如果是数值，sort默认按照数值升序</p>
+<p>2.如果是字符串，sort默认按照字母升序</p>
+<p>3.如果是自定义的类型，那么这个自定义的类需要有Comparable或者Comparator接口的支持</p>
+<h1 id="数学工具类Math"><a href="#数学工具类Math" class="headerlink" title="数学工具类Math"></a>数学工具类Math</h1><p>java.util.Math类是数学相关的工具类，里面提供了大量的静态方法，完成与数学运算相关的操作</p>
+<p>public static double abs(double num)：获取绝对值</p>
+<p>public static double ceil(double num)：向上取整</p>
+<p>public static double floor(double num)：向下取整</p>
+<p>public static long round(double num)：四舍五入</p>
+<p>Math.PI代表近似的圆周率常量</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='https://link.hhtjim.com/163/454494.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">1.</span> <span class="toc-text">字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A6%82%E8%BF%B0%E5%92%8C%E7%89%B9%E7%82%B9"><span class="toc-number">1.1.</span> <span class="toc-text">字符串概述和特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E5%92%8C%E7%9B%B4%E6%8E%A5%E5%88%9B%E5%BB%BA"><span class="toc-number">1.2.</span> <span class="toc-text">字符串的构造方法和直接创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E9%87%8F%E6%B1%A0"><span class="toc-number">1.3.</span> <span class="toc-text">字符串常量池</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%AF%94%E8%BE%83%E6%96%B9%E6%B3%95"><span class="toc-number">1.4.</span> <span class="toc-text">字符串的比较方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E8%8E%B7%E5%8F%96%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95"><span class="toc-number">1.5.</span> <span class="toc-text">字符串的获取相关方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%88%AA%E5%8F%96%E6%96%B9%E6%B3%95"><span class="toc-number">1.6.</span> <span class="toc-text">字符串的截取方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E8%BD%AC%E6%8D%A2%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95"><span class="toc-number">1.7.</span> <span class="toc-text">字符串的转换相关方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%86%E5%89%B2%E6%96%B9%E6%B3%95"><span class="toc-number">1.8.</span> <span class="toc-text">字符串的分割方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%99%E6%80%81static%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">2.</span> <span class="toc-text">静态static关键字</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%B7%A5%E5%85%B7%E7%B1%BBArrays"><span class="toc-number">3.</span> <span class="toc-text">数组工具类Arrays</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E5%B7%A5%E5%85%B7%E7%B1%BBMath"><span class="toc-number">4.</span> <span class="toc-text">数学工具类Math</span></a></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+
+</html>
