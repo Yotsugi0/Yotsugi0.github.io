@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>StudyNotes_day21 - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="异常异常的概念在java等面向对象的编程语言中，异常本身是一个类，产生异常就是创建异常对象并抛出了一个异常对象
+异常的体系异常的根类是 java.lang.Throwable
+其下有个子类： jav,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">StudyNotes_day21</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">StudyNotes_day21</h1>
+        <div class="stuff">
+            <span>十月 10, 2021</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><h2 id="异常的概念"><a href="#异常的概念" class="headerlink" title="异常的概念"></a>异常的概念</h2><p>在java等面向对象的编程语言中，异常本身是一个类，产生异常就是创建异常对象并抛出了一个异常对象</p>
+<h2 id="异常的体系"><a href="#异常的体系" class="headerlink" title="异常的体系"></a>异常的体系</h2><p>异常的根类是 java.lang.Throwable</p>
+<p>其下有个子类： java.lang.Error与java.lang.Exception</p>
+<p>平常所说的异常指: Exception</p>
+<p>Throwable类中定义了一些查看的方法：</p>
+<ul>
+<li>public String getMessage( )：返回异常简短描述</li>
+<li>public String toString( )：返回异常详细消息字符串，直接打印异常变量，就是调用此方法</li>
+<li>public void printStackTrace( )：JVM打印异常对象，默认此方法，信息最全面</li>
+</ul>
+<h2 id="异常的分类"><a href="#异常的分类" class="headerlink" title="异常的分类"></a>异常的分类</h2><p>Throwable：可抛出的意思，是所有异常的根类</p>
+<p>错误：Error：内存溢出、系统崩溃</p>
+<p>异常：Exception：其他的Exception（必须处理）、RuntimeException（一般不处理）</p>
+<h1 id="异常的处理"><a href="#异常的处理" class="headerlink" title="异常的处理"></a>异常的处理</h1><p>java异常处理的五个关键字：try、catch、finally、throw、throws</p>
+<h2 id="抛出异常throw"><a href="#抛出异常throw" class="headerlink" title="抛出异常throw"></a>抛出异常throw</h2><p>作用：</p>
+<p>​    可以使用throw关键字在指定的方法中抛出指定的异常</p>
+<p>使用格式：</p>
+<p>​    throw new xxxException（“异常产生的原因”）；</p>
+<p>注意：</p>
+<p>​    1.throw关键字必须卸写在方法的内部</p>
+<p>​    2.throw关键字后边new的对象必须是Exception或Exception的子类对象</p>
+<p>​    3.throw关键字抛出指定的异常对象，要处理这个对象</p>
+<p>​            throw关键字后边创建的是RuntimeException或其子类对象，可以不处理，默认交给JVM处理（打印异常对象，中断程序）</p>
+<p>​            throw关键字后边创建的是编译异常，必须处理，要么throws,要么try…catch</p>
+<h2 id="Objects非空判断"><a href="#Objects非空判断" class="headerlink" title="Objects非空判断"></a>Objects非空判断</h2><p>public static <T> requireNonNull(T obj)：查看指定引用对象是不是null</p>
+<p>Objects.requireNonNull( T obj ,  “产生原因”);</p>
+<h2 id="声明异常throws"><a href="#声明异常throws" class="headerlink" title="声明异常throws"></a>声明异常throws</h2><p>格式：</p>
+<p>​    修饰符 返回值类型 方法名（参数列表） throws AAAException,BBBException…{</p>
+<p>​    throw new AAAException(“产生原因”);</p>
+<p>​    throw new BBBException(“产生原因”);</p>
+<p>​    …</p>
+<p>}</p>
+<p>注意：</p>
+<p>1.必须写在方法声明处</p>
+<p>2.声明的异常必须是Exception或其子类</p>
+<p>3.方法内部抛出了多个了多个异常，那么throws后面也声明多个异常</p>
+<p>如果抛出的多个异常有子父类关系，那么直接声明父类异常</p>
+<p>4.调用了一个声明抛出异常的方法，就必须处理，那么继续throws，那么try…catch自己处理异常</p>
+<h2 id="捕获异常try…catch…finally"><a href="#捕获异常try…catch…finally" class="headerlink" title="捕获异常try…catch…finally"></a>捕获异常try…catch…finally</h2><p>格式：</p>
+<p> try{</p>
+<p>​            可能产生异常的代码</p>
+<p> }catch( 定义一个异常的变量，用来接收try中抛出的异常对象 ) {</p>
+<p>​            异常处理的逻辑</p>
+<p>​            一般在工作中，会把异常的信息记录到一个日志中</p>
+<p>}</p>
+<p>…</p>
+<p>catch（异常类名 变量名）{</p>
+<p>}finally{</p>
+<p>​    一般用于资源释放（finally里不要写return）</p>
+<p>}</p>
+<h2 id="异常注意事项"><a href="#异常注意事项" class="headerlink" title="异常注意事项"></a>异常注意事项</h2><h3 id="多异常的捕获处理："><a href="#多异常的捕获处理：" class="headerlink" title="多异常的捕获处理："></a>多异常的捕获处理：</h3><p>如果一定要写多个catch语句块，那么顺序应该是子类异常放到前面，父类放再后面</p>
+<p>不严谨的就用Exception</p>
+<h3 id="子父类的异常："><a href="#子父类的异常：" class="headerlink" title="子父类的异常："></a>子父类的异常：</h3><p>父类抛出什么异常，子类就抛出什么异常</p>
+<h1 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h1><p>格式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">xxxException</span> <span class="keyword">extends</span> <span class="title">Expcetion</span>/<span class="title">RuntimeException</span></span>&#123;</span><br><span class="line">	<span class="comment">//添加一个无参构造</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">xxxException</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//添加一个带异常信息的构造方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">xxxException</span><span class="params">(String message)</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(message);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="练习代码："><a href="#练习代码：" class="headerlink" title="练习代码："></a>练习代码：</h3><p>模拟用户注册</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RegisterException</span> <span class="keyword">extends</span> <span class="title">Exception</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">RegisterException</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">RegisterException</span><span class="params">(String message)</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(message);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RegisterDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ArrayList&lt;String&gt; usernames = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        Collections.addAll(usernames,<span class="string">&quot;Tom&quot;</span>,<span class="string">&quot;Jack&quot;</span>,<span class="string">&quot;John&quot;</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;输入要注册的用户名：&quot;</span>);</span><br><span class="line">        String username = <span class="keyword">new</span> Scanner(System.in).next();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            String name = checkname(usernames, username);</span><br><span class="line">            usernames.add(name);</span><br><span class="line">            System.out.println(<span class="string">&quot;注册成功！&quot;</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (RegisterException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">checkname</span><span class="params">(ArrayList&lt;String&gt; usernames ,String name)</span> <span class="keyword">throws</span> RegisterException </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (String username : usernames) &#123;</span><br><span class="line">            <span class="keyword">if</span> (username.equals(name))&#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> RegisterException(<span class="string">&quot;用户名已存在&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='https://link.hhtjim.com/163/454494.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8"><span class="toc-number">1.</span> <span class="toc-text">异常</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">异常的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E7%9A%84%E4%BD%93%E7%B3%BB"><span class="toc-number">1.2.</span> <span class="toc-text">异常的体系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">1.3.</span> <span class="toc-text">异常的分类</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">异常的处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%9B%E5%87%BA%E5%BC%82%E5%B8%B8throw"><span class="toc-number">2.1.</span> <span class="toc-text">抛出异常throw</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Objects%E9%9D%9E%E7%A9%BA%E5%88%A4%E6%96%AD"><span class="toc-number">2.2.</span> <span class="toc-text">Objects非空判断</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A3%B0%E6%98%8E%E5%BC%82%E5%B8%B8throws"><span class="toc-number">2.3.</span> <span class="toc-text">声明异常throws</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8try%E2%80%A6catch%E2%80%A6finally"><span class="toc-number">2.4.</span> <span class="toc-text">捕获异常try…catch…finally</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">2.5.</span> <span class="toc-text">异常注意事项</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E5%BC%82%E5%B8%B8%E7%9A%84%E6%8D%95%E8%8E%B7%E5%A4%84%E7%90%86%EF%BC%9A"><span class="toc-number">2.5.1.</span> <span class="toc-text">多异常的捕获处理：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%90%E7%88%B6%E7%B1%BB%E7%9A%84%E5%BC%82%E5%B8%B8%EF%BC%9A"><span class="toc-number">2.5.2.</span> <span class="toc-text">子父类的异常：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8"><span class="toc-number">3.</span> <span class="toc-text">自定义异常</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0%E4%BB%A3%E7%A0%81%EF%BC%9A"><span class="toc-number">3.0.1.</span> <span class="toc-text">练习代码：</span></a></li></ol></li></ol></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+
+</html>

@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>StudyNotes_day19 - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="数据结构数据结构_栈先进后出
+数据结构_队列先进先出
+数据结构_数组查询快：数组的地址是连续的，我们通过数组的首地址，可以找到数组，通过数组的索引可以快速查找到某一个元素
+增删慢：数组的长度是固定的,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">StudyNotes_day19</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">StudyNotes_day19</h1>
+        <div class="stuff">
+            <span>十月 05, 2021</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h2 id="数据结构-栈"><a href="#数据结构-栈" class="headerlink" title="数据结构_栈"></a>数据结构_栈</h2><p>先进后出</p>
+<h2 id="数据结构-队列"><a href="#数据结构-队列" class="headerlink" title="数据结构_队列"></a>数据结构_队列</h2><p>先进先出</p>
+<h2 id="数据结构-数组"><a href="#数据结构-数组" class="headerlink" title="数据结构_数组"></a>数据结构_数组</h2><p>查询快：数组的地址是连续的，我们通过数组的首地址，可以找到数组，通过数组的索引可以快速查找到某一个元素</p>
+<p>增删慢：数组的长度是固定的，想要增加/删除一个元素，必须创建一个新数组，把源数组的数据复制过来</p>
+<h2 id="数据结构-链表"><a href="#数据结构-链表" class="headerlink" title="数据结构_链表"></a>数据结构_链表</h2><p>查询慢，增删快</p>
+<p>单向链表：链表中只有一条链子，不能保证元素的顺序（存取元素和取出元素的顺序有可能不一致）</p>
+<p>双向链表：链表中有两条链子，有一条链子是专门记录元素的顺序，是一个有序的集合</p>
+<h2 id="数据结构-红黑树"><a href="#数据结构-红黑树" class="headerlink" title="数据结构_红黑树"></a>数据结构_红黑树</h2><p>趋近于平衡树，查询的速度非常快，查询叶子节点最大次数和最小次数不能超过2倍</p>
+<h1 id="List集合-介绍-amp-常用方法"><a href="#List集合-介绍-amp-常用方法" class="headerlink" title="List集合_介绍&amp;常用方法"></a>List集合_介绍&amp;常用方法</h1><p>List集合中带有索引的方法（特有）</p>
+<ul>
+<li><p>public void add( int index, E element )：将指定的元素，添加到该集合中的指定位置上</p>
+</li>
+<li><p>public E get( int index )：返回集合中指定位置的元素</p>
+</li>
+<li><p>public E remove( int index )：移除列表中指定位置的元素，返回的是被移除的元素</p>
+</li>
+<li><p>public E set( int index, E element )：用指定元素替换集合中指定位置的元素，返回值的更新前的元素</p>
+</li>
+</ul>
+<p>注意：</p>
+<p>​        操作索引的时候，一定要防止索引越界异常</p>
+<p>List集合有3中遍历的方式：</p>
+<p>前两种是Collection集合中共有的两种遍历方式：Iterator迭代器遍历和foreach遍历</p>
+<p>第三种是通过E get( int index )和普通for循环组合进行遍历集合</p>
+<h2 id="ArrayList集合"><a href="#ArrayList集合" class="headerlink" title="ArrayList集合"></a>ArrayList集合</h2><p>当需求多为查询时用ArrayList</p>
+<p>此实现不是同步的，多线程，速度快</p>
+<h2 id="LinkedList集合"><a href="#LinkedList集合" class="headerlink" title="LinkedList集合"></a>LinkedList集合</h2><p>需求增删多时用LinkedList</p>
+<p>双向链表</p>
+<p>多线程</p>
+<p>有大量的操作首尾元素的方法</p>
+<ul>
+<li>public void addFirst( E e )：将指定的元素插入此列表的开头</li>
+<li>public void addLast( E e )：元素添加到末尾，相当于add方法</li>
+<li>public void push( E e )：将元素推入此列表所表示的堆栈，相当于addFirst方法</li>
+<li>public E getFirst( )：返回此列表的第一个元素</li>
+<li>public E getLast( )：返回最后一个元素</li>
+<li>public E removeFirst( )：移除并返回第一个元素</li>
+<li>public E removeLast( )：移除并返回最后一个元素</li>
+<li>public E pop( )：从此列表所表示的堆栈处弹出一个元素，相当于removeFirst方法</li>
+<li>public boolean isEmpty( )：如果列表不含元素，则返回true</li>
+</ul>
+<h2 id="Vector集合"><a href="#Vector集合" class="headerlink" title="Vector集合"></a>Vector集合</h2><p>Java 1.0版本出的，同步的，单线程，速度慢，1.2版本后被ArrayList集合取代</p>
+<p>Collection集合1.2版本才出现的</p>
+<h1 id="Set集合"><a href="#Set集合" class="headerlink" title="Set集合"></a>Set集合</h1><p>与Collection接口中的方法基本一致</p>
+<p>和Collection集合一样没有索引，不能用普通for循环遍历</p>
+<p>用Iterator迭代器和foreach遍历</p>
+<h3 id="Set集合存储元素不重复的原理"><a href="#Set集合存储元素不重复的原理" class="headerlink" title="Set集合存储元素不重复的原理"></a>Set集合存储元素不重复的原理</h3><p>Set集合在调用add方法的时候，add方法会调用元素的hashCode方法和equals方法，判断元素是否重复</p>
+<p>两个元素的哈希值相同，equals方法返回true，才认定元素相同</p>
+<h2 id="HashSet集合"><a href="#HashSet集合" class="headerlink" title="HashSet集合"></a>HashSet集合</h2><h3 id="哈希值"><a href="#哈希值" class="headerlink" title="哈希值"></a>哈希值</h3><p>是一个十进制的整数，由系统随机给出（就是对象的地址值，不过地址是十六进制的，是一个逻辑地址，是模拟出来得到的地址，不是数据实际的物理地址）</p>
+<p>在Object类有一个方法，可以获取对象的哈希值</p>
+<p>int hashCode( )：返回搞对象的哈希值</p>
+<h3 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h3><p>HashSet集合存储数据的结构（哈希表）</p>
+<p>哈希表：</p>
+<p>​    Jdk 1.8版本之前=数据+链表</p>
+<p>​    Jdk 1.8版本之后=数组+红黑树（提高查询速度）</p>
+<h3 id="HashSet集合存储自定义类型的元素"><a href="#HashSet集合存储自定义类型的元素" class="headerlink" title="HashSet集合存储自定义类型的元素"></a>HashSet集合存储自定义类型的元素</h3><p>在自定的类中添加重写的equals和hashCode方法实现存储元素唯一</p>
+<h2 id="LinkedHashSet集合"><a href="#LinkedHashSet集合" class="headerlink" title="LinkedHashSet集合"></a>LinkedHashSet集合</h2><p>集合特点：</p>
+<p>底层是一个哈希表（数组+链表）+链表；多了一条链表（记录元素的存储顺序，保证元素有序）</p>
+<h1 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h1><p>Jdk 1.5之后出现的新特性</p>
+<p>使用前提：</p>
+<p>当方法的参数列表数据类型已经确定，但是参数参数个数不确定，可以使用可变参数</p>
+<p>格式：</p>
+<p>修饰符 返回值类型 方法名（ 数据类型…变量名 ）{ </p>
+<p>​    //方法体</p>
+<p> }</p>
+<p>原理：</p>
+<p>可变参数底层是一个数组，根据传递参数个数不同，会创建不同长度的数组</p>
+<p>注意事项：</p>
+<p>1.一个方法的参数列表，只能有一个可变参数</p>
+<p>2.方法的参数有多个的时候，可变参数必须写在参数列表的末尾</p>
+<p>可变参数的特殊（终极）写法</p>
+<p>修饰符 返回值类型 方法名（ Object…obj ）{</p>
+<p>​    //方法体</p>
+<p>}</p>
+<h1 id="Collection集合工具类"><a href="#Collection集合工具类" class="headerlink" title="Collection集合工具类"></a>Collection集合工具类</h1><p>java.util.Collections是集合工具类，用来对集合进行操作，部分方法：</p>
+<ul>
+<li>public static <T> boolean addAll( Collection<T> c, T…elements )：往集合中添加一些元素</li>
+<li>public static void shuffle( List&lt;?&gt; list )：打乱顺序</li>
+<li>public static <T> void sort( List<T> list )：将集合中元素按照默认规则排序（升序）</li>
+<li>public static <T> void sort( List<T> list, Comparator&lt;? super T&gt; )：将集合中元素按照指定规则排序</li>
+</ul>
+<p>注意：</p>
+<p>sort( List<T> list )使用前提：</p>
+<p>自定义的类需要排序的时候，（被排序的集合里边存储的元素）必须实现Comparable接口，重写接口中的CompareTo定义排序的规则</p>
+<p>Comparable接口排序规则：</p>
+<p>​    自己（this）-参数：升序</p>
+<p>sort( List<T> list, Comparator&lt;? super T&gt; )：</p>
+<p>Comparator和Comparable的区别</p>
+<p>​    Comparable：自己（this）和别（参数）比较，自己需要实现Comparable接口</p>
+<p>​    Comparator：相当于找一个第三方的裁判，比较两个，使用时直接在参数中使用匿名内部类实现接口中的方法</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='https://link.hhtjim.com/163/454494.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text">数据结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88"><span class="toc-number">1.1.</span> <span class="toc-text">数据结构_栈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97"><span class="toc-number">1.2.</span> <span class="toc-text">数据结构_队列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%95%B0%E7%BB%84"><span class="toc-number">1.3.</span> <span class="toc-text">数据结构_数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8"><span class="toc-number">1.4.</span> <span class="toc-text">数据结构_链表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%A2%E9%BB%91%E6%A0%91"><span class="toc-number">1.5.</span> <span class="toc-text">数据结构_红黑树</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#List%E9%9B%86%E5%90%88-%E4%BB%8B%E7%BB%8D-amp-%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">List集合_介绍&amp;常用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ArrayList%E9%9B%86%E5%90%88"><span class="toc-number">2.1.</span> <span class="toc-text">ArrayList集合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LinkedList%E9%9B%86%E5%90%88"><span class="toc-number">2.2.</span> <span class="toc-text">LinkedList集合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vector%E9%9B%86%E5%90%88"><span class="toc-number">2.3.</span> <span class="toc-text">Vector集合</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Set%E9%9B%86%E5%90%88"><span class="toc-number">3.</span> <span class="toc-text">Set集合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Set%E9%9B%86%E5%90%88%E5%AD%98%E5%82%A8%E5%85%83%E7%B4%A0%E4%B8%8D%E9%87%8D%E5%A4%8D%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-number">3.0.1.</span> <span class="toc-text">Set集合存储元素不重复的原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HashSet%E9%9B%86%E5%90%88"><span class="toc-number">3.1.</span> <span class="toc-text">HashSet集合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%93%88%E5%B8%8C%E5%80%BC"><span class="toc-number">3.1.1.</span> <span class="toc-text">哈希值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%93%88%E5%B8%8C%E8%A1%A8"><span class="toc-number">3.1.2.</span> <span class="toc-text">哈希表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HashSet%E9%9B%86%E5%90%88%E5%AD%98%E5%82%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%85%83%E7%B4%A0"><span class="toc-number">3.1.3.</span> <span class="toc-text">HashSet集合存储自定义类型的元素</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LinkedHashSet%E9%9B%86%E5%90%88"><span class="toc-number">3.2.</span> <span class="toc-text">LinkedHashSet集合</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0"><span class="toc-number">4.</span> <span class="toc-text">可变参数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Collection%E9%9B%86%E5%90%88%E5%B7%A5%E5%85%B7%E7%B1%BB"><span class="toc-number">5.</span> <span class="toc-text">Collection集合工具类</span></a></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+
+</html>

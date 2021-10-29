@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>StudyNotes_day17 - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="Object类java.lang.Object
+Object类是所有的类的父类，一个类都会直接或者间接的继承自该类
+该类中提供了一些非常常用的方法
+Object类的toString方法toSring,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">StudyNotes_day17</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">StudyNotes_day17</h1>
+        <div class="stuff">
+            <span>十月 02, 2021</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h1 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h1><p>java.lang.Object</p>
+<p>Object类是所有的类的父类，一个类都会直接或者间接的继承自该类</p>
+<p>该类中提供了一些非常常用的方法</p>
+<h2 id="Object类的toString方法"><a href="#Object类的toString方法" class="headerlink" title="Object类的toString方法"></a>Object类的toString方法</h2><p>toSring方法返回地址值</p>
+<p>直接打印对象的名字，其实就是调用对象的toString方法</p>
+<p>作用：打印对象的信息</p>
+<p>重写前：打印的是包名类名@地址值</p>
+<p>重写后：打印的是对象中的属性值</p>
+<h2 id="Object类的equals方法"><a href="#Object类的equals方法" class="headerlink" title="Object类的equals方法"></a>Object类的equals方法</h2><p>Object类equals方法的源码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">this</span> == obj);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>参数：Object obj ：可以传递任意的对象</p>
+<p>方法体：</p>
+<p>​        == :比较运算符：返回的就是一个布尔值</p>
+<p>​        基本数据类型：比较的是值</p>
+<p>​        引用数据类型：比较的两个对象的地址值</p>
+<p>作用：比较两个对象的</p>
+<p>重写前：比较的是对象的地址值</p>
+<p>重写后：比较的是对象中的属性值</p>
+<h1 id="Objects工具类"><a href="#Objects工具类" class="headerlink" title="Objects工具类"></a>Objects工具类</h1><p>java.util.Objects</p>
+<h2 id="Objects类的equals方法"><a href="#Objects类的equals方法" class="headerlink" title="Objects类的equals方法"></a>Objects类的equals方法</h2><p>可以跟Null值比较，两个对象比较，防止空指针异常</p>
+<p>作用：比较两个对象是否相同，但是增加了一些完善的判断</p>
+<h1 id="日期时间类"><a href="#日期时间类" class="headerlink" title="日期时间类"></a>日期时间类</h1><h2 id="毫秒值的概念和作用"><a href="#毫秒值的概念和作用" class="headerlink" title="毫秒值的概念和作用"></a>毫秒值的概念和作用</h2><p>毫秒：千分之一秒，1000ms = 1s</p>
+<p>毫秒值的作用：可以对时间和日期进行计算</p>
+<p>2088-01-01到2099-01-03 中间一共有多少天</p>
+<p>可以把日期转换为毫秒进行计算，计算完，再把毫秒转换为日期</p>
+<p>​    </p>
+<p>把日期转换为毫秒：</p>
+<p>​        当前日期：2088-01-01</p>
+<p>​        时间原点（0毫秒）：1970年1月1日00：00：00</p>
+<p>​        计算当前日期到时间原之间一共经历了多少毫秒</p>
+<p>注意：</p>
+<p>​        中国属于东八区，会把时间增加8个小时</p>
+<p>System.currentTimeMillis();获取当前系统时间到1970年1月1日00：00：00经历了多少毫秒</p>
+<h2 id="Date类的构造方法和成员方法"><a href="#Date类的构造方法和成员方法" class="headerlink" title="Date类的构造方法和成员方法"></a>Date类的构造方法和成员方法</h2><p>java.util.Date</p>
+<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>无参构造：Date( )    获取当前系统的日期和时间</p>
+<p>有参构造：Date( Long date )    传递毫秒值，把毫秒转换为Data日期 </p>
+<h3 id="成员方法"><a href="#成员方法" class="headerlink" title="成员方法"></a>成员方法</h3><p>Long getTime( ):把日期转换为毫秒（相当于System.currentTimeMillis() ）</p>
+<p>返回自时间原点之间经过的毫秒</p>
+<h2 id="DateFormat类-amp-SimpleDateFormat类"><a href="#DateFormat类-amp-SimpleDateFormat类" class="headerlink" title="DateFormat类&amp;SimpleDateFormat类"></a>DateFormat类&amp;SimpleDateFormat类</h2><h3 id="DateFormat类"><a href="#DateFormat类" class="headerlink" title="DateFormat类"></a>DateFormat类</h3><p>父类Format:格式化类</p>
+<p>子类SimpleDateFormat</p>
+<p>java.text.DateFormat是日期/时间格式化子类的<strong>抽象类</strong>，我们可以通过这个类可以帮我们完成日期和文本之间的转换，也就是可以再Data对象与String对象之间进行来回转换</p>
+<p>格式化：按照指定格式，从Date对象转换为String对象（日期 -&gt; 文本）</p>
+<p>解析：按照指定格式，从String对象转换为Date对象（文本 -&gt; 日期）</p>
+<p>成员方法：</p>
+<p>​        String format(Date date)    按照指定的格式，把Date日期，格式化为符合模式的字符串</p>
+<p>​        Date parse(String source)    把符合模式的字符串，解析为Date日期</p>
+<p>注意：</p>
+<p>​    DateFormat类是一个抽象类，无法直接创建对象使用，可以创建子类SimpleDateFormat对象</p>
+<h3 id="SimpleDateFormat类"><a href="#SimpleDateFormat类" class="headerlink" title="SimpleDateFormat类"></a>SimpleDateFormat类</h3><p>构造方法：</p>
+<p>​    SimpleDateFormat( String pattern )    用给定的模式和默认语言环境的日期格式符合构造</p>
+<p>​    参数：</p>
+<p>​            String pattern:传递指定的模式</p>
+<p>​            写对应的模式，会把模式替换为对应的日期和时间</p>
+<p>​                “yyyy-MM-dd HH:mm:ss”</p>
+<p>​                “yyyy年MM月dd日 HH时mm分ss秒”</p>
+<p>使用步骤：</p>
+<ul>
+<li><p>格式化日期</p>
+<ol>
+<li>创建Date对象</li>
+<li>创建SimpleDateFormat对象，构造方法中传递指定的模式</li>
+<li>调用SimpleDateFormat对象中的format方法</li>
+</ol>
+</li>
+<li><p>日期解析</p>
+<ol>
+<li><p>创建SimpleDateFormat对象，构造方法中传递指定的模式</p>
+</li>
+<li><p>调用SimpleDateFormat对象中的parse方法</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="日期时间类代码"><a href="#日期时间类代码" class="headerlink" title="日期时间类代码"></a>日期时间类代码</h2><h3 id="Date类使用代码"><a href="#Date类使用代码" class="headerlink" title="Date类使用代码"></a>Date类使用代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoDate</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//获取系统当前的日期和时间</span></span><br><span class="line">        Date d1 = <span class="keyword">new</span> Date();</span><br><span class="line">        System.out.println(d1);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//传递毫秒参数计算对应的日期和时间</span></span><br><span class="line">        Date d2 = <span class="keyword">new</span> Date(<span class="number">0l</span>);</span><br><span class="line">        System.out.println(d2);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//传递系统当前时间到时间原点经过的毫秒计算当前的日期和时间</span></span><br><span class="line">        Date d3 = <span class="keyword">new</span> Date(System.currentTimeMillis());</span><br><span class="line">        System.out.println(d3);</span><br><span class="line"></span><br><span class="line">        Date d4 = <span class="keyword">new</span> Date();</span><br><span class="line">        <span class="comment">//getTime等效于System.currentTimeMillis();获取系统当前时间到时间原点之间的毫秒</span></span><br><span class="line">        <span class="keyword">long</span> time = d4.getTime();</span><br><span class="line">        <span class="keyword">long</span> timeMillis = System.currentTimeMillis();</span><br><span class="line">        System.out.println(time);</span><br><span class="line">        System.out.println(timeMillis);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="SimpleDateFormat"><a href="#SimpleDateFormat" class="headerlink" title="SimpleDateFormat"></a>SimpleDateFormat</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoSimpleDateFormat</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Date date = <span class="keyword">new</span> Date();</span><br><span class="line">        SimpleDateFormat sdf = <span class="keyword">new</span> SimpleDateFormat(<span class="string">&quot;yyyy年MM月dd日 HH时mm分ss秒&quot;</span>);</span><br><span class="line">        String text = sdf.format(date);</span><br><span class="line">        System.out.println(text);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.text.ParseException;</span><br><span class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoSimpleDateFormat</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ParseException </span>&#123;</span><br><span class="line">        <span class="comment">//格式化日期</span></span><br><span class="line">        Date date = <span class="keyword">new</span> Date();</span><br><span class="line">        SimpleDateFormat sdf = <span class="keyword">new</span> SimpleDateFormat(<span class="string">&quot;yyyy年MM月dd日 HH时mm分ss秒&quot;</span>);</span><br><span class="line">        String text = sdf.format(date);</span><br><span class="line">        System.out.println(text);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//日期解析</span></span><br><span class="line">        SimpleDateFormat simpleDateFormat = <span class="keyword">new</span> SimpleDateFormat(<span class="string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>);</span><br><span class="line">        Date parse = simpleDateFormat.parse(<span class="string">&quot;2021-10-04 17:08:00&quot;</span>);</span><br><span class="line">        System.out.println(parse);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Calendar类"><a href="#Calendar类" class="headerlink" title="Calendar类"></a>Calendar类</h2><p>java.util.Calendar是日历类，在Date后出现，替换了许多Date的方法，该类将所有可能用到的时间信息封装为静态成员变量，方便获取。日历类就是方便获取各个时间属性的</p>
+<p>Calendar为抽象类。调用其中的静态方法，返回子类对象</p>
+<p>static Calendar getInstance():使用默认时区和语言环境获得一个日历</p>
+<h3 id="Calendar类的常用成员方法"><a href="#Calendar类的常用成员方法" class="headerlink" title="Calendar类的常用成员方法"></a>Calendar类的常用成员方法</h3><p>public int get( int field )：返回给定日历字段的值</p>
+<p>public  void set( int field, int value )：将给定日历字段设置为给定值</p>
+<p>public abstract void add( int field, int amount )：根据日历的规则，为给定的日历字段添加或减去指定的时间量</p>
+<p>public Date getTime( )：把日历对象转成日期对象</p>
+<h3 id="日历Calendar类代码"><a href="#日历Calendar类代码" class="headerlink" title="日历Calendar类代码"></a>日历Calendar类代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Calendar;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoCalendar</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//用getInstance静态方法创建Calendar的子类对象</span></span><br><span class="line">        Calendar c = Calendar.getInstance();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//获取给定日历字段的值，西方月份是0-11月</span></span><br><span class="line">        <span class="keyword">int</span> i = c.get(Calendar.YEAR);</span><br><span class="line">        <span class="keyword">int</span> m = c.get(Calendar.MARCH) + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> d = c.get(Calendar.DATE);</span><br><span class="line">        <span class="keyword">int</span> h = c.get(Calendar.HOUR);</span><br><span class="line">        <span class="keyword">int</span> min = c.get(Calendar.MINUTE);</span><br><span class="line">        <span class="keyword">int</span> s = c.get(Calendar.SECOND);</span><br><span class="line">        System.out.println(i);</span><br><span class="line">        System.out.println(m);</span><br><span class="line">        System.out.println(d);</span><br><span class="line">        System.out.println(h);</span><br><span class="line">        System.out.println(min);</span><br><span class="line">        System.out.println(s);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//Date getTime()把日历对象转成日期对象</span></span><br><span class="line"><span class="comment">//        Date time = c.getTime();</span></span><br><span class="line"><span class="comment">//        System.out.println(time);</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="System类-amp-StringBuilder类"><a href="#System类-amp-StringBuilder类" class="headerlink" title="System类&amp;StringBuilder类"></a>System类&amp;StringBuilder类</h1><h2 id="System类"><a href="#System类" class="headerlink" title="System类"></a>System类</h2><p>java.lang.System类中提供了大量的静态方法，可以获取与系统相关的信息或系统级操作</p>
+<p>常用方法：</p>
+<p>public static long currentTimeMillis( )：获取当前系统毫秒值</p>
+<p>public static void arraycopy(Object src , int srcPos , Object dest , int dest Pos , int length )：将源数组的部分内容复制到目标数组中</p>
+<p>​        参数：src：源数组</p>
+<p>​                    srcPos:源数组起始位置</p>
+<p>​                    dest:目标数组</p>
+<p>​                    destPos:目标数组起始位置</p>
+<p>​                    length:要复制的数组元素数量</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoSystem01</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//查看程序运行效率</span></span><br><span class="line">        <span class="keyword">long</span> start = System.currentTimeMillis();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">999</span>; i++) &#123;</span><br><span class="line">            System.out.println(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">long</span> end = System.currentTimeMillis();</span><br><span class="line">        System.out.println(end - start);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoSystem02</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] src = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span>[] dest = &#123;<span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>&#125;;</span><br><span class="line">        System.out.println(Arrays.toString(dest));</span><br><span class="line">        System.arraycopy(src,<span class="number">0</span>,dest,<span class="number">0</span>,<span class="number">3</span>);</span><br><span class="line">        System.out.println(Arrays.toString(dest));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="StringBuilder类"><a href="#StringBuilder类" class="headerlink" title="StringBuilder类"></a>StringBuilder类</h2><p>java.lang.StringBuilder类：字符串缓冲区，可以提高字符串的效率</p>
+<h3 id="构造方法-1"><a href="#构造方法-1" class="headerlink" title="构造方法"></a>构造方法</h3><p>public StringBuilder( )：创建一个空的字符串缓冲区对象</p>
+<p>public StringBuilder( String str )：根据传入的内容创建一个字符串缓冲区对象</p>
+<h3 id="成员方法-1"><a href="#成员方法-1" class="headerlink" title="成员方法"></a>成员方法</h3><p>public StringBuilder append( … )：添加任意类型数据的字符串形式，并返回当前对象自身</p>
+<p>public String toString( )：将当前StringBuilder对象转换为String对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        StringBuilder bu1 = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        StringBuilder bu2 = <span class="keyword">new</span> StringBuilder(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line">        System.out.println(bu1);</span><br><span class="line">        System.out.println(bu2);</span><br><span class="line"></span><br><span class="line">        StringBuilder bu3 = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        bu3.append(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">        bu3.append(<span class="string">&quot;,&quot;</span>);</span><br><span class="line">        bu3.append(<span class="string">&quot;World&quot;</span>);</span><br><span class="line">        System.out.println(bu3);</span><br><span class="line"></span><br><span class="line">        StringBuilder bu4 = <span class="keyword">new</span> StringBuilder(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line">        <span class="comment">//链式编程</span></span><br><span class="line">        bu4.append(<span class="number">1</span>).append(<span class="number">3.14</span>).append(<span class="string">&#x27;A&#x27;</span>);</span><br><span class="line">        System.out.println(bu4);</span><br><span class="line"></span><br><span class="line">        StringBuilder bu5 = <span class="keyword">new</span> StringBuilder(<span class="string">&quot;Hello,World!&quot;</span>);</span><br><span class="line">        String s = bu5.toString();</span><br><span class="line">        System.out.println(s);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h1><h2 id="基本类型与字符串类型之间的相互转换"><a href="#基本类型与字符串类型之间的相互转换" class="headerlink" title="基本类型与字符串类型之间的相互转换"></a>基本类型与字符串类型之间的相互转换</h2><p>基本类型数据的值 + “ ” 最简单的方式（工作中常用） </p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='https://link.hhtjim.com/163/454494.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Object%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">Object类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Object%E7%B1%BB%E7%9A%84toString%E6%96%B9%E6%B3%95"><span class="toc-number">1.1.</span> <span class="toc-text">Object类的toString方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Object%E7%B1%BB%E7%9A%84equals%E6%96%B9%E6%B3%95"><span class="toc-number">1.2.</span> <span class="toc-text">Object类的equals方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Objects%E5%B7%A5%E5%85%B7%E7%B1%BB"><span class="toc-number">2.</span> <span class="toc-text">Objects工具类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Objects%E7%B1%BB%E7%9A%84equals%E6%96%B9%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text">Objects类的equals方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E7%B1%BB"><span class="toc-number">3.</span> <span class="toc-text">日期时间类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AF%AB%E7%A7%92%E5%80%BC%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E4%BD%9C%E7%94%A8"><span class="toc-number">3.1.</span> <span class="toc-text">毫秒值的概念和作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Date%E7%B1%BB%E7%9A%84%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E5%92%8C%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95"><span class="toc-number">3.2.</span> <span class="toc-text">Date类的构造方法和成员方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="toc-number">3.2.1.</span> <span class="toc-text">构造方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95"><span class="toc-number">3.2.2.</span> <span class="toc-text">成员方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DateFormat%E7%B1%BB-amp-SimpleDateFormat%E7%B1%BB"><span class="toc-number">3.3.</span> <span class="toc-text">DateFormat类&amp;SimpleDateFormat类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DateFormat%E7%B1%BB"><span class="toc-number">3.3.1.</span> <span class="toc-text">DateFormat类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SimpleDateFormat%E7%B1%BB"><span class="toc-number">3.3.2.</span> <span class="toc-text">SimpleDateFormat类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E7%B1%BB%E4%BB%A3%E7%A0%81"><span class="toc-number">3.4.</span> <span class="toc-text">日期时间类代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Date%E7%B1%BB%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%A0%81"><span class="toc-number">3.4.1.</span> <span class="toc-text">Date类使用代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SimpleDateFormat"><span class="toc-number">3.4.2.</span> <span class="toc-text">SimpleDateFormat</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Calendar%E7%B1%BB"><span class="toc-number">3.5.</span> <span class="toc-text">Calendar类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Calendar%E7%B1%BB%E7%9A%84%E5%B8%B8%E7%94%A8%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95"><span class="toc-number">3.5.1.</span> <span class="toc-text">Calendar类的常用成员方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E5%8E%86Calendar%E7%B1%BB%E4%BB%A3%E7%A0%81"><span class="toc-number">3.5.2.</span> <span class="toc-text">日历Calendar类代码</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#System%E7%B1%BB-amp-StringBuilder%E7%B1%BB"><span class="toc-number">4.</span> <span class="toc-text">System类&amp;StringBuilder类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#System%E7%B1%BB"><span class="toc-number">4.1.</span> <span class="toc-text">System类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#StringBuilder%E7%B1%BB"><span class="toc-number">4.2.</span> <span class="toc-text">StringBuilder类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95-1"><span class="toc-number">4.2.1.</span> <span class="toc-text">构造方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95-1"><span class="toc-number">4.2.2.</span> <span class="toc-text">成员方法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8C%85%E8%A3%85%E7%B1%BB"><span class="toc-number">5.</span> <span class="toc-text">包装类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B%E4%B9%8B%E9%97%B4%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2"><span class="toc-number">5.1.</span> <span class="toc-text">基本类型与字符串类型之间的相互转换</span></a></li></ol></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+
+</html>
