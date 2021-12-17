@@ -80,23 +80,27 @@
 <li><p>对象创建格式：</p>
 <p>类名称 对象名称 = new 类名称（）；</p>
 </li>
-<li><p>集合:</p>
-</li>
 </ul>
 <p>new一个对象就是new一个类的构造方法</p>
 <p>new     调用的是构造方法</p>
-<p>对象名.（点）    掉用的是成员方法</p>
+<p>对象名.（点）    调用的是成员方法</p>
 <p>非静态方法使用，要先创建此方法所在类的对象，通过对象名称去调用</p>
 <p>静态方法直接用类名去调用，不用创建对象</p>
+<p>静态方法只能访问静态的成员变量和静态的成员方法</p>
+<p>静态访问静态</p>
 <p>​    </p>
 <p>需要特殊方式获取实现类：</p>
 <ul>
 <li><p>Calendar为抽象类。调用其中的静态方法，返回子类对象</p>
 <p>static Calendar getInstance():使用默认时区和语言环境获得一个日历</p>
 </li>
-<li><p>Iterator            Collection接口中的    iterator( )    获取迭代器实现类对象</p>
+<li><p>Iterator            Collection接口中的    iterator( )    方法获取迭代器实现类对象</p>
 </li>
 </ul>
+<p>​    </p>
+<p>面向对象的思想：做一件事情，找一个能解决这个事情的对象，调用对象的方法，完成事情</p>
+<p>​    </p>
+<p>学习一个类步骤：先看有没有静态的成员，有就可以直接通过类调用，再看构造方法，就可通过构造方法创建对象，再看普遍的成员方法，通过对象名调用成员方法</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">

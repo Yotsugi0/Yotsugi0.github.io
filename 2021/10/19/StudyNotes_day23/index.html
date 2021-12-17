@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>StudyNotes_day23 - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="Lambda表达式Lambda表达式属于函数式编程
+Lambda表示式可以用来简化匿名内部类
+Lambda的使用前提1.使用Lambda必须具有接口，且要求接口中有且仅有一个抽象方法
+2.使用Lam,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">StudyNotes_day23</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">StudyNotes_day23</h1>
+        <div class="stuff">
+            <span>十月 19, 2021</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h1 id="Lambda表达式"><a href="#Lambda表达式" class="headerlink" title="Lambda表达式"></a>Lambda表达式</h1><p>Lambda表达式属于函数式编程</p>
+<p>Lambda表示式可以用来简化匿名内部类</p>
+<h2 id="Lambda的使用前提"><a href="#Lambda的使用前提" class="headerlink" title="Lambda的使用前提"></a>Lambda的使用前提</h2><p>1.使用Lambda必须具有接口，且要求<strong>接口中有且仅有一个抽象方法</strong></p>
+<p>2.使用Lambda必须具有<strong>上下文推断</strong></p>
+<p>也就是方法的参数或局部变量类型必须为Lambda对应的接口类型，才能使用Lambda作为接口的实例</p>
+<blockquote>
+<p>备注：有且仅有一个抽象方法的接口，成为“函数式接口”</p>
+</blockquote>
+<h2 id="Lambda标准格式"><a href="#Lambda标准格式" class="headerlink" title="Lambda标准格式"></a>Lambda标准格式</h2><p>格式：（ 参数列表 ）-&gt; { 一些重写的代码 }</p>
+<p>解释说明格式：</p>
+<ul>
+<li>（）：接口中抽象方法的参数列表，没有参数就空着，多个参数使用逗号分隔</li>
+<li> -&gt; ：传递的意思，把参数传递给方法体{ }</li>
+<li> { }：重写接口的抽象方法的方法体</li>
+</ul>
+<h2 id="Lambda省略格式"><a href="#Lambda省略格式" class="headerlink" title="Lambda省略格式"></a>Lambda省略格式</h2><p>可以省略的内容：</p>
+<p>1.（ 参数列表 ）：括号中参数列表的数据类型，可以省略不写</p>
+<p>2.（ 参数列表 ）：括号中的参数如果只有一个，那么类型和（）都可以省略</p>
+<p>3.{ 一些代码 } ：如果{ }中的代码只有一行，无论是否有返回值，可以省略且必须一起省略{ }，return，分号</p>
+<h2 id="Lambda练习代码"><a href="#Lambda练习代码" class="headerlink" title="Lambda练习代码"></a>Lambda练习代码</h2><h3 id="Lambda标准格式-1"><a href="#Lambda标准格式-1" class="headerlink" title="Lambda标准格式"></a>Lambda标准格式</h3><h4 id="Lambda表达式的无参无返回的练习"><a href="#Lambda表达式的无参无返回的练习" class="headerlink" title="Lambda表达式的无参无返回的练习"></a>Lambda表达式的无参无返回的练习</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Cook</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">makeFood</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoMain</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        invokeCooke(<span class="keyword">new</span> Cook() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">makeFood</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;厨子做饭&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;==================&quot;</span>);</span><br><span class="line"></span><br><span class="line">        invokeCooke(() -&gt; &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;厨子做饭&quot;</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">invokeCooke</span><span class="params">(Cook cook)</span> </span>&#123;</span><br><span class="line">        cook.makeFood();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Lambda表达式有参数有返回值的练习"><a href="#Lambda表达式有参数有返回值的练习" class="headerlink" title="Lambda表达式有参数有返回值的练习"></a>Lambda表达式有参数有返回值的练习</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 使用数组存储多个Person对象</span></span><br><span class="line"><span class="comment"> * 对数组中的Person对象使用Arrays的sort方法通过年龄进行升序排序</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoMain</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Person[] array = &#123;</span><br><span class="line">                <span class="keyword">new</span> Person(<span class="string">&quot;Tom&quot;</span>, <span class="number">19</span>),</span><br><span class="line">                <span class="keyword">new</span> Person(<span class="string">&quot;Jack&quot;</span>, <span class="number">20</span>),</span><br><span class="line">                <span class="keyword">new</span> Person(<span class="string">&quot;Lily&quot;</span>, <span class="number">18</span>)</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        Arrays.sort(array, <span class="keyword">new</span> Comparator&lt;Person&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Person o1, Person o2)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> o1.getAge() - o2.getAge();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (Person p : array) &#123;</span><br><span class="line">            System.out.println(p);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;====================&quot;</span>);</span><br><span class="line"></span><br><span class="line">        Arrays.sort(array, (Person o1, Person o2) -&gt; &#123;</span><br><span class="line">            <span class="keyword">return</span> o1.getAge() - o2.getAge();</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (Person p : array) &#123;</span><br><span class="line">            System.out.println(p);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>自定义接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Calculator</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">calc</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoMain</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        invokeCalc(<span class="number">100</span>, <span class="number">200</span>, <span class="keyword">new</span> Calculator() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">calc</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> a + b;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;==================&quot;</span>);</span><br><span class="line"></span><br><span class="line">        invokeCalc(<span class="number">100</span>, <span class="number">200</span>, (<span class="keyword">int</span> a, <span class="keyword">int</span> b) -&gt; &#123;</span><br><span class="line">            <span class="keyword">return</span> a + b;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">invokeCalc</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, Calculator c)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result = c.calc(a, b);</span><br><span class="line">        System.out.println(result);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Lambda省略格式练习"><a href="#Lambda省略格式练习" class="headerlink" title="Lambda省略格式练习"></a>Lambda省略格式练习</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoMain</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//使用匿名内部类的方式，实现多线程</span></span><br><span class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(Thread.currentThread().getName() + <span class="string">&quot;新线程创建了&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//使用Lambda标准格式，实现多线程</span></span><br><span class="line">        <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">            System.out.println(Thread.currentThread().getName() + <span class="string">&quot;新线程创建了&quot;</span>);</span><br><span class="line">        &#125;).start();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//Lambda省略格式，实现多线程</span></span><br><span class="line">        <span class="keyword">new</span> Thread(() -&gt; System.out.println(Thread.currentThread().getName() + <span class="string">&quot;新线程创建了&quot;</span>)).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="File类"><a href="#File类" class="headerlink" title="File类"></a>File类</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>java.io.File 类主要用于文件和目录的创建，查找和删除等操作</p>
+<p>重点：</p>
+<p>file：文件</p>
+<p>directory：文件夹（目录）</p>
+<p>path：路径</p>
+<p>路径：</p>
+<p>绝对路径：是一个完整的路径</p>
+<p>相对路径：是一个简化的路径</p>
+<p>抽象路径</p>
+<p>注意：</p>
+<p>1.路径不区分大小写</p>
+<p>2.Windows中路径的文件名称分隔符使用反斜杠\，反斜杠是转义字符，两个反斜杠代表一个普通的反斜杠</p>
+<h2 id="File类的静态成员变量"><a href="#File类的静态成员变量" class="headerlink" title="File类的静态成员变量"></a>File类的静态成员变量</h2><p>路径分隔符    Windows多个路径直接分隔用分号；    Linux用冒号：</p>
+<ul>
+<li><p>Static String pathSeparator        = “ “ + pathSeparatorChar</p>
+</li>
+<li><p>Static char pathSeparatorChar</p>
+</li>
+</ul>
+<p>文件名称分隔符    Windows：反斜杠\    Linux：正斜杠/</p>
+<ul>
+<li><p>Static String separator</p>
+</li>
+<li><p>Staitc char separatorChar</p>
+</li>
+</ul>
+<p>例如：</p>
+<p>C:\develop\a\a.txt        windows</p>
+<p>C:/develop/a/a.txt        linux</p>
+<p>“C:” + File.separator + “develop” + File.sparator + “a” + File.separator + “a.txt”</p>
+<h2 id="File类的构造方法"><a href="#File类的构造方法" class="headerlink" title="File类的构造方法"></a>File类的构造方法</h2><ul>
+<li>File（ String pathname ）：通过给定的路径名称字符串转换为抽象路径名来创建一个新File实例，不考虑路径真假情况</li>
+<li>File（ String parent, String child ）：根据parent路径名字字符串和child路径名字字符串创建一个新File实例</li>
+<li>File（ File parent, String child ）：根据parent抽象路径名和child路径名字符串创建一个新File实例</li>
+<li>File（ URI uri ）：通过将给定的fie：URI转换为一个抽象路径名来创建一个新的File实例</li>
+</ul>
+<h2 id="File类的常用方法"><a href="#File类的常用方法" class="headerlink" title="File类的常用方法"></a>File类的常用方法</h2><h3 id="获取功能的方法"><a href="#获取功能的方法" class="headerlink" title="获取功能的方法"></a>获取功能的方法</h3><ul>
+<li>public String getAbsolutePath( )：返回此File的绝对路径名字符串。  获取构造方法中的传递的路径，无论路径是绝对还是现对，返回的都是绝对路径</li>
+<li>public String getPath( )：将此File转换为路径名字符串。  File类里重写的toString方法就是调用的getPath方法</li>
+<li>public String getName( )：返回由此File 表示的文件或目录的名称。  获取的是构造方法传递路径的结尾部分（文件名，文件夹没名）</li>
+<li>public long length( )：返回由此File表示的文件的长度。  获取的是构造方法指导的文件大小，文件大小以字节为单位，文件夹没有大小概念，文件夹大小为0，如果构造方法中路径不存在返回0</li>
+</ul>
+<h3 id="判断功能的方法"><a href="#判断功能的方法" class="headerlink" title="判断功能的方法"></a>判断功能的方法</h3><ul>
+<li>public boolean exists( )：此File表示的文件或目录是否实际存在</li>
+<li>pubic boolean isDirectory( )：此File表示的是否为目录</li>
+<li>public boolean isFile( )：此File表示的是否为文件</li>
+</ul>
+<h3 id="创建删除功能的方法"><a href="#创建删除功能的方法" class="headerlink" title="创建删除功能的方法"></a>创建删除功能的方法</h3><ul>
+<li>public boolean mkdir( )：创建单级空文件夹</li>
+<li>public boolean mkdirs( )：既可以创建单级空文件夹，也可以创建多级文件夹</li>
+<li>public boolean createNewFile( )：创建一个新的空文件</li>
+<li>public boolean delete( )：删除有此File表示的文件或目录</li>
+</ul>
+<h2 id="File类遍历（文件夹）目录功能"><a href="#File类遍历（文件夹）目录功能" class="headerlink" title="File类遍历（文件夹）目录功能"></a>File类遍历（文件夹）目录功能</h2><ul>
+<li>public String[ ] list( )：返回一个String数组，表示该File目录中的所有子文件或目录</li>
+<li>public File[ ] listFiles( )：返回一个File数组，表示该File目录中的所有的子文件或目录</li>
+</ul>
+<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><p>递归：指当前方法内调用自己的这种现象</p>
+<p>递归的分类：</p>
+<p>1.直接递归：方法自身调用自己</p>
+<p>2.间接递归：A方法调用B方法，B方法调用A方法</p>
+<p>注意事项：</p>
+<p>1.递归一定要有条件限定</p>
+<p>2.在递归的次数不能过多</p>
+<p>3.构造方法禁止递归</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='https://link.hhtjim.com/163/454494.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">Lambda表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Lambda%E7%9A%84%E4%BD%BF%E7%94%A8%E5%89%8D%E6%8F%90"><span class="toc-number">1.1.</span> <span class="toc-text">Lambda的使用前提</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Lambda%E6%A0%87%E5%87%86%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text">Lambda标准格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Lambda%E7%9C%81%E7%95%A5%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.3.</span> <span class="toc-text">Lambda省略格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Lambda%E7%BB%83%E4%B9%A0%E4%BB%A3%E7%A0%81"><span class="toc-number">1.4.</span> <span class="toc-text">Lambda练习代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Lambda%E6%A0%87%E5%87%86%E6%A0%BC%E5%BC%8F-1"><span class="toc-number">1.4.1.</span> <span class="toc-text">Lambda标准格式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E6%97%A0%E5%8F%82%E6%97%A0%E8%BF%94%E5%9B%9E%E7%9A%84%E7%BB%83%E4%B9%A0"><span class="toc-number">1.4.1.1.</span> <span class="toc-text">Lambda表达式的无参无返回的练习</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%9C%89%E5%8F%82%E6%95%B0%E6%9C%89%E8%BF%94%E5%9B%9E%E5%80%BC%E7%9A%84%E7%BB%83%E4%B9%A0"><span class="toc-number">1.4.1.2.</span> <span class="toc-text">Lambda表达式有参数有返回值的练习</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lambda%E7%9C%81%E7%95%A5%E6%A0%BC%E5%BC%8F%E7%BB%83%E4%B9%A0"><span class="toc-number">1.4.2.</span> <span class="toc-text">Lambda省略格式练习</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#File%E7%B1%BB"><span class="toc-number">2.</span> <span class="toc-text">File类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">2.1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#File%E7%B1%BB%E7%9A%84%E9%9D%99%E6%80%81%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F"><span class="toc-number">2.2.</span> <span class="toc-text">File类的静态成员变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#File%E7%B1%BB%E7%9A%84%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="toc-number">2.3.</span> <span class="toc-text">File类的构造方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#File%E7%B1%BB%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">2.4.</span> <span class="toc-text">File类的常用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%8A%9F%E8%83%BD%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">2.4.1.</span> <span class="toc-text">获取功能的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E5%8A%9F%E8%83%BD%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">2.4.2.</span> <span class="toc-text">判断功能的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%88%A0%E9%99%A4%E5%8A%9F%E8%83%BD%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">2.4.3.</span> <span class="toc-text">创建删除功能的方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#File%E7%B1%BB%E9%81%8D%E5%8E%86%EF%BC%88%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%89%E7%9B%AE%E5%BD%95%E5%8A%9F%E8%83%BD"><span class="toc-number">2.5.</span> <span class="toc-text">File类遍历（文件夹）目录功能</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%92%E5%BD%92"><span class="toc-number">3.</span> <span class="toc-text">递归</span></a></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+
+</html>
