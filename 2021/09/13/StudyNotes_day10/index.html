@@ -102,6 +102,23 @@
 <p>​    </p>
 <p>学习一个类步骤：先看有没有静态的成员，有就可以直接通过类调用，再看构造方法，就可通过构造方法创建对象，再看普遍的成员方法，通过对象名调用成员方法</p>
 <p>集合就是一个容器，存取数据，最重要就是会存和取</p>
+<p>​    </p>
+<p>标准的类也叫做Java Bean</p>
+<p>1、所有属性为private</p>
+<p>2、提供默认构造方法</p>
+<p>3、提供getter和setter</p>
+<p>4、实现serializable接口</p>
+<p>几个标准类：</p>
+<ul>
+<li><p><strong>pojo(plain old java object)</strong>:普通的Java对象,没有业务逻辑</p>
+</li>
+<li><p><strong>po(persistence object)</strong>:用于持久化时(例如保存到数据库或者缓存);</p>
+</li>
+<li><p><strong>vo(value object)</strong>:用于前端展示使用(例如放置到JSP中解析或者给前端传递数据)</p>
+</li>
+<li><p><strong>dto(data transfer object)</strong>:用于接口互相调用返回,数据传输(例如很多接口调用返回值或消息队列内容)</p>
+</li>
+</ul>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
