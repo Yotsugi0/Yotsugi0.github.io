@@ -5,12 +5,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>StudyNotes_day31 - Hexo</title>
+    <title>StudyNotes_day31(Linux) - Hexo</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    
+    <meta name="description" content="Linux常见的执行Linux命令的格式是下面这样的
+
+命令名称   [命令参数]   [命令对象]
+
+命令参数为缩写字母用：—
+命令参数为完整的单词：— —
+一、常用命令
+pwd；当前位置的绝对路,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -38,7 +45,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://oshino0.gitee.io"></a>
     <div title="播放/暂停" class="iconfont icon-play"></div>
-    <h3 class="subtitle">StudyNotes_day31</h3>
+    <h3 class="subtitle">StudyNotes_day31(Linux)</h3>
     <div class="social">
         <div>
             <div class="share">
@@ -53,14 +60,124 @@
     <div class="section">
         <div class="article">
     <div class='main'>
-        <h1 class="title">StudyNotes_day31</h1>
+        <h1 class="title">StudyNotes_day31(Linux)</h1>
         <div class="stuff">
             <span>一月 18, 2022</span>
             
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Linux/" rel="tag">Linux</a></li></ul>
+
 
         </div>
         <div class="content markdown">
-            
+            <h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><p>常见的执行Linux命令的格式是下面这样的</p>
+<blockquote>
+<p><strong>命令名称   [命令参数]   [命令对象]</strong></p>
+</blockquote>
+<p>命令参数为缩写字母用：—</p>
+<p>命令参数为完整的单词：— —</p>
+<h2 id="一、常用命令"><a href="#一、常用命令" class="headerlink" title="一、常用命令"></a>一、常用命令</h2><ul>
+<li>pwd；当前位置的绝对路径</li>
+<li>uname -a：查看内核</li>
+<li>echo：打印，类似于java中的syso打印语句</li>
+<li>clear：清屏</li>
+<li>history：历史命令</li>
+</ul>
+<h2 id="二、基本命令"><a href="#二、基本命令" class="headerlink" title="二、基本命令"></a>二、基本命令</h2><h3 id="2-1-关机和重启"><a href="#2-1-关机和重启" class="headerlink" title="2.1 关机和重启"></a>2.1 关机和重启</h3><p>关机<br>    shutdown -h now        立刻关机<br>    shutdown -h 5        5分钟后关机<br>    poweroff            立刻关机<br>重启<br>    shutdown -r now        立刻重启<br>    shutdown -r 5        5分钟后重启<br>    reboot                立刻重启</p>
+<h3 id="2-2-帮助命令"><a href="#2-2-帮助命令" class="headerlink" title="2.2 帮助命令"></a>2.2 帮助命令</h3><p>–help命令<br>shutdown –help：<br>ifconfig  –help：查看网卡信息</p>
+<p>man命令（命令说明书）<br>  man shutdown<br>  注意：man shutdown打开命令说明书之后，使用按键q退出</p>
+<h2 id="三、目录操作命令"><a href="#三、目录操作命令" class="headerlink" title="三、目录操作命令"></a>三、目录操作命令</h2><h3 id="3-1-目录切换-cd"><a href="#3-1-目录切换-cd" class="headerlink" title="3.1 目录切换 cd"></a>3.1 目录切换 cd</h3><p>命令：cd 目录</p>
+<p>cd /        切换到根目录<br>cd /usr        切换到根目录下的usr目录<br>cd ../        切换到上一级目录 或者  cd ..<br>cd ~        切换到home目录<br>cd -        切换到上次访问的目录</p>
+<h3 id="3-2-目录查看-ls-al"><a href="#3-2-目录查看-ls-al" class="headerlink" title="3.2 目录查看 ls [-al]"></a>3.2 目录查看 ls [-al]</h3><p>命令：ls [-al]</p>
+<p>ls                查看当前目录下的所有目录和文件<br>ls -a            查看当前目录下的所有目录和文件（包括隐藏的文件）<br>ls -l 或 ll       列表查看当前目录下的所有目录和文件（列表查看，显示更多信息）<br>ls /dir            查看指定目录下的所有目录和文件   如：ls /usr</p>
+<h3 id="3-3-目录操作【增，删，改，查】"><a href="#3-3-目录操作【增，删，改，查】" class="headerlink" title="3.3 目录操作【增，删，改，查】"></a>3.3 目录操作【增，删，改，查】</h3><h4 id="3-3-1-创建目录【增】-mkdir"><a href="#3-3-1-创建目录【增】-mkdir" class="headerlink" title="3.3.1 创建目录【增】 mkdir"></a>3.3.1 创建目录【增】 mkdir</h4><p>命令：mkdir 目录</p>
+<p>mkdir    aaa            在当前目录下创建一个名为aaa的目录<br>mkdir    /usr/aaa    在指定目录下创建一个名为aaa的目录</p>
+<p>mkdir -p c/cc/ccc    在当前目录下创建一个c目录，在c目录里创建一个cc目录，在cc目录里创建一个ccc目录</p>
+<h4 id="3-3-2-删除目录或文件【删】rm"><a href="#3-3-2-删除目录或文件【删】rm" class="headerlink" title="3.3.2 删除目录或文件【删】rm"></a>3.3.2 删除目录或文件【删】rm</h4><p>命令：rm [-rf] 目录</p>
+<p>删除文件：<br>rm 文件        删除当前目录下的文件<br>rm -f 文件    删除当前目录的的文件（不询问）</p>
+<p>删除目录：<br>rm -r aaa    递归删除当前目录下的aaa目录<br>rm -rf aaa    递归删除当前目录下的aaa目录（不询问）</p>
+<p>全部删除：<br>rm -rf *    将当前目录下的所有目录和文件全部删除<br>rm -rf /*    【自杀命令！慎用！慎用！慎用！】将根目录下的所有文件全部删除</p>
+<p>注意：rm不仅可以删除目录，也可以删除其他文件或压缩包，为了方便大家的记忆，无论删除任何目录或文件，都直接使用 rm -rf 目录/文件/压缩包</p>
+<h4 id="3-3-3-目录修改【改】mv-和-cp"><a href="#3-3-3-目录修改【改】mv-和-cp" class="headerlink" title="3.3.3 目录修改【改】mv 和 cp"></a>3.3.3 目录修改【改】mv 和 cp</h4><p>一、重命名目录<br>    命令：mv 当前目录  新目录<br>    例如：mv aaa bbb    将目录aaa改为bbb<br>    注意：mv的语法不仅可以对目录进行重命名而且也可以对各种文件，压缩包等进行    重命名的操作</p>
+<p>二、剪切目录<br>    命令：mv 目录名称 目录的新位置<br>    示例：将/usr/tmp目录下的aaa目录剪切到 /usr目录下面     mv /usr/tmp/aaa /usr<br>    注意：mv语法不仅可以对目录进行剪切操作，对文件和压缩包等都可执行剪切操作</p>
+<p>三、拷贝目录<br>    命令：cp -r 目录名称 目录拷贝的目标位置   -r代表递归<br>    示例：将/usr/tmp目录下的aaa目录复制到 /usr目录下面     cp /usr/tmp/aaa  /usr<br>    注意：cp命令不仅可以拷贝目录还可以拷贝文件，压缩包等，拷贝文件和压缩包时不    用写-r递归</p>
+<h4 id="3-3-4-搜索目录【查】find"><a href="#3-3-4-搜索目录【查】find" class="headerlink" title="3.3.4 搜索目录【查】find"></a>3.3.4 搜索目录【查】find</h4><p>命令：find 目录 参数 文件名称<br>示例：find /usr/tmp -name ‘a*’    查找/usr/tmp目录下的所有以a开头的目录或文件</p>
+<h2 id="四、文件操作命令"><a href="#四、文件操作命令" class="headerlink" title="四、文件操作命令"></a>四、文件操作命令</h2><h3 id="4-1-文件操作【增，删，改，查】"><a href="#4-1-文件操作【增，删，改，查】" class="headerlink" title="4.1 文件操作【增，删，改，查】"></a>4.1 文件操作【增，删，改，查】</h3><h4 id="4-1-1-新建文件【增】touch"><a href="#4-1-1-新建文件【增】touch" class="headerlink" title="4.1.1 新建文件【增】touch"></a>4.1.1 新建文件【增】touch</h4><p>命令：touch 文件名<br>示例：在当前目录创建一个名为aa.txt的文件        touch  aa.txt</p>
+<h4 id="4-1-2-删除文件-【删】-rm"><a href="#4-1-2-删除文件-【删】-rm" class="headerlink" title="4.1.2 删除文件 【删】 rm"></a>4.1.2 删除文件 【删】 rm</h4><p>命令：rm -rf 文件名</p>
+<h4 id="4-1-3-修改文件【改】-vi或vim"><a href="#4-1-3-修改文件【改】-vi或vim" class="headerlink" title="4.1.3 修改文件【改】 vi或vim"></a>4.1.3 修改文件【改】 vi或vim</h4><p>【vi编辑器的3种模式】<br>    基本上vi可以分为三种状态，分别是命令模式（command mode）、插入模式（Insert mode）和底行模式（last line mode），各模式的功能区分如下：</p>
+<ol>
+<li>命令行模式command mode）<br>   控制屏幕光标的移动，字符、字或行的删除，查找，移动复制某区段及进入Insert mode下，或者到 last line mode。<br>   命令行模式下的常用命令：<br>   【1】控制光标移动：↑，↓，j<br>   【2】删除当前行：dd<br>   【3】查找：/字符<br>   【4】进入编辑模式：i o a<br>   【5】进入底行模式：:</li>
+<li>编辑模式（Insert mode）<br>   只有在Insert mode下，才可以做文字输入，按「ESC」键可回到命令行模式。<br>   编辑模式下常用命令：<br>   【1】ESC 退出编辑模式到命令行模式；</li>
+<li>底行模式（last line mode）<br>  将文件保存或退出vi，也可以设置编辑环境，如寻找字符串、列出行号……等。<br>  底行模式下常用命令：<br>  【1】退出编辑：   :q<br>  【2】强制退出：   :q!<br>  【3】保存并退出：  :wq</li>
+</ol>
+<p>打开文件</p>
+<p>命令：vi 文件名<br>示例：打开当前目录下的aa.txt文件     vi aa.txt 或者 vim aa.txt</p>
+<p>注意：使用vi编辑器打开文件后，并不能编辑，因为此时处于命令模式，点击键盘i/a/o进入编辑模式。</p>
+<p>编辑文件</p>
+<p>使用vi编辑器打开文件后点击按键：i ，a或者o即可进入编辑模式。</p>
+<p>i:在光标所在字符前开始插入<br>a:在光标所在字符后开始插入<br>o:在光标所在行的下面另起一新行插入</p>
+<p>保存或者取消编辑</p>
+<p>保存文件：</p>
+<p>第一步：ESC  进入命令行模式<br>第二步：:     进入底行模式<br>第三步：wq     保存并退出编辑</p>
+<p>取消编辑：</p>
+<p>第一步：ESC  进入命令行模式<br>第二步：:     进入底行模式<br>第三步：q!     撤销本次修改并退出编辑</p>
+<h4 id="4-1-4-文件的查看【查】"><a href="#4-1-4-文件的查看【查】" class="headerlink" title="4.1.4 文件的查看【查】"></a>4.1.4 文件的查看【查】</h4><p>文件的查看命令：cat/more/less/tail</p>
+<p>cat：看最后一屏</p>
+<p>示例：使用cat查看/etc/sudo.conf文件，只能显示最后一屏内容<br>cat sudo.conf</p>
+<p>more：百分比显示</p>
+<p>示例：使用more查看/etc/sudo.conf文件，可以显示百分比，回车可以向下一行，空格可以向下一页，q可以退出查看<br>more sudo.conf</p>
+<p>less：翻页查看</p>
+<p>示例：使用less查看/etc/sudo.conf文件，可以使用键盘上的PgUp和PgDn向上    和向下翻页，q结束查看<br>less sudo.conf</p>
+<p>tail：指定行数或者动态查看</p>
+<p>示例：使用tail -10 查看/etc/sudo.conf文件的后10行，Ctrl+C结束<br>tail -10 sudo.conf</p>
+<h3 id="4-2-权限修改"><a href="#4-2-权限修改" class="headerlink" title="4.2 权限修改"></a>4.2 权限修改</h3><p>rwx：r代表可读，w代表可写，x代表该文件是一个可执行文件，如果rwx任意位置变为-则代表不可读或不可写或不可执行文件。</p>
+<p>示例：给aaa.txt文件权限改为可执行文件权限，aaa.txt文件的权限是- rw- — —</p>
+<p>第一位：-就代表是文件，d代表是文件夹<br>第一段（3位）：代表拥有者的权限<br>第二段（3位）：代表拥有者所在的组，组员的权限<br>第三段（最后3位）：代表的是其他用户的权限四、压缩文件操作</p>
+<h2 id="五、压缩文件操作"><a href="#五、压缩文件操作" class="headerlink" title="五、压缩文件操作"></a>五、压缩文件操作</h2><h3 id="5-1-打包和压缩"><a href="#5-1-打包和压缩" class="headerlink" title="5.1 打包和压缩"></a>5.1 打包和压缩</h3><p>linux中的打包文件：aa.tar<br>linux中的压缩文件：bb.gz<br>linux中打包并压缩的文件：.tar.gz</p>
+<p>Linux中的打包文件一般是以.tar结尾的，压缩的命令一般是以.gz结尾的。<br>而一般情况下打包和压缩是一起进行的，打包并压缩后的文件的后缀名一般.tar.gz。</p>
+<p>命令：tar -zcvf 打包压缩后的文件名 要打包的文件<br>其中：z：调用gzip压缩命令进行压缩<br>  c：打包文件<br>  v：显示运行过程<br>  f：指定文件名</p>
+<p>示例：打包并压缩/usr/tmp 下的所有文件 压缩后的压缩包指定名称为xxx.tar<br>tar -zcvf ab.tar aa.txt bb.txt<br>或：tar -zcvf ab.tar  *</p>
+<h3 id="5-2-解压"><a href="#5-2-解压" class="headerlink" title="5.2 解压"></a>5.2 解压</h3><p>命令：tar [-zxvf] 压缩文件<br>其中：x：代表解压</p>
+<h2 id="六、查找命令"><a href="#六、查找命令" class="headerlink" title="六、查找命令"></a>六、查找命令</h2><h3 id="6-1-grep"><a href="#6-1-grep" class="headerlink" title="6.1 grep"></a>6.1 grep</h3><p>grep命令是一种强大的文本搜索工具</p>
+<p>使用实例：</p>
+<p>grep root  /etc/passwd  在文件中查找关键字root</p>
+<p>grep root  /etc/passwd  –-color     高亮显示</p>
+<p>grep root  /etc/passwd  –A5 –B5     高亮显示，A后5行，B前5行</p>
+<p>grep -n root /etc/passwd  查找并显示行数</p>
+<p>grep -v root /etc/passwd  取反，查出不含root的数据</p>
+<h3 id="6-2-find"><a href="#6-2-find" class="headerlink" title="6.2 find"></a>6.2 find</h3><p>find命令在目录结构中搜索文件，并对搜索结果执行指定的操作。 </p>
+<p>find 默认搜索当前目录及其子目录，并且不过滤任何结果（也就是返回所有文件），将它们全都显示在屏幕上。</p>
+<p>使用实例：</p>
+<p>find . -name “*.log” -ls  在当前目录查找以.log结尾的文件，并显示详细信息。<br>find . -size +100M  查找当前目录大于100M的文件</p>
+<h3 id="6-3-whereis"><a href="#6-3-whereis" class="headerlink" title="6.3 whereis"></a>6.3 whereis</h3><p>whereis命令是定位可执行文件、源代码文件、帮助文件在文件系统中的位置。这些文件的属性应属于原始代码，二进制文件，或是帮助文件。</p>
+<p>使用实例：</p>
+<p>whereis ls    将和ls文件相关的文件都查找出来</p>
+<h3 id="6-4-which"><a href="#6-4-which" class="headerlink" title="6.4 which"></a>6.4 which</h3><p>which命令的作用是在PATH变量指定的路径中，搜索某个系统命令的位置，并且返回第一个搜索结果。查看安装位置</p>
+<p>使用实例：</p>
+<p>which pwd  查找pwd命令所在路径 </p>
+<p>which java  查找path中java的路径</p>
+<h2 id="七、其他命令"><a href="#七、其他命令" class="headerlink" title="七、其他命令"></a>七、其他命令</h2><ul>
+<li><p>shh：连接远程服务器</p>
+</li>
+<li><p>git clone：拉取项目代码</p>
+</li>
+<li><p>ps -ef   查看所有正在运行的进程</p>
+</li>
+<li><p>ps -ef | grep java  查找java服务进程（|为管道符）</p>
+</li>
+<li><p>kill pid 或者 kill -9 pid(强制杀死进程)      pid:进程号</p>
+</li>
+<li><p>nohup  程序 &amp;：后台启动程序</p>
+</li>
+<li><p>jobs：查看后台程序</p>
+</li>
+<li><p>du -sh *：查看项目占用空间</p>
+</li>
+<li><p>netstat：查看端口</p>
+</li>
+<li><p>curl url：获取该网址的文本信息</p>
+</li>
+</ul>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
@@ -91,7 +208,7 @@
     </div>
     
         <div class='side'>
-				
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux"><span class="toc-number">1.</span> <span class="toc-text">Linux</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">1.1.</span> <span class="toc-text">一、常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="toc-number">1.2.</span> <span class="toc-text">二、基本命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%85%B3%E6%9C%BA%E5%92%8C%E9%87%8D%E5%90%AF"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 关机和重启</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%B8%AE%E5%8A%A9%E5%91%BD%E4%BB%A4"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 帮助命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4"><span class="toc-number">1.3.</span> <span class="toc-text">三、目录操作命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E7%9B%AE%E5%BD%95%E5%88%87%E6%8D%A2-cd"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1 目录切换 cd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E7%9B%AE%E5%BD%95%E6%9F%A5%E7%9C%8B-ls-al"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.2 目录查看 ls [-al]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E3%80%90%E5%A2%9E%EF%BC%8C%E5%88%A0%EF%BC%8C%E6%94%B9%EF%BC%8C%E6%9F%A5%E3%80%91"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.3 目录操作【增，删，改，查】</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-1-%E5%88%9B%E5%BB%BA%E7%9B%AE%E5%BD%95%E3%80%90%E5%A2%9E%E3%80%91-mkdir"><span class="toc-number">1.3.3.1.</span> <span class="toc-text">3.3.1 创建目录【增】 mkdir</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-2-%E5%88%A0%E9%99%A4%E7%9B%AE%E5%BD%95%E6%88%96%E6%96%87%E4%BB%B6%E3%80%90%E5%88%A0%E3%80%91rm"><span class="toc-number">1.3.3.2.</span> <span class="toc-text">3.3.2 删除目录或文件【删】rm</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-3-%E7%9B%AE%E5%BD%95%E4%BF%AE%E6%94%B9%E3%80%90%E6%94%B9%E3%80%91mv-%E5%92%8C-cp"><span class="toc-number">1.3.3.3.</span> <span class="toc-text">3.3.3 目录修改【改】mv 和 cp</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-4-%E6%90%9C%E7%B4%A2%E7%9B%AE%E5%BD%95%E3%80%90%E6%9F%A5%E3%80%91find"><span class="toc-number">1.3.3.4.</span> <span class="toc-text">3.3.4 搜索目录【查】find</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4"><span class="toc-number">1.4.</span> <span class="toc-text">四、文件操作命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E3%80%90%E5%A2%9E%EF%BC%8C%E5%88%A0%EF%BC%8C%E6%94%B9%EF%BC%8C%E6%9F%A5%E3%80%91"><span class="toc-number">1.4.1.</span> <span class="toc-text">4.1 文件操作【增，删，改，查】</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-1-%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E3%80%90%E5%A2%9E%E3%80%91touch"><span class="toc-number">1.4.1.1.</span> <span class="toc-text">4.1.1 新建文件【增】touch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-2-%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6-%E3%80%90%E5%88%A0%E3%80%91-rm"><span class="toc-number">1.4.1.2.</span> <span class="toc-text">4.1.2 删除文件 【删】 rm</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-3-%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E3%80%90%E6%94%B9%E3%80%91-vi%E6%88%96vim"><span class="toc-number">1.4.1.3.</span> <span class="toc-text">4.1.3 修改文件【改】 vi或vim</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-4-%E6%96%87%E4%BB%B6%E7%9A%84%E6%9F%A5%E7%9C%8B%E3%80%90%E6%9F%A5%E3%80%91"><span class="toc-number">1.4.1.4.</span> <span class="toc-text">4.1.4 文件的查看【查】</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%9D%83%E9%99%90%E4%BF%AE%E6%94%B9"><span class="toc-number">1.4.2.</span> <span class="toc-text">4.2 权限修改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-number">1.5.</span> <span class="toc-text">五、压缩文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E6%89%93%E5%8C%85%E5%92%8C%E5%8E%8B%E7%BC%A9"><span class="toc-number">1.5.1.</span> <span class="toc-text">5.1 打包和压缩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E8%A7%A3%E5%8E%8B"><span class="toc-number">1.5.2.</span> <span class="toc-text">5.2 解压</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%9F%A5%E6%89%BE%E5%91%BD%E4%BB%A4"><span class="toc-number">1.6.</span> <span class="toc-text">六、查找命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-grep"><span class="toc-number">1.6.1.</span> <span class="toc-text">6.1 grep</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-find"><span class="toc-number">1.6.2.</span> <span class="toc-text">6.2 find</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-whereis"><span class="toc-number">1.6.3.</span> <span class="toc-text">6.3 whereis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-4-which"><span class="toc-number">1.6.4.</span> <span class="toc-text">6.4 which</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4"><span class="toc-number">1.7.</span> <span class="toc-text">七、其他命令</span></a></li></ol></li></ol>	
         </div>
     
 </div>
