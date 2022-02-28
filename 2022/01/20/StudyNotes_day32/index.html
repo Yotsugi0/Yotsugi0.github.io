@@ -143,7 +143,9 @@
 <li><p>作用：版本切换</p>
 </li>
 <li><p>命令形式：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard commitID	<span class="comment"># commitID 可以使用 git-log 或 git log 指令查看</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard commitID	<span class="comment"># commitID 版本号可以使用 git-log 或 git log 指令查看</span></span><br></pre></td></tr></table></figure></li>
+<li><p>如何查看已经删除的记录</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reflog	<span class="comment">#这个指令可以看到已经删除的提交记录</span></span><br></pre></td></tr></table></figure>
 <h3 id="添加文件至忽略列表"><a href="#添加文件至忽略列表" class="headerlink" title="添加文件至忽略列表"></a>添加文件至忽略列表</h3></li>
 </ul>
 <p>一般我们总会有些文件无需纳入Git 的管理，也不希望它们总出现在未跟踪文件列表。 通常都是些自动生成的文件，比如日志文件，或者编译过程中创建的临时文件等。 在这种情况下，我们可以在工作目录中创建一个名为 <code>.gitignore</code> 的文件（文件名称固定），列出要忽略的文件模式。</p>
@@ -155,7 +157,7 @@
 <h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout 分支名</span><br></pre></td></tr></table></figure>
 <p>我们还可以直接切换到一个不存在的分支（创建并切换）：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b 分支名</span><br></pre></td></tr></table></figure>
-<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><p>一个分支上的提交可以合并到另一个分支</p>
+<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><p>一个分支上的提交可以合并到另一个分支，默认把其他分支合并到master</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge 分支名</span><br></pre></td></tr></table></figure>
 <h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><p>不能删除当前分支，只能删除其他分支</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch -d 分支名 			<span class="comment"># 删除分支时，需要做各种检查</span></span><br><span class="line">git branch -D 分支名 			<span class="comment"># 不做任何检查，强制删除</span></span><br></pre></td></tr></table></figure>
@@ -175,6 +177,137 @@
 </ul>
 <p>还有一些其他分支，在此不再详述，例如test分支（用于代码测试）、pre分支（预上线分支）等等。</p>
 <p><img src="/screenshot/image-20220118170619389.png" alt="图片"></p>
+<h2 id="Git远程仓库"><a href="#Git远程仓库" class="headerlink" title="Git远程仓库"></a>Git远程仓库</h2><h3 id="常用的托管服务（远程仓库）"><a href="#常用的托管服务（远程仓库）" class="headerlink" title="常用的托管服务（远程仓库）"></a>常用的托管服务（远程仓库）</h3><p>前面我们已经知道了Git中存在两种类型的仓库，即本地仓库和远程仓库。那么我们如何搭建Git远程仓库呢？我们可以借助互联网上提供的一些代码托管服务来实现，其中比较常用的有GitHub、码云、GitLab等。</p>
+<ul>
+<li><p>GitHub（ 地址：<a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a> ）是一个面向开源及私有软件项目的托管平台，因为只支持Git 作为唯一的版本库格式进行托管，故名GitHub</p>
+</li>
+<li><p>码云（地址： <a target="_blank" rel="noopener" href="https://gitee.com/">https://gitee.com/</a> ）是国内的一个代码托管平台，由于服务器在国内，所以相比于 GitHub，码云速度会更快</p>
+</li>
+<li><p>GitLab （地址： <a target="_blank" rel="noopener" href="https://about.gitlab.com/">https://about.gitlab.com/</a> ）是一个用于仓库管理系统的开源项目，使用Git作为代码管理工具，并在此基础上搭建起来的web服务，一般用于在企业、学校等内部网络搭建git私服。</p>
+</li>
+</ul>
+<h3 id="创建远程仓库"><a href="#创建远程仓库" class="headerlink" title="创建远程仓库"></a>创建远程仓库</h3><p>在gitee官网注册账号，并新建一个仓库</p>
+<h3 id="配置SSH公钥"><a href="#配置SSH公钥" class="headerlink" title="配置SSH公钥"></a>配置SSH公钥</h3><p>不是随便什么都可以推送到自己建的远程参数，要么输入账号和密码，要么配置SSH公钥</p>
+<ul>
+<li><p>生成SSH公钥（可以使用github的SSH公钥）</p>
+<ul>
+<li>ssh-keygen -t rsa</li>
+<li>不断回车<ul>
+<li>如果公钥已经存在，则自动覆盖</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Gitee设置账户共公钥</p>
+<ul>
+<li>获取公钥<ul>
+<li>cat ~/.ssh/id_rsa.pub</li>
+</ul>
+</li>
+<li><img src="/screenshot/100904.png" alt="图片"></li>
+<li>验证是否配置成功<ul>
+<li>ssh -T <a href="mailto:&#103;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#101;&#x65;&#x2e;&#x63;&#x6f;&#109;">&#103;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#101;&#x65;&#x2e;&#x63;&#x6f;&#109;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="操作远程仓库"><a href="#操作远程仓库" class="headerlink" title="操作远程仓库"></a>操作远程仓库</h3><h4 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h4><ul>
+<li><p>命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add &lt;远端名称&gt; &lt;仓库地址&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>远端名称：默认是<code>origin</code>，取决于远端服务器设置</li>
+<li>仓库地址：从远端服务器获取此url</li>
+<li>例如：git remote add origin <a href="mailto:&#x67;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#x65;&#101;&#46;&#99;&#x6f;&#109;">&#x67;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#x65;&#101;&#46;&#99;&#x6f;&#109;</a>:czbk_zhang_meng/git_test.git</li>
+</ul>
+</li>
+</ul>
+<p><img src="/screenshot/image-20220119170243218.png" alt="图片"></p>
+<h4 id="查看远程仓库"><a href="#查看远程仓库" class="headerlink" title="查看远程仓库"></a>查看远程仓库</h4><ul>
+<li><p>命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote</span><br></pre></td></tr></table></figure>
+<h4 id="推送到远程仓库"><a href="#推送到远程仓库" class="headerlink" title="推送到远程仓库"></a>推送到远程仓库</h4></li>
+<li><p>命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push [-f] [--set-upstream] [远端名称] [本地分支名][:远端分支名]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>如果远程分支名和本地分支名相同，则可以只写本地分支名<ul>
+<li>git push origin master</li>
+</ul>
+</li>
+<li><code>-f</code>  表示强制推送，<strong>一般在公司内没有这个的使用权限</strong>，否则容易冲掉远程仓库的所有代码</li>
+<li><code>--set-upstream</code> 推送到远端的同时，建立起和远端分支的关联关系。用于第一次推送时。<ul>
+<li>git push –set-upstream origin master</li>
+</ul>
+</li>
+<li>如果当前分支已经和远端分支关联，则可以省略分支名和远端名<ul>
+<li>git push 将master分支推送到已关联的远端分支</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/screenshot/103656.png" alt="图片"></p>
+<h4 id="查看本地分支与远程分支的绑定关系"><a href="#查看本地分支与远程分支的绑定关系" class="headerlink" title="查看本地分支与远程分支的绑定关系"></a>查看本地分支与远程分支的绑定关系</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -vv</span><br></pre></td></tr></table></figure>
+<p><img src="/screenshot/image-20220119171618826.png" alt="图片"></p>
+<p>此时尚未有绑定关系</p>
+<p>将本地分支master和远程分支master绑定关系</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --set-upstream origin master:master</span><br></pre></td></tr></table></figure>
+<p><img src="/screenshot/image-20220119171841320.png" alt="图片"></p>
+<p>发现本地分支master已经和远程分支master绑定成功</p>
+<p>此时本地分支master若要推送到远程分支master上，则可直接使用命令：<code>git push</code></p>
+<h4 id="从远程仓库克隆"><a href="#从远程仓库克隆" class="headerlink" title="从远程仓库克隆"></a>从远程仓库克隆</h4><p>如果已经有一个远端仓库，我们可以直接clone到本地。</p>
+<ul>
+<li><p>命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> &lt;仓库地址&gt; [本地目录]</span><br></pre></td></tr></table></figure>
+<p>本地目录可以省略，会自动生成一个目录</p>
+</li>
+</ul>
+<h4 id="从远程仓库中抓取和拉取"><a href="#从远程仓库中抓取和拉取" class="headerlink" title="从远程仓库中抓取和拉取"></a>从远程仓库中抓取和拉取</h4><p>远程分支和本地的分支一样，我们可以进行merge操作，只是需要先把远端仓库里的更新都下载到本地，再进行操作。</p>
+<ul>
+<li>抓取命令：<ul>
+<li><strong>抓取指令就是将仓库里的更新都抓取到本地，不会进行合并</strong></li>
+<li>如果不指定远端名称和分支名，则抓取所有分支。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch [remote name] [branch name]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>拉取命令：<ul>
+<li>拉取指令就是将远端仓库的修改拉到本地并自动进行合并，<strong>等同于fetch+merge</strong></li>
+<li>如果不指定远端名称和分支名，则抓取所有并更新当前分支。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull [remote name] [branch name]</span><br></pre></td></tr></table></figure>
+<h4 id="解决合并冲突"><a href="#解决合并冲突" class="headerlink" title="解决合并冲突"></a>解决合并冲突</h4><p>在一段时间，A、B用户修改了同一个文件，且修改了同一行位置的代码，此时会发生合并冲突。</p>
+<p>A用户在本地修改代码后优先推送到远程仓库，此时B用户在本地修订代码，提交到本地仓库后，也需要推送到远程仓库，此时B用户晚于A用户，故需要先拉取远程仓库的提交，经过合并后才能推送到远端分支，如下图所示。</p>
+<p><img src="/screenshot/image-20220119174403295.png" alt="图片"></p>
+<p>在B用户拉取代码时，因为A、B用户同一段时间修改了同一个文件的相同位置代码，故会发生合并冲突。</p>
+<p><strong>远程分支也是分支，所以合并时冲突的解决方式也和解决本地分支冲突相同相同</strong>，在此不再赘述。</p>
+<h2 id="IDEA中的Git使用"><a href="#IDEA中的Git使用" class="headerlink" title="IDEA中的Git使用"></a>IDEA中的Git使用</h2><h3 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h3><p><img src="/screenshot/%E9%85%8D%E7%BD%AEGit.png" alt="图片"></p>
+<h3 id="在IDEA中操作Git"><a href="#在IDEA中操作Git" class="headerlink" title="在IDEA中操作Git"></a>在IDEA中操作Git</h3><p>场景：本地已经有一个项目，但是并不是git项目，我们需要将这个放到码云的仓库里，和其他开发人员继续一起协作开发。</p>
+<h4 id="创建项目的远程仓库"><a href="#创建项目的远程仓库" class="headerlink" title="创建项目的远程仓库"></a>创建项目的远程仓库</h4><p>略</p>
+<h4 id="初始化本地仓库"><a href="#初始化本地仓库" class="headerlink" title="初始化本地仓库"></a>初始化本地仓库</h4><p><img src="/screenshot/%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93.png" alt="图片"></p>
+<h4 id="设置远程仓库"><a href="#设置远程仓库" class="headerlink" title="设置远程仓库"></a>设置远程仓库</h4><p><img src="/screenshot/%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93.png" alt="图片"></p>
+<h4 id="提交到本地仓库"><a href="#提交到本地仓库" class="headerlink" title="提交到本地仓库"></a>提交到本地仓库</h4><p><img src="/screenshot/%E6%8F%90%E4%BA%A4%E5%88%B0%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93.png" alt="图片"></p>
+<h4 id="推送到远程仓库-1"><a href="#推送到远程仓库-1" class="headerlink" title="推送到远程仓库"></a>推送到远程仓库</h4><p><img src="/screenshot/%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93.png" alt="图片"></p>
+<h4 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h4><ul>
+<li><p>方法一：最常规的方式</p>
+<p><img src="/screenshot/image-20220119190427959.png" alt="图片"></p>
+</li>
+<li><p>方法2：最强大的方式</p>
+<p><img src="/screenshot/image-20220119190603175.png" alt="图片"></p>
+</li>
+</ul>
+<h3 id="IDEA常用GIT操作入口"><a href="#IDEA常用GIT操作入口" class="headerlink" title="IDEA常用GIT操作入口"></a>IDEA常用GIT操作入口</h3><p>1.第一张图上的快捷入口可以基本满足开发的需求</p>
+<p><img src="/screenshot/GIT%E6%93%8D%E4%BD%9C%E5%85%A5%E5%8F%A31.png" alt="图片"></p>
+<p>2.第二张图是更多在IDEA操作git的入口</p>
+<p><img src="/screenshot/GIT%E6%93%8D%E4%BD%9C%E5%85%A5%E5%8F%A32.png" alt="图片"></p>
+<h3 id="IDEA集成GitBash代替Terminal"><a href="#IDEA集成GitBash代替Terminal" class="headerlink" title="IDEA集成GitBash代替Terminal"></a>IDEA集成GitBash代替Terminal</h3><p><img src="/screenshot/idea%E9%9B%86%E6%88%90GitBash%E4%BB%A3%E6%9B%BFTerminal.png" alt="图片"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>在IDEA的终端中可使用git命令来完成以上所有功能</li>
+<li><strong>先拉取pull，提示合并失败就解决合并冲突，再推送push</strong></li>
+</ul>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
@@ -206,7 +339,7 @@
     </div>
     
         <div class='side'>
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git"><span class="toc-number">1.</span> <span class="toc-text">Git</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-number">1.2.</span> <span class="toc-text">Git工作流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E5%AE%89%E8%A3%85%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-number">1.3.</span> <span class="toc-text">Git安装与环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Git%E5%AE%89%E8%A3%85"><span class="toc-number">1.3.1.</span> <span class="toc-text">Git安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-number">1.3.2.</span> <span class="toc-text">环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">基本配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BA%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E9%85%8D%E7%BD%AE%E5%88%AB%E5%90%8D"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">为常用指令配置别名</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93"><span class="toc-number">1.4.</span> <span class="toc-text">创建本地仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">1.5.</span> <span class="toc-text">常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#status%E6%9F%A5%E7%9C%8B%E4%BF%AE%E6%94%B9%E7%9A%84%E7%8A%B6%E6%80%81"><span class="toc-number">1.5.1.</span> <span class="toc-text">status查看修改的状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#add%E6%B7%BB%E5%8A%A0%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%88%B0%E6%9A%82%E5%AD%98%E5%8C%BA"><span class="toc-number">1.5.2.</span> <span class="toc-text">add添加工作区到暂存区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#commit%E6%8F%90%E4%BA%A4%E6%9A%82%E5%AD%98%E5%8C%BA%E5%88%B0%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93"><span class="toc-number">1.5.3.</span> <span class="toc-text">commit提交暂存区到本地仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#log%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E6%97%A5%E5%BF%97"><span class="toc-number">1.5.4.</span> <span class="toc-text">log查看提交日志</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%80"><span class="toc-number">1.5.5.</span> <span class="toc-text">版本回退</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6%E8%87%B3%E5%BF%BD%E7%95%A5%E5%88%97%E8%A1%A8"><span class="toc-number">1.5.6.</span> <span class="toc-text">添加文件至忽略列表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%94%AF"><span class="toc-number">1.6.</span> <span class="toc-text">分支</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF"><span class="toc-number">1.6.1.</span> <span class="toc-text">查看本地分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF"><span class="toc-number">1.6.2.</span> <span class="toc-text">创建本地分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF"><span class="toc-number">1.6.3.</span> <span class="toc-text">切换分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF"><span class="toc-number">1.6.4.</span> <span class="toc-text">合并分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF"><span class="toc-number">1.6.5.</span> <span class="toc-text">删除分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E5%86%B2%E7%AA%81"><span class="toc-number">1.6.6.</span> <span class="toc-text">解决冲突</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E4%B8%AD%E5%88%86%E6%94%AF%E4%BD%BF%E7%94%A8%E5%8E%9F%E5%88%99%E4%B8%8E%E6%B5%81%E7%A8%8B"><span class="toc-number">1.6.7.</span> <span class="toc-text">开发中分支使用原则与流程</span></a></li></ol></li></ol></li></ol>	
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git"><span class="toc-number">1.</span> <span class="toc-text">Git</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-number">1.2.</span> <span class="toc-text">Git工作流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E5%AE%89%E8%A3%85%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-number">1.3.</span> <span class="toc-text">Git安装与环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Git%E5%AE%89%E8%A3%85"><span class="toc-number">1.3.1.</span> <span class="toc-text">Git安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-number">1.3.2.</span> <span class="toc-text">环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">基本配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BA%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E9%85%8D%E7%BD%AE%E5%88%AB%E5%90%8D"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">为常用指令配置别名</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93"><span class="toc-number">1.4.</span> <span class="toc-text">创建本地仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">1.5.</span> <span class="toc-text">常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#status%E6%9F%A5%E7%9C%8B%E4%BF%AE%E6%94%B9%E7%9A%84%E7%8A%B6%E6%80%81"><span class="toc-number">1.5.1.</span> <span class="toc-text">status查看修改的状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#add%E6%B7%BB%E5%8A%A0%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%88%B0%E6%9A%82%E5%AD%98%E5%8C%BA"><span class="toc-number">1.5.2.</span> <span class="toc-text">add添加工作区到暂存区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#commit%E6%8F%90%E4%BA%A4%E6%9A%82%E5%AD%98%E5%8C%BA%E5%88%B0%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93"><span class="toc-number">1.5.3.</span> <span class="toc-text">commit提交暂存区到本地仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#log%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E6%97%A5%E5%BF%97"><span class="toc-number">1.5.4.</span> <span class="toc-text">log查看提交日志</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%80"><span class="toc-number">1.5.5.</span> <span class="toc-text">版本回退</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6%E8%87%B3%E5%BF%BD%E7%95%A5%E5%88%97%E8%A1%A8"><span class="toc-number">1.5.6.</span> <span class="toc-text">添加文件至忽略列表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%94%AF"><span class="toc-number">1.6.</span> <span class="toc-text">分支</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF"><span class="toc-number">1.6.1.</span> <span class="toc-text">查看本地分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF"><span class="toc-number">1.6.2.</span> <span class="toc-text">创建本地分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF"><span class="toc-number">1.6.3.</span> <span class="toc-text">切换分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF"><span class="toc-number">1.6.4.</span> <span class="toc-text">合并分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF"><span class="toc-number">1.6.5.</span> <span class="toc-text">删除分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E5%86%B2%E7%AA%81"><span class="toc-number">1.6.6.</span> <span class="toc-text">解决冲突</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E4%B8%AD%E5%88%86%E6%94%AF%E4%BD%BF%E7%94%A8%E5%8E%9F%E5%88%99%E4%B8%8E%E6%B5%81%E7%A8%8B"><span class="toc-number">1.6.7.</span> <span class="toc-text">开发中分支使用原则与流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-number">1.7.</span> <span class="toc-text">Git远程仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E6%89%98%E7%AE%A1%E6%9C%8D%E5%8A%A1%EF%BC%88%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%EF%BC%89"><span class="toc-number">1.7.1.</span> <span class="toc-text">常用的托管服务（远程仓库）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-number">1.7.2.</span> <span class="toc-text">创建远程仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AESSH%E5%85%AC%E9%92%A5"><span class="toc-number">1.7.3.</span> <span class="toc-text">配置SSH公钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-number">1.7.4.</span> <span class="toc-text">操作远程仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-number">1.7.4.1.</span> <span class="toc-text">添加远程仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-number">1.7.4.2.</span> <span class="toc-text">查看远程仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A8%E9%80%81%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-number">1.7.4.3.</span> <span class="toc-text">推送到远程仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E4%B8%8E%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E7%9A%84%E7%BB%91%E5%AE%9A%E5%85%B3%E7%B3%BB"><span class="toc-number">1.7.4.4.</span> <span class="toc-text">查看本地分支与远程分支的绑定关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%85%8B%E9%9A%86"><span class="toc-number">1.7.4.5.</span> <span class="toc-text">从远程仓库克隆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E4%B8%AD%E6%8A%93%E5%8F%96%E5%92%8C%E6%8B%89%E5%8F%96"><span class="toc-number">1.7.4.6.</span> <span class="toc-text">从远程仓库中抓取和拉取</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E5%90%88%E5%B9%B6%E5%86%B2%E7%AA%81"><span class="toc-number">1.7.4.7.</span> <span class="toc-text">解决合并冲突</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IDEA%E4%B8%AD%E7%9A%84Git%E4%BD%BF%E7%94%A8"><span class="toc-number">1.8.</span> <span class="toc-text">IDEA中的Git使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEGit"><span class="toc-number">1.8.1.</span> <span class="toc-text">配置Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8IDEA%E4%B8%AD%E6%93%8D%E4%BD%9CGit"><span class="toc-number">1.8.2.</span> <span class="toc-text">在IDEA中操作Git</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%9A%84%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-number">1.8.2.1.</span> <span class="toc-text">创建项目的远程仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93"><span class="toc-number">1.8.2.2.</span> <span class="toc-text">初始化本地仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-number">1.8.2.3.</span> <span class="toc-text">设置远程仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4%E5%88%B0%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93"><span class="toc-number">1.8.2.4.</span> <span class="toc-text">提交到本地仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A8%E9%80%81%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93-1"><span class="toc-number">1.8.2.5.</span> <span class="toc-text">推送到远程仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF"><span class="toc-number">1.8.2.6.</span> <span class="toc-text">创建分支</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IDEA%E5%B8%B8%E7%94%A8GIT%E6%93%8D%E4%BD%9C%E5%85%A5%E5%8F%A3"><span class="toc-number">1.8.3.</span> <span class="toc-text">IDEA常用GIT操作入口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IDEA%E9%9B%86%E6%88%90GitBash%E4%BB%A3%E6%9B%BFTerminal"><span class="toc-number">1.8.4.</span> <span class="toc-text">IDEA集成GitBash代替Terminal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.8.5.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li></ol>	
         </div>
     
 </div>

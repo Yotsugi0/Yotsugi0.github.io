@@ -332,6 +332,46 @@
       </categories>
   </entry>
   <entry>
+    <title>StudyNotes_day11（ArrayList集合初步使用）</title>
+    <url>/2021/09/14/StudyNotes_day11/</url>
+    <content><![CDATA[<h1 id="ArrayList集合"><a href="#ArrayList集合" class="headerlink" title="ArrayList集合"></a>ArrayList集合</h1><h2 id="ArrayList集合概述和基本使用"><a href="#ArrayList集合概述和基本使用" class="headerlink" title="ArrayList集合概述和基本使用"></a>ArrayList集合概述和基本使用</h2><p>数组的长度不可发生改变</p>
+<p>但是ArrayList集合的长度是可以随意变化的</p>
+<p>对于ArrayList来说，有一个尖括号<E>代表泛型</p>
+<p>泛型：也就是装在集合当中的所有元素，全都是统一的类型</p>
+<p>注意：泛型只能是引用类型，不能是基本类型</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//存放字符串类型数据</span></span><br><span class="line">ArrayList&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"><span class="comment">//存放int类型数据</span></span><br><span class="line">ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br></pre></td></tr></table></figure>
+<p>注意事项：</p>
+<p>对于ArrayList集合来说，直接打印得到的不是地址值，而是内容</p>
+<p>如果内容是空，得到的是空的中括号：[ ]</p>
+<h2 id="ArrayList集合的常用方法和遍历"><a href="#ArrayList集合的常用方法和遍历" class="headerlink" title="ArrayList集合的常用方法和遍历"></a>ArrayList集合的常用方法和遍历</h2><p>ArrayList当中的常用方法有：</p>
+<p>​    </p>
+<p>public boolean add(E e)向集合当中添加元素，参数的类型和泛型一致，返回值代表添加是否成功</p>
+<p>备注：对于ArrayList集合来说，add添加动作一定是成功的，所以返回值可以不用</p>
+<p>但对于其他集合来说，add添加动作就不一定成功</p>
+<p>public E get(int index)从集合当中获取元素，参数是索引编号，返回值就是对应位置的元素</p>
+<p>public E remove(int index)从集合当中删除元素，参数是索引编号，返回值就是删除掉的元素</p>
+<p>public int size()获取集合尺寸长度，返回值是集合中包含的元素个数</p>
+<h2 id="ArrayList集合存储基本数据类型"><a href="#ArrayList集合存储基本数据类型" class="headerlink" title="ArrayList集合存储基本数据类型"></a>ArrayList集合存储基本数据类型</h2><p>如果要向集合ArrayList当中存储基本类型的数据，必须使用基本类型对应的“包装类”</p>
+<p>​    </p>
+<p>基本类型        包装类型（引用类型，包装类都位于java.lang包下）</p>
+<p>byte                  Byte</p>
+<p>short                Short</p>
+<p>int                     Integer    【特殊】</p>
+<p>long                  Long</p>
+<p>floot                 Floot</p>
+<p>double             Double</p>
+<p>char                 Character    【特殊】</p>
+<p>boolean           Boolean</p>
+<p>​    </p>
+<p>从JDK1.5+开始，支持自动装箱、自动拆箱</p>
+<p>自动装箱：基本类型    ——&gt;    包装类型</p>
+<p>自动拆箱：包装类型    ——&gt;    基本类型</p>
+]]></content>
+      <categories>
+        <category>javaSE</category>
+      </categories>
+  </entry>
+  <entry>
     <title>StudyNotes_day13（继承、抽象类）</title>
     <url>/2021/09/23/StudyNotes_day13/</url>
     <content><![CDATA[<h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><h2 id="继承的概述"><a href="#继承的概述" class="headerlink" title="继承的概述"></a>继承的概述</h2><p>面向对象的三大特征：封装性、继承性、多态性</p>
@@ -426,46 +466,6 @@
 <p>理解：未包含抽象方法的抽象类，目的是不想让调用者创建该类对象，通常用于某些特殊的类结构设计</p>
 </blockquote>
 <p>4.抽象类的子类，必须重写抽象父类中所有的抽象方法，除非该子类也是抽象类</p>
-]]></content>
-      <categories>
-        <category>javaSE</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>StudyNotes_day11（ArrayList集合初步使用）</title>
-    <url>/2021/09/14/StudyNotes_day11/</url>
-    <content><![CDATA[<h1 id="ArrayList集合"><a href="#ArrayList集合" class="headerlink" title="ArrayList集合"></a>ArrayList集合</h1><h2 id="ArrayList集合概述和基本使用"><a href="#ArrayList集合概述和基本使用" class="headerlink" title="ArrayList集合概述和基本使用"></a>ArrayList集合概述和基本使用</h2><p>数组的长度不可发生改变</p>
-<p>但是ArrayList集合的长度是可以随意变化的</p>
-<p>对于ArrayList来说，有一个尖括号<E>代表泛型</p>
-<p>泛型：也就是装在集合当中的所有元素，全都是统一的类型</p>
-<p>注意：泛型只能是引用类型，不能是基本类型</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//存放字符串类型数据</span></span><br><span class="line">ArrayList&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"><span class="comment">//存放int类型数据</span></span><br><span class="line">ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br></pre></td></tr></table></figure>
-<p>注意事项：</p>
-<p>对于ArrayList集合来说，直接打印得到的不是地址值，而是内容</p>
-<p>如果内容是空，得到的是空的中括号：[ ]</p>
-<h2 id="ArrayList集合的常用方法和遍历"><a href="#ArrayList集合的常用方法和遍历" class="headerlink" title="ArrayList集合的常用方法和遍历"></a>ArrayList集合的常用方法和遍历</h2><p>ArrayList当中的常用方法有：</p>
-<p>​    </p>
-<p>public boolean add(E e)向集合当中添加元素，参数的类型和泛型一致，返回值代表添加是否成功</p>
-<p>备注：对于ArrayList集合来说，add添加动作一定是成功的，所以返回值可以不用</p>
-<p>但对于其他集合来说，add添加动作就不一定成功</p>
-<p>public E get(int index)从集合当中获取元素，参数是索引编号，返回值就是对应位置的元素</p>
-<p>public E remove(int index)从集合当中删除元素，参数是索引编号，返回值就是删除掉的元素</p>
-<p>public int size()获取集合尺寸长度，返回值是集合中包含的元素个数</p>
-<h2 id="ArrayList集合存储基本数据类型"><a href="#ArrayList集合存储基本数据类型" class="headerlink" title="ArrayList集合存储基本数据类型"></a>ArrayList集合存储基本数据类型</h2><p>如果要向集合ArrayList当中存储基本类型的数据，必须使用基本类型对应的“包装类”</p>
-<p>​    </p>
-<p>基本类型        包装类型（引用类型，包装类都位于java.lang包下）</p>
-<p>byte                  Byte</p>
-<p>short                Short</p>
-<p>int                     Integer    【特殊】</p>
-<p>long                  Long</p>
-<p>floot                 Floot</p>
-<p>double             Double</p>
-<p>char                 Character    【特殊】</p>
-<p>boolean           Boolean</p>
-<p>​    </p>
-<p>从JDK1.5+开始，支持自动装箱、自动拆箱</p>
-<p>自动装箱：基本类型    ——&gt;    包装类型</p>
-<p>自动拆箱：包装类型    ——&gt;    基本类型</p>
 ]]></content>
       <categories>
         <category>javaSE</category>
@@ -964,6 +964,28 @@
       </categories>
   </entry>
   <entry>
+    <title>StudyNotes_day2（常量、变量）</title>
+    <url>/2021/02/16/StudyNotes_day2/</url>
+    <content><![CDATA[<h1 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h1><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>​    java程序运行期间固定不变的数据</p>
+<p>分类：</p>
+<ul>
+<li>整数常量        例如：100， 0 ， -100</li>
+<li>小数常量        例如：1.1， 0.0 ， -1.1</li>
+<li>布尔常量                    true,false</li>
+<li>字符常量        例如:   ‘a’,’A’,’9’</li>
+<li>字符串常量    例如：”abc”,”a”,”123”</li>
+<li>空常量                         null,代表没有任何数据</li>
+</ul>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>​    程序运行期间，内容可以发生改变的量</p>
+<p>创建一个变量的一步到位格式：</p>
+<p>数据类型    变量名称    =    数据值</p>
+<p>​    </p>
+]]></content>
+      <categories>
+        <category>javaSE</category>
+      </categories>
+  </entry>
+  <entry>
     <title>StudyNotes_day19（数据结构、List集合、Set集合、可变参数、Collections集合工具类）</title>
     <url>/2021/10/05/StudyNotes_day19/</url>
     <content><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h2 id="数据结构-栈"><a href="#数据结构-栈" class="headerlink" title="数据结构_栈"></a>数据结构_栈</h2><p>先进后出</p>
@@ -1056,28 +1078,6 @@
 <p>Comparator和Comparable的区别</p>
 <p>​    Comparable：自己（this）和别（参数）比较，自己需要实现Comparable接口</p>
 <p>​    Comparator：相当于找一个第三方的裁判，比较两个，使用时直接在参数中使用匿名内部类实现接口中的方法</p>
-]]></content>
-      <categories>
-        <category>javaSE</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>StudyNotes_day2（常量、变量）</title>
-    <url>/2021/02/16/StudyNotes_day2/</url>
-    <content><![CDATA[<h1 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h1><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>​    java程序运行期间固定不变的数据</p>
-<p>分类：</p>
-<ul>
-<li>整数常量        例如：100， 0 ， -100</li>
-<li>小数常量        例如：1.1， 0.0 ， -1.1</li>
-<li>布尔常量                    true,false</li>
-<li>字符常量        例如:   ‘a’,’A’,’9’</li>
-<li>字符串常量    例如：”abc”,”a”,”123”</li>
-<li>空常量                         null,代表没有任何数据</li>
-</ul>
-<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>​    程序运行期间，内容可以发生改变的量</p>
-<p>创建一个变量的一步到位格式：</p>
-<p>数据类型    变量名称    =    数据值</p>
-<p>​    </p>
 ]]></content>
       <categories>
         <category>javaSE</category>
@@ -1409,6 +1409,56 @@
       </categories>
   </entry>
   <entry>
+    <title>StudyNotes_day27（IO流_序列化和反序列化、打印流）</title>
+    <url>/2021/11/28/StudyNotes_day27/</url>
+    <content><![CDATA[<h1 id="序列化和反序列化"><a href="#序列化和反序列化" class="headerlink" title="序列化和反序列化"></a>序列化和反序列化</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>序列化：对象转换为字节（ 内存——》硬盘 ）</p>
+<p>反序列化：字节重构为对象（ 内存《——硬盘 ）</p>
+<p><strong>只有类实现了Serializable接口，其对象才能进行序列化和反序列化</strong></p>
+<h2 id="对象的序列化流-ObjectOutputStream"><a href="#对象的序列化流-ObjectOutputStream" class="headerlink" title="对象的序列化流_ObjectOutputStream"></a>对象的序列化流_ObjectOutputStream</h2><p><code>java.io.ObjectOutputStream</code> extends OutputStream</p>
+<p>继承父类OutputStream共性的成员方法</p>
+<p>​    </p>
+<p>构造方法：</p>
+<ul>
+<li>ObjectOutputStream( OutputStream out ) ：创建写入指定 OutputStream 的 ObjectOutputStream。</li>
+</ul>
+<p>参数：</p>
+<p>​    OutputStream out ：创建字节输出流</p>
+<p>特有的成员方法：</p>
+<ul>
+<li>void writeObject( Object obj ) ：将指定的对象写入 ObjectOutputStream。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.company.demo14;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.Serializable;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Person&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, age=&quot;</span> + age +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> com.company.demo14;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.FileOutputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.ObjectOutputStream;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoObjectOutputStream</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        ObjectOutputStream oos = <span class="keyword">new</span> ObjectOutputStream(<span class="keyword">new</span> FileOutputStream(<span class="string">&quot;C:\\Users\\admin\\Desktop\\person.txt&quot;</span>));</span><br><span class="line">        oos.writeObject(<span class="keyword">new</span> Person(<span class="string">&quot;张三&quot;</span>, <span class="number">19</span>));</span><br><span class="line">        oos.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="对象的反序列化流-ObjectInputStream"><a href="#对象的反序列化流-ObjectInputStream" class="headerlink" title="对象的反序列化流_ObjectInputStream"></a>对象的反序列化流_ObjectInputStream</h2><p><code>java.io.ObjectInputStream</code> extends InputStream</p>
+<p>继承父类InputStream共性的成员方法</p>
+<p>​    </p>
+<p>构造方法：</p>
+<ul>
+<li>ObjectInputStream( InputStream in ) ：创建从指定 InputStream 读取的 ObjectInputStream。</li>
+</ul>
+<p>参数：</p>
+<p>​     InputStream in ：创建字节输入流</p>
+<p>特有的成员方法：</p>
+<ul>
+<li> Object readObject( )  ： 从 ObjectInputStream 读取对象。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.company.demo14;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.FileInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.ObjectInputStream;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoObjectInputStream</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException, ClassNotFoundException </span>&#123;</span><br><span class="line">        ObjectInputStream ois = <span class="keyword">new</span> ObjectInputStream(<span class="keyword">new</span> FileInputStream(<span class="string">&quot;C:\\Users\\admin\\Desktop\\person.txt&quot;</span>));</span><br><span class="line">        Object o = ois.readObject();</span><br><span class="line">        ois.close();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//打印反序列化得到的对象</span></span><br><span class="line">        System.out.println(o);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="transient关键字-瞬态关键字"><a href="#transient关键字-瞬态关键字" class="headerlink" title="transient关键字_瞬态关键字"></a>transient关键字_瞬态关键字</h2><p>如果类有某些属性不需要序列化，就用transient修饰该属性</p>
+<h2 id="InvalidClassException异常及处理"><a href="#InvalidClassException异常及处理" class="headerlink" title="InvalidClassException异常及处理"></a>InvalidClassException异常及处理</h2><p>Serializable接口给需要序列化的类，提供了一个序列版本号（序列号）：serialVersionUID </p>
+<p>在需要序列号的类中同时实现了Serializable接口，并手动加上序列号serialVersionUID，修改类中的属性后再反序列化就不会出现InvalidClassException异常</p>
+<p>处理：</p>
+<p>在实现类了Serializable接口的类中添加:</p>
+<p>private static final long serialVersionUID = 1L</p>
+<h2 id="练习-序列化集合"><a href="#练习-序列化集合" class="headerlink" title="练习_序列化集合"></a>练习_序列化集合</h2><p>当需要序列化多个对象时，可以先把对象存放到集合中，再讲集合进行序列化</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.company.demo14;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.Serializable;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Person&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, age=&quot;</span> + age +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> com.company.demo14;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException, ClassNotFoundException </span>&#123;</span><br><span class="line">        ArrayList&lt;Person&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        list.add(<span class="keyword">new</span> Person(<span class="string">&quot;张三&quot;</span>, <span class="number">19</span>));</span><br><span class="line">        list.add(<span class="keyword">new</span> Person(<span class="string">&quot;李四&quot;</span>, <span class="number">22</span>));</span><br><span class="line">        list.add(<span class="keyword">new</span> Person(<span class="string">&quot;王五&quot;</span>, <span class="number">25</span>));</span><br><span class="line"></span><br><span class="line">        ObjectOutputStream oos = <span class="keyword">new</span> ObjectOutputStream(<span class="keyword">new</span> FileOutputStream(<span class="string">&quot;C:\\Users\\admin\\Desktop\\list.txt&quot;</span>));</span><br><span class="line">        oos.writeObject(list);</span><br><span class="line">        oos.close();</span><br><span class="line"></span><br><span class="line">        ObjectInputStream ois = <span class="keyword">new</span> ObjectInputStream(<span class="keyword">new</span> FileInputStream(<span class="string">&quot;C:\\Users\\admin\\Desktop\\list.txt&quot;</span>));</span><br><span class="line">        Object o = ois.readObject();</span><br><span class="line">        ois.close();</span><br><span class="line"></span><br><span class="line">        ArrayList&lt;Person&gt; list1 = (ArrayList&lt;Person&gt;) o;</span><br><span class="line">        <span class="keyword">for</span> (Person p : list) &#123;</span><br><span class="line">            System.out.println(p);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="打印流"><a href="#打印流" class="headerlink" title="打印流"></a>打印流</h1><p><code>java.io.PrintStream</code> extends FilterOutputStream extends OutputStream</p>
+<p>平时在控制台打印输出，就是调用PrintStream类中的print（）方法和println（）方法</p>
+<p>System.out中的out就是PrintStream类的对象</p>
+]]></content>
+      <categories>
+        <category>javaSE</category>
+      </categories>
+  </entry>
+  <entry>
     <title>StudyNotes_day25（IO流_异常处理、属性集）</title>
     <url>/2021/10/25/StudyNotes_day25/</url>
     <content><![CDATA[<h1 id="IO异常的处理"><a href="#IO异常的处理" class="headerlink" title="IO异常的处理"></a>IO异常的处理</h1><h2 id="JDK7以前的处理"><a href="#JDK7以前的处理" class="headerlink" title="JDK7以前的处理"></a>JDK7以前的处理</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.company.demo06;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.FileOutputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo01TryCatch</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//提高fos的作用域，让finally可以使用</span></span><br><span class="line">        FileOutputStream fos = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            fos = <span class="keyword">new</span> FileOutputStream(<span class="string">&quot;a:\\Users\\admin\\Desktop\\a.txt&quot;</span>);</span><br><span class="line">            fos.write(<span class="string">&quot;Hello,World!&quot;</span>.getBytes());</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            System.out.println(e);</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="comment">//创建对象失败了，fos默认值就是null，null是不能调用方法的，会抛出NullPointerException,需要增加一个判断</span></span><br><span class="line">            <span class="keyword">if</span> (fos != <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    fos.close();</span><br><span class="line">                &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1610,50 +1660,18 @@
       </categories>
   </entry>
   <entry>
-    <title>StudyNotes_day27（IO流_序列化和反序列化、打印流）</title>
-    <url>/2021/11/28/StudyNotes_day27/</url>
-    <content><![CDATA[<h1 id="序列化和反序列化"><a href="#序列化和反序列化" class="headerlink" title="序列化和反序列化"></a>序列化和反序列化</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>序列化：对象转换为字节（ 内存——》硬盘 ）</p>
-<p>反序列化：字节重构为对象（ 内存《——硬盘 ）</p>
-<p><strong>只有类实现了Serializable接口，其对象才能进行序列化和反序列化</strong></p>
-<h2 id="对象的序列化流-ObjectOutputStream"><a href="#对象的序列化流-ObjectOutputStream" class="headerlink" title="对象的序列化流_ObjectOutputStream"></a>对象的序列化流_ObjectOutputStream</h2><p><code>java.io.ObjectOutputStream</code> extends OutputStream</p>
-<p>继承父类OutputStream共性的成员方法</p>
-<p>​    </p>
-<p>构造方法：</p>
-<ul>
-<li>ObjectOutputStream( OutputStream out ) ：创建写入指定 OutputStream 的 ObjectOutputStream。</li>
-</ul>
-<p>参数：</p>
-<p>​    OutputStream out ：创建字节输出流</p>
-<p>特有的成员方法：</p>
-<ul>
-<li>void writeObject( Object obj ) ：将指定的对象写入 ObjectOutputStream。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.company.demo14;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.Serializable;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Person&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, age=&quot;</span> + age +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> com.company.demo14;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.FileOutputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.ObjectOutputStream;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoObjectOutputStream</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        ObjectOutputStream oos = <span class="keyword">new</span> ObjectOutputStream(<span class="keyword">new</span> FileOutputStream(<span class="string">&quot;C:\\Users\\admin\\Desktop\\person.txt&quot;</span>));</span><br><span class="line">        oos.writeObject(<span class="keyword">new</span> Person(<span class="string">&quot;张三&quot;</span>, <span class="number">19</span>));</span><br><span class="line">        oos.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="对象的反序列化流-ObjectInputStream"><a href="#对象的反序列化流-ObjectInputStream" class="headerlink" title="对象的反序列化流_ObjectInputStream"></a>对象的反序列化流_ObjectInputStream</h2><p><code>java.io.ObjectInputStream</code> extends InputStream</p>
-<p>继承父类InputStream共性的成员方法</p>
-<p>​    </p>
-<p>构造方法：</p>
-<ul>
-<li>ObjectInputStream( InputStream in ) ：创建从指定 InputStream 读取的 ObjectInputStream。</li>
-</ul>
-<p>参数：</p>
-<p>​     InputStream in ：创建字节输入流</p>
-<p>特有的成员方法：</p>
-<ul>
-<li> Object readObject( )  ： 从 ObjectInputStream 读取对象。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.company.demo14;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.FileInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.ObjectInputStream;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoObjectInputStream</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException, ClassNotFoundException </span>&#123;</span><br><span class="line">        ObjectInputStream ois = <span class="keyword">new</span> ObjectInputStream(<span class="keyword">new</span> FileInputStream(<span class="string">&quot;C:\\Users\\admin\\Desktop\\person.txt&quot;</span>));</span><br><span class="line">        Object o = ois.readObject();</span><br><span class="line">        ois.close();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//打印反序列化得到的对象</span></span><br><span class="line">        System.out.println(o);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="transient关键字-瞬态关键字"><a href="#transient关键字-瞬态关键字" class="headerlink" title="transient关键字_瞬态关键字"></a>transient关键字_瞬态关键字</h2><p>如果类有某些属性不需要序列化，就用transient修饰该属性</p>
-<h2 id="InvalidClassException异常及处理"><a href="#InvalidClassException异常及处理" class="headerlink" title="InvalidClassException异常及处理"></a>InvalidClassException异常及处理</h2><p>Serializable接口给需要序列化的类，提供了一个序列版本号（序列号）：serialVersionUID </p>
-<p>在需要序列号的类中同时实现了Serializable接口，并手动加上序列号serialVersionUID，修改类中的属性后再反序列化就不会出现InvalidClassException异常</p>
-<p>处理：</p>
-<p>在实现类了Serializable接口的类中添加:</p>
-<p>private static final long serialVersionUID = 1L</p>
-<h2 id="练习-序列化集合"><a href="#练习-序列化集合" class="headerlink" title="练习_序列化集合"></a>练习_序列化集合</h2><p>当需要序列化多个对象时，可以先把对象存放到集合中，再讲集合进行序列化</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.company.demo14;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.Serializable;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Person&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, age=&quot;</span> + age +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> com.company.demo14;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException, ClassNotFoundException </span>&#123;</span><br><span class="line">        ArrayList&lt;Person&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        list.add(<span class="keyword">new</span> Person(<span class="string">&quot;张三&quot;</span>, <span class="number">19</span>));</span><br><span class="line">        list.add(<span class="keyword">new</span> Person(<span class="string">&quot;李四&quot;</span>, <span class="number">22</span>));</span><br><span class="line">        list.add(<span class="keyword">new</span> Person(<span class="string">&quot;王五&quot;</span>, <span class="number">25</span>));</span><br><span class="line"></span><br><span class="line">        ObjectOutputStream oos = <span class="keyword">new</span> ObjectOutputStream(<span class="keyword">new</span> FileOutputStream(<span class="string">&quot;C:\\Users\\admin\\Desktop\\list.txt&quot;</span>));</span><br><span class="line">        oos.writeObject(list);</span><br><span class="line">        oos.close();</span><br><span class="line"></span><br><span class="line">        ObjectInputStream ois = <span class="keyword">new</span> ObjectInputStream(<span class="keyword">new</span> FileInputStream(<span class="string">&quot;C:\\Users\\admin\\Desktop\\list.txt&quot;</span>));</span><br><span class="line">        Object o = ois.readObject();</span><br><span class="line">        ois.close();</span><br><span class="line"></span><br><span class="line">        ArrayList&lt;Person&gt; list1 = (ArrayList&lt;Person&gt;) o;</span><br><span class="line">        <span class="keyword">for</span> (Person p : list) &#123;</span><br><span class="line">            System.out.println(p);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="打印流"><a href="#打印流" class="headerlink" title="打印流"></a>打印流</h1><p><code>java.io.PrintStream</code> extends FilterOutputStream extends OutputStream</p>
-<p>平时在控制台打印输出，就是调用PrintStream类中的print（）方法和println（）方法</p>
-<p>System.out中的out就是PrintStream类的对象</p>
+    <title>StudyNotes_day3（运算符）</title>
+    <url>/2021/04/05/StudyNotes_day3/</url>
+    <content><![CDATA[<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><p>算数运算符、赋值运算符、比较运算符、逻辑运算符、三元运算符</p>
+<h1 id="算数运算符-加号的多种用法"><a href="#算数运算符-加号的多种用法" class="headerlink" title="算数运算符_加号的多种用法"></a>算数运算符_加号的多种用法</h1><p>四则运算当中的加号“+”有常见的三种用法：</p>
+<ol>
+<li>对于数值来说，那就是加法</li>
+<li>对于字符char类型来说，在计算之前，char会被提升成为int，然后再计算<br>char类型字符，int类型数字，之间的对照关系表：ASCII、Unicode</li>
+<li>对于字符串String（首字母大写，不是关键字）来说，加号代表字符串拼接（连接）操作<br> 任何数据类型和字符串进行连接时，结果都会变成字符串</li>
+</ol>
+<h1 id="算数运算符-自增自减运算符"><a href="#算数运算符-自增自减运算符" class="headerlink" title="算数运算符_自增自减运算符"></a>算数运算符_自增自减运算符</h1><p>自增运算符： ++<br>自减运算符： –</p>
+<p>基本含义：让一个变量涨一个数字1，或者让一个变量降一个数字1使用格式：写在变量名称之前，或者写在变量名称之后，例如：++num，也可以num++<br>使用方法：<br>      1.单独使用：不和其他操作混合，自己独立成为一个步骤<br>      2.混合使用：和其他操作混合，例如与赋值混合，或者与打印操作混合，等<br>使用区别：<br>      1.在单独使用的时候，前++和后++没有任何区别，也就是 ++num 和 num++ 是完全一样的<br>     2.在混合使用的时候，有【重大区别】<br>          A、如果是【前++】，那么变量【立刻马上+1】，然后拿着结果进行使用      【先加后用】<br>        B、如果是【后++】，难么首先使用变量本来的数值，【然后再让变量+1】    【先用后加】<br>        总计：[先加减，后使用]，[先使用，后加减]</p>
+<p>注意事项：<br>     只有变量才能使用自增、自减运算符，常量不可发生改变，所以不能用</p>
 ]]></content>
       <categories>
         <category>javaSE</category>
@@ -1778,35 +1796,6 @@
       <categories>
         <category>javaSE</category>
       </categories>
-  </entry>
-  <entry>
-    <title>StudyNotes_day3（运算符）</title>
-    <url>/2021/04/05/StudyNotes_day3/</url>
-    <content><![CDATA[<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><p>算数运算符、赋值运算符、比较运算符、逻辑运算符、三元运算符</p>
-<h1 id="算数运算符-加号的多种用法"><a href="#算数运算符-加号的多种用法" class="headerlink" title="算数运算符_加号的多种用法"></a>算数运算符_加号的多种用法</h1><p>四则运算当中的加号“+”有常见的三种用法：</p>
-<ol>
-<li>对于数值来说，那就是加法</li>
-<li>对于字符char类型来说，在计算之前，char会被提升成为int，然后再计算<br>char类型字符，int类型数字，之间的对照关系表：ASCII、Unicode</li>
-<li>对于字符串String（首字母大写，不是关键字）来说，加号代表字符串拼接（连接）操作<br> 任何数据类型和字符串进行连接时，结果都会变成字符串</li>
-</ol>
-<h1 id="算数运算符-自增自减运算符"><a href="#算数运算符-自增自减运算符" class="headerlink" title="算数运算符_自增自减运算符"></a>算数运算符_自增自减运算符</h1><p>自增运算符： ++<br>自减运算符： –</p>
-<p>基本含义：让一个变量涨一个数字1，或者让一个变量降一个数字1使用格式：写在变量名称之前，或者写在变量名称之后，例如：++num，也可以num++<br>使用方法：<br>      1.单独使用：不和其他操作混合，自己独立成为一个步骤<br>      2.混合使用：和其他操作混合，例如与赋值混合，或者与打印操作混合，等<br>使用区别：<br>      1.在单独使用的时候，前++和后++没有任何区别，也就是 ++num 和 num++ 是完全一样的<br>     2.在混合使用的时候，有【重大区别】<br>          A、如果是【前++】，那么变量【立刻马上+1】，然后拿着结果进行使用      【先加后用】<br>        B、如果是【后++】，难么首先使用变量本来的数值，【然后再让变量+1】    【先用后加】<br>        总计：[先加减，后使用]，[先使用，后加减]</p>
-<p>注意事项：<br>     只有变量才能使用自增、自减运算符，常量不可发生改变，所以不能用</p>
-]]></content>
-      <categories>
-        <category>javaSE</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>StudyNotes_day30(Mysql)</title>
-    <url>/2022/01/03/StudyNotes_day30/</url>
-    <content><![CDATA[<h1 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h1>]]></content>
-      <categories>
-        <category>javaEE</category>
-      </categories>
-      <tags>
-        <tag>mysql</tag>
-      </tags>
   </entry>
   <entry>
     <title>StudyNotes_day31(Linux)</title>
@@ -2011,7 +2000,9 @@
 <li><p>作用：版本切换</p>
 </li>
 <li><p>命令形式：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git reset --hard commitID	<span class="comment"># commitID 可以使用 git-log 或 git log 指令查看</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git reset --hard commitID	<span class="comment"># commitID 版本号可以使用 git-log 或 git log 指令查看</span></span><br></pre></td></tr></table></figure></li>
+<li><p>如何查看已经删除的记录</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git reflog	<span class="comment">#这个指令可以看到已经删除的提交记录</span></span><br></pre></td></tr></table></figure>
 <h3 id="添加文件至忽略列表"><a href="#添加文件至忽略列表" class="headerlink" title="添加文件至忽略列表"></a>添加文件至忽略列表</h3></li>
 </ul>
 <p>一般我们总会有些文件无需纳入Git 的管理，也不希望它们总出现在未跟踪文件列表。 通常都是些自动生成的文件，比如日志文件，或者编译过程中创建的临时文件等。 在这种情况下，我们可以在工作目录中创建一个名为 <code>.gitignore</code> 的文件（文件名称固定），列出要忽略的文件模式。</p>
@@ -2023,7 +2014,7 @@
 <h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git checkout 分支名</span><br></pre></td></tr></table></figure>
 <p>我们还可以直接切换到一个不存在的分支（创建并切换）：</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git checkout -b 分支名</span><br></pre></td></tr></table></figure>
-<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><p>一个分支上的提交可以合并到另一个分支</p>
+<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><p>一个分支上的提交可以合并到另一个分支，默认把其他分支合并到master</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git merge 分支名</span><br></pre></td></tr></table></figure>
 <h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><p>不能删除当前分支，只能删除其他分支</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git branch -d 分支名 			<span class="comment"># 删除分支时，需要做各种检查</span></span><br><span class="line">git branch -D 分支名 			<span class="comment"># 不做任何检查，强制删除</span></span><br></pre></td></tr></table></figure>
@@ -2043,6 +2034,137 @@
 </ul>
 <p>还有一些其他分支，在此不再详述，例如test分支（用于代码测试）、pre分支（预上线分支）等等。</p>
 <p><img src="/screenshot/image-20220118170619389.png" alt="图片"></p>
+<h2 id="Git远程仓库"><a href="#Git远程仓库" class="headerlink" title="Git远程仓库"></a>Git远程仓库</h2><h3 id="常用的托管服务（远程仓库）"><a href="#常用的托管服务（远程仓库）" class="headerlink" title="常用的托管服务（远程仓库）"></a>常用的托管服务（远程仓库）</h3><p>前面我们已经知道了Git中存在两种类型的仓库，即本地仓库和远程仓库。那么我们如何搭建Git远程仓库呢？我们可以借助互联网上提供的一些代码托管服务来实现，其中比较常用的有GitHub、码云、GitLab等。</p>
+<ul>
+<li><p>GitHub（ 地址：<a href="https://github.com/">https://github.com/</a> ）是一个面向开源及私有软件项目的托管平台，因为只支持Git 作为唯一的版本库格式进行托管，故名GitHub</p>
+</li>
+<li><p>码云（地址： <a href="https://gitee.com/">https://gitee.com/</a> ）是国内的一个代码托管平台，由于服务器在国内，所以相比于 GitHub，码云速度会更快</p>
+</li>
+<li><p>GitLab （地址： <a href="https://about.gitlab.com/">https://about.gitlab.com/</a> ）是一个用于仓库管理系统的开源项目，使用Git作为代码管理工具，并在此基础上搭建起来的web服务，一般用于在企业、学校等内部网络搭建git私服。</p>
+</li>
+</ul>
+<h3 id="创建远程仓库"><a href="#创建远程仓库" class="headerlink" title="创建远程仓库"></a>创建远程仓库</h3><p>在gitee官网注册账号，并新建一个仓库</p>
+<h3 id="配置SSH公钥"><a href="#配置SSH公钥" class="headerlink" title="配置SSH公钥"></a>配置SSH公钥</h3><p>不是随便什么都可以推送到自己建的远程参数，要么输入账号和密码，要么配置SSH公钥</p>
+<ul>
+<li><p>生成SSH公钥（可以使用github的SSH公钥）</p>
+<ul>
+<li>ssh-keygen -t rsa</li>
+<li>不断回车<ul>
+<li>如果公钥已经存在，则自动覆盖</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Gitee设置账户共公钥</p>
+<ul>
+<li>获取公钥<ul>
+<li>cat ~/.ssh/id_rsa.pub</li>
+</ul>
+</li>
+<li><img src="/screenshot/100904.png" alt="图片"></li>
+<li>验证是否配置成功<ul>
+<li>ssh -T <a href="mailto:&#103;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#101;&#x65;&#x2e;&#x63;&#x6f;&#109;">&#103;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#101;&#x65;&#x2e;&#x63;&#x6f;&#109;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="操作远程仓库"><a href="#操作远程仓库" class="headerlink" title="操作远程仓库"></a>操作远程仓库</h3><h4 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h4><ul>
+<li><p>命令：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git remote add &lt;远端名称&gt; &lt;仓库地址&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>远端名称：默认是<code>origin</code>，取决于远端服务器设置</li>
+<li>仓库地址：从远端服务器获取此url</li>
+<li>例如：git remote add origin <a href="mailto:&#x67;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#x65;&#101;&#46;&#99;&#x6f;&#109;">&#x67;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#x65;&#101;&#46;&#99;&#x6f;&#109;</a>:czbk_zhang_meng/git_test.git</li>
+</ul>
+</li>
+</ul>
+<p><img src="/screenshot/image-20220119170243218.png" alt="图片"></p>
+<h4 id="查看远程仓库"><a href="#查看远程仓库" class="headerlink" title="查看远程仓库"></a>查看远程仓库</h4><ul>
+<li><p>命令：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git remote</span><br></pre></td></tr></table></figure>
+<h4 id="推送到远程仓库"><a href="#推送到远程仓库" class="headerlink" title="推送到远程仓库"></a>推送到远程仓库</h4></li>
+<li><p>命令：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git push [-f] [--set-upstream] [远端名称] [本地分支名][:远端分支名]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>如果远程分支名和本地分支名相同，则可以只写本地分支名<ul>
+<li>git push origin master</li>
+</ul>
+</li>
+<li><code>-f</code>  表示强制推送，<strong>一般在公司内没有这个的使用权限</strong>，否则容易冲掉远程仓库的所有代码</li>
+<li><code>--set-upstream</code> 推送到远端的同时，建立起和远端分支的关联关系。用于第一次推送时。<ul>
+<li>git push –set-upstream origin master</li>
+</ul>
+</li>
+<li>如果当前分支已经和远端分支关联，则可以省略分支名和远端名<ul>
+<li>git push 将master分支推送到已关联的远端分支</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/screenshot/103656.png" alt="图片"></p>
+<h4 id="查看本地分支与远程分支的绑定关系"><a href="#查看本地分支与远程分支的绑定关系" class="headerlink" title="查看本地分支与远程分支的绑定关系"></a>查看本地分支与远程分支的绑定关系</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git branch -vv</span><br></pre></td></tr></table></figure>
+<p><img src="/screenshot/image-20220119171618826.png" alt="图片"></p>
+<p>此时尚未有绑定关系</p>
+<p>将本地分支master和远程分支master绑定关系</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git push --set-upstream origin master:master</span><br></pre></td></tr></table></figure>
+<p><img src="/screenshot/image-20220119171841320.png" alt="图片"></p>
+<p>发现本地分支master已经和远程分支master绑定成功</p>
+<p>此时本地分支master若要推送到远程分支master上，则可直接使用命令：<code>git push</code></p>
+<h4 id="从远程仓库克隆"><a href="#从远程仓库克隆" class="headerlink" title="从远程仓库克隆"></a>从远程仓库克隆</h4><p>如果已经有一个远端仓库，我们可以直接clone到本地。</p>
+<ul>
+<li><p>命令：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> &lt;仓库地址&gt; [本地目录]</span><br></pre></td></tr></table></figure>
+<p>本地目录可以省略，会自动生成一个目录</p>
+</li>
+</ul>
+<h4 id="从远程仓库中抓取和拉取"><a href="#从远程仓库中抓取和拉取" class="headerlink" title="从远程仓库中抓取和拉取"></a>从远程仓库中抓取和拉取</h4><p>远程分支和本地的分支一样，我们可以进行merge操作，只是需要先把远端仓库里的更新都下载到本地，再进行操作。</p>
+<ul>
+<li>抓取命令：<ul>
+<li><strong>抓取指令就是将仓库里的更新都抓取到本地，不会进行合并</strong></li>
+<li>如果不指定远端名称和分支名，则抓取所有分支。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git fetch [remote name] [branch name]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>拉取命令：<ul>
+<li>拉取指令就是将远端仓库的修改拉到本地并自动进行合并，<strong>等同于fetch+merge</strong></li>
+<li>如果不指定远端名称和分支名，则抓取所有并更新当前分支。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git pull [remote name] [branch name]</span><br></pre></td></tr></table></figure>
+<h4 id="解决合并冲突"><a href="#解决合并冲突" class="headerlink" title="解决合并冲突"></a>解决合并冲突</h4><p>在一段时间，A、B用户修改了同一个文件，且修改了同一行位置的代码，此时会发生合并冲突。</p>
+<p>A用户在本地修改代码后优先推送到远程仓库，此时B用户在本地修订代码，提交到本地仓库后，也需要推送到远程仓库，此时B用户晚于A用户，故需要先拉取远程仓库的提交，经过合并后才能推送到远端分支，如下图所示。</p>
+<p><img src="/screenshot/image-20220119174403295.png" alt="图片"></p>
+<p>在B用户拉取代码时，因为A、B用户同一段时间修改了同一个文件的相同位置代码，故会发生合并冲突。</p>
+<p><strong>远程分支也是分支，所以合并时冲突的解决方式也和解决本地分支冲突相同相同</strong>，在此不再赘述。</p>
+<h2 id="IDEA中的Git使用"><a href="#IDEA中的Git使用" class="headerlink" title="IDEA中的Git使用"></a>IDEA中的Git使用</h2><h3 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h3><p><img src="/screenshot/%E9%85%8D%E7%BD%AEGit.png" alt="图片"></p>
+<h3 id="在IDEA中操作Git"><a href="#在IDEA中操作Git" class="headerlink" title="在IDEA中操作Git"></a>在IDEA中操作Git</h3><p>场景：本地已经有一个项目，但是并不是git项目，我们需要将这个放到码云的仓库里，和其他开发人员继续一起协作开发。</p>
+<h4 id="创建项目的远程仓库"><a href="#创建项目的远程仓库" class="headerlink" title="创建项目的远程仓库"></a>创建项目的远程仓库</h4><p>略</p>
+<h4 id="初始化本地仓库"><a href="#初始化本地仓库" class="headerlink" title="初始化本地仓库"></a>初始化本地仓库</h4><p><img src="/screenshot/%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93.png" alt="图片"></p>
+<h4 id="设置远程仓库"><a href="#设置远程仓库" class="headerlink" title="设置远程仓库"></a>设置远程仓库</h4><p><img src="/screenshot/%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93.png" alt="图片"></p>
+<h4 id="提交到本地仓库"><a href="#提交到本地仓库" class="headerlink" title="提交到本地仓库"></a>提交到本地仓库</h4><p><img src="/screenshot/%E6%8F%90%E4%BA%A4%E5%88%B0%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93.png" alt="图片"></p>
+<h4 id="推送到远程仓库-1"><a href="#推送到远程仓库-1" class="headerlink" title="推送到远程仓库"></a>推送到远程仓库</h4><p><img src="/screenshot/%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93.png" alt="图片"></p>
+<h4 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h4><ul>
+<li><p>方法一：最常规的方式</p>
+<p><img src="/screenshot/image-20220119190427959.png" alt="图片"></p>
+</li>
+<li><p>方法2：最强大的方式</p>
+<p><img src="/screenshot/image-20220119190603175.png" alt="图片"></p>
+</li>
+</ul>
+<h3 id="IDEA常用GIT操作入口"><a href="#IDEA常用GIT操作入口" class="headerlink" title="IDEA常用GIT操作入口"></a>IDEA常用GIT操作入口</h3><p>1.第一张图上的快捷入口可以基本满足开发的需求</p>
+<p><img src="/screenshot/GIT%E6%93%8D%E4%BD%9C%E5%85%A5%E5%8F%A31.png" alt="图片"></p>
+<p>2.第二张图是更多在IDEA操作git的入口</p>
+<p><img src="/screenshot/GIT%E6%93%8D%E4%BD%9C%E5%85%A5%E5%8F%A32.png" alt="图片"></p>
+<h3 id="IDEA集成GitBash代替Terminal"><a href="#IDEA集成GitBash代替Terminal" class="headerlink" title="IDEA集成GitBash代替Terminal"></a>IDEA集成GitBash代替Terminal</h3><p><img src="/screenshot/idea%E9%9B%86%E6%88%90GitBash%E4%BB%A3%E6%9B%BFTerminal.png" alt="图片"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>在IDEA的终端中可使用git命令来完成以上所有功能</li>
+<li><strong>先拉取pull，提示合并失败就解决合并冲突，再推送push</strong></li>
+</ul>
 ]]></content>
       <categories>
         <category>javaEE</category>
@@ -2052,37 +2174,50 @@
       </tags>
   </entry>
   <entry>
-    <title>StudyNotes_day33(Mybatis)</title>
-    <url>/2022/02/08/StudyNotes_day33/</url>
-    <content><![CDATA[<h1 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h1>]]></content>
+    <title>StudyNotes_day5（流程控制）</title>
+    <url>/2021/05/31/StudyNotes_day5/</url>
+    <content><![CDATA[<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1><ol>
+<li><p><strong>什么是流程控制</strong></p>
+<p>流程控制是指“程序代码执行的顺序”，即这些代码哪行先执行，哪行后执行，某行执行完了之后再执行哪行</p>
+</li>
+<li><p><strong>流程控制的结构</strong></p>
+<blockquote>
+<p>顺序: 从上到下执行代码<br>选择: 有选择的执行代码<br>循环: 循环执行某一段代码</p>
+</blockquote>
+<p>由图灵提出，图灵认为世界上任何复杂的问题，总可以用上面三种流程控制进行编程实现.(这个可以证明的)</p>
+</li>
+</ol>
+<h3 id="选择结构"><a href="#选择结构" class="headerlink" title="选择结构"></a>选择结构</h3><h5 id="判断语句：if语句"><a href="#判断语句：if语句" class="headerlink" title="判断语句：if语句"></a>判断语句：if语句</h5><ul>
+<li>if语句第一种格式</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(关系表达式)&#123;</span><br><span class="line">	语句体;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>if语句第二种格式</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(关系表达式)&#123;</span><br><span class="line">	语句体<span class="number">1</span>;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	语句体<span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>if语句第三种格式</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(判断条件<span class="number">1</span>)&#123;</span><br><span class="line">	执行语句<span class="number">1</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(判断条件<span class="number">2</span>)&#123;</span><br><span class="line">	执行语句<span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(判断条件n)&#123;</span><br><span class="line">	执行语句n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line">	执行语句n+<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="选择语句：switch语句"><a href="#选择语句：switch语句" class="headerlink" title="选择语句：switch语句"></a>选择语句：switch语句</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span>(表达式)&#123;</span><br><span class="line">	<span class="keyword">case</span> 常量<span class="number">1</span>：</span><br><span class="line">		语句体<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> 常量<span class="number">2</span>：</span><br><span class="line">		语句体<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	...</span><br><span class="line">	<span class="keyword">default</span>:</span><br><span class="line">		语句体n+<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><ul>
+<li>for</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(初始化表达式①;布尔表达式②;步进表达式④)&#123;</span><br><span class="line">	循环体③</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>while</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">初始化表达式①</span><br><span class="line"><span class="keyword">while</span>(布尔表达式②)&#123;</span><br><span class="line">	循环体③</span><br><span class="line">	步进表达式④</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>do-while</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">初始化表达式①</span><br><span class="line">	<span class="keyword">do</span>&#123;</span><br><span class="line">	循环体③</span><br><span class="line">	步进表达式④</span><br><span class="line">&#125;<span class="keyword">while</span>(布尔表达式②)</span><br></pre></td></tr></table></figure>
+<p>break</p>
+<p>continue</p>
+]]></content>
       <categories>
-        <category>javaEE</category>
+        <category>javaSE</category>
       </categories>
-      <tags>
-        <tag>Mybatis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>StudyNotes_day35(SpringMVC)</title>
-    <url>/2022/02/17/StudyNotes_day35/</url>
-    <content><![CDATA[<h1 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h1>]]></content>
-      <categories>
-        <category>javaEE</category>
-      </categories>
-      <tags>
-        <tag>SpringMVC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>StudyNotes_day34(Spring)</title>
-    <url>/2022/02/12/StudyNotes_day34/</url>
-    <content><![CDATA[<h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h2 id="IOC"><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h2><h2 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h2>]]></content>
-      <categories>
-        <category>javaEE</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-      </tags>
   </entry>
   <entry>
     <title>StudyNotes_day4（运算符）</title>
@@ -2154,52 +2289,6 @@
 <p>方法重载与下列因素无关：</p>
 <p>1.与参数的名称无关</p>
 <p>2.与方法的返回值类型无关</p>
-]]></content>
-      <categories>
-        <category>javaSE</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>StudyNotes_day5（流程控制）</title>
-    <url>/2021/05/31/StudyNotes_day5/</url>
-    <content><![CDATA[<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1><ol>
-<li><p><strong>什么是流程控制</strong></p>
-<p>流程控制是指“程序代码执行的顺序”，即这些代码哪行先执行，哪行后执行，某行执行完了之后再执行哪行</p>
-</li>
-<li><p><strong>流程控制的结构</strong></p>
-<blockquote>
-<p>顺序: 从上到下执行代码<br>选择: 有选择的执行代码<br>循环: 循环执行某一段代码</p>
-</blockquote>
-<p>由图灵提出，图灵认为世界上任何复杂的问题，总可以用上面三种流程控制进行编程实现.(这个可以证明的)</p>
-</li>
-</ol>
-<h3 id="选择结构"><a href="#选择结构" class="headerlink" title="选择结构"></a>选择结构</h3><h5 id="判断语句：if语句"><a href="#判断语句：if语句" class="headerlink" title="判断语句：if语句"></a>判断语句：if语句</h5><ul>
-<li>if语句第一种格式</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(关系表达式)&#123;</span><br><span class="line">	语句体;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>if语句第二种格式</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(关系表达式)&#123;</span><br><span class="line">	语句体<span class="number">1</span>;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	语句体<span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>if语句第三种格式</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(判断条件<span class="number">1</span>)&#123;</span><br><span class="line">	执行语句<span class="number">1</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(判断条件<span class="number">2</span>)&#123;</span><br><span class="line">	执行语句<span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(判断条件n)&#123;</span><br><span class="line">	执行语句n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line">	执行语句n+<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="选择语句：switch语句"><a href="#选择语句：switch语句" class="headerlink" title="选择语句：switch语句"></a>选择语句：switch语句</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span>(表达式)&#123;</span><br><span class="line">	<span class="keyword">case</span> 常量<span class="number">1</span>：</span><br><span class="line">		语句体<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> 常量<span class="number">2</span>：</span><br><span class="line">		语句体<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	...</span><br><span class="line">	<span class="keyword">default</span>:</span><br><span class="line">		语句体n+<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><ul>
-<li>for</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(初始化表达式①;布尔表达式②;步进表达式④)&#123;</span><br><span class="line">	循环体③</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>while</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">初始化表达式①</span><br><span class="line"><span class="keyword">while</span>(布尔表达式②)&#123;</span><br><span class="line">	循环体③</span><br><span class="line">	步进表达式④</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>do-while</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">初始化表达式①</span><br><span class="line">	<span class="keyword">do</span>&#123;</span><br><span class="line">	循环体③</span><br><span class="line">	步进表达式④</span><br><span class="line">&#125;<span class="keyword">while</span>(布尔表达式②)</span><br></pre></td></tr></table></figure>
-<p>break</p>
-<p>continue</p>
 ]]></content>
       <categories>
         <category>javaSE</category>
@@ -2397,6 +2486,20 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2021/02/10/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>一篇博文</title>
     <url>/2021/02/11/%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/</url>
     <content><![CDATA[<h2 id="建站（折腾）历程"><a href="#建站（折腾）历程" class="headerlink" title="建站（折腾）历程"></a>建站（折腾）历程</h2><p>​    建这个博客的起因是想记录和总结学到的知识点，其实自己并没有记录和总结的习惯，一个教训就是之前学习java没有及时总结到后期忘记前面的知识点复习起来很痛苦，这次我在边复习java和学习新的知识时边在自己的博客上做些总结。</p>
@@ -2410,20 +2513,6 @@
         <tag>java</tag>
         <tag>ACG</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2021/02/10/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>基本的Dos命令</title>
@@ -2449,6 +2538,55 @@
       <categories>
         <category>Dos</category>
       </categories>
+  </entry>
+  <entry>
+    <title>StudyNotes_day33(Mybatis)</title>
+    <url>/2022/02/08/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/StudyNotes_day33/</url>
+    <content><![CDATA[<h1 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h1>]]></content>
+      <categories>
+        <category>javaEE</category>
+      </categories>
+      <tags>
+        <tag>Mybatis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>StudyNotes_day35(SpringMVC)</title>
+    <url>/2022/02/17/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/StudyNotes_day35/</url>
+    <content><![CDATA[<h1 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h1>]]></content>
+      <categories>
+        <category>javaEE</category>
+      </categories>
+      <tags>
+        <tag>SpringMVC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>StudyNotes_day34(Spring)</title>
+    <url>/2022/02/12/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/StudyNotes_day34/</url>
+    <content><![CDATA[<h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h2 id="IOC"><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h2><h2 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h2>]]></content>
+      <categories>
+        <category>javaEE</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>StudyNotes_day36(SpringBoot)</title>
+    <url>/2022/02/20/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/StudyNotes_day36/</url>
+    <content><![CDATA[<h1 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h1>]]></content>
+      <categories>
+        <category>javaEE</category>
+      </categories>
+      <tags>
+        <tag>SpringBoot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>StudyNotes_day37</title>
+    <url>/2022/02/28/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/StudyNotes_day37/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>StudyNotes_day22（线程）</title>
@@ -3072,5 +3210,263 @@
       <categories>
         <category>javaSE</category>
       </categories>
+  </entry>
+  <entry>
+    <title>StudyNotes_day30(Mysql)</title>
+    <url>/2022/01/03/StudyNotes_day30/</url>
+    <content><![CDATA[<h1 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h1><h2 id="数据库概述"><a href="#数据库概述" class="headerlink" title="数据库概述"></a>数据库概述</h2><h3 id="数据库的分类"><a href="#数据库的分类" class="headerlink" title="数据库的分类"></a>数据库的分类</h3><p><strong>关系型数据库：底层是以二维表的及其之间的关系所组成的数据库</strong></p>
+<p><strong>非关系(NoSQL)型数据库：键值对数据库，例如：MongoDB、Redis</strong></p>
+<p>横：记录。竖：字段</p>
+<h2 id="MySQL数据类型及字段约束"><a href="#MySQL数据类型及字段约束" class="headerlink" title="MySQL数据类型及字段约束"></a>MySQL数据类型及字段约束</h2><h3 id="数值类型"><a href="#数值类型" class="headerlink" title="数值类型"></a>数值类型</h3><p>MySQL中支持多种整型，其实很大程度上是相同的，只是存储值的大小范围不同而已</p>
+<p><strong>tinyint</strong>：占用1个字节，相对于java中的byte</p>
+<p><strong>smallint</strong>：占用2个字节，相对于java中的short</p>
+<p><strong>int</strong>：占用4个字节，相对于java中的int</p>
+<p><strong>bigint</strong>：占用8个字节，相对于java中的long</p>
+<p>其次是浮点类型即：float和double类型</p>
+<p><strong>float</strong>：4字节单精度浮点类型，相对于java中的float</p>
+<p><strong>double</strong>：8字节双精度浮点类型，相对于java中的double</p>
+<h3 id="字符串类型"><a href="#字符串类型" class="headerlink" title="字符串类型"></a>字符串类型</h3><p>1、char(n)定长字符串，最长255个字符。n表示字符数，例如：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 创建user表, 指定用户名为char类型，字符长度不超过10</span><br><span class="line">create table user(</span><br><span class="line">	username char(10),</span><br><span class="line">	...</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>所谓的定长，是当插入的值长度小于指定的长度<strong>10</strong>（上面指定的）时, 剩余的空间会用空格填充。（这样会浪费空间）</p>
+<p>2、varchar(n) 变长字符串，最长不超过 65535个字节，n表示字符数，一般超过255个字节，会使用text类型，例如：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 创建user表, 指定用户名为varchar类型，长度不超过10</span><br><span class="line">create table user(</span><br><span class="line">	username varchar(10)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>3、大文本（长文本）类型</p>
+<p>最长65535个字节，一般超过255个字符列的会使用text</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 创建user表, </span><br><span class="line">create table user(</span><br><span class="line"></span><br><span class="line">	resume text</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>另，text也分多种，其中bigtext存储数据的长度约为4GB</p>
+<p>总结：char(n)、varchar(n)、text都可以表示字符串类型，其区别在于：</p>
+<ol>
+<li>char(n)在保存数据时, 如果存入的字符串长度小于指定的长度n，后面会用空格补全，因此可能会造成空间浪费，但是char类型的存储速度较varchar和text快。因此char类型适合存储长度固定的数据，这样就不会有空间浪费，存储效率比后两者还快！</li>
+<li>varchar(n)保存数据时, 按数据的真实长度存储, 剩余的空间可以留给别的数据用，因此varchar不会浪费空间。<br>因此varchar适合存储长度不固定的数据，这样不会有空间的浪费。</li>
+<li>text是大文本类型，一般文本长度超过255个字符，就会使用text类型存储。</li>
+</ol>
+<h3 id="日期类型"><a href="#日期类型" class="headerlink" title="日期类型"></a>日期类型</h3><ol>
+<li>date：年月日</li>
+<li>time：时分秒</li>
+<li>datetime：年月日 时分秒</li>
+<li>timestamp：时间戳(实际存储的是一个时间毫秒值)，与datetime存储日期格式相同。<br>timestamp最大表示2038年，而datetime范围是1000~9999<br>timestamp在插入数、修改数据时，可以自动更新成系统当前时间(后面用到时再做讲解)</li>
+</ol>
+<h3 id="字段-列-约束"><a href="#字段-列-约束" class="headerlink" title="字段(列)约束"></a>字段(列)约束</h3><p>创建表时, 除了要给每个列指定对应的数据类型, 有时也需要给列添加约束。常见的约束有：主键约束、唯一约束、非空约束、外键约束。</p>
+<p>1、主键(primary key)</p>
+<p>主键是数据表中，一行记录的唯一标识。比如学生的编号，人的身份证号, 例如:</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">--创建user表,指定id为主键, 作为用户的唯一标识</span><br><span class="line">create table stu(</span><br><span class="line">	id int primary key,</span><br><span class="line">	...</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>主键的特点： 唯一且不能为空！！！</p>
+<p>当主键为数值时，为了方便维护，可以设置主键为自增（auto_increment）</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">--示例：创建user表,指定id为主键, 并指定主键自增</span><br><span class="line">create table user(</span><br><span class="line">	id int primary key auto_increament,</span><br><span class="line">	...</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>2、唯一(unique)</p>
+<p>保证所约束的列必须是唯一的，即不能重复出现，例如：用户注册时，保存的用户名不可以重复。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">--示例：创建user表, 指定用户名不能重复</span><br><span class="line">create table user(</span><br><span class="line">	id int primary key auto_increament,</span><br><span class="line">	username varchar(50) unique,</span><br><span class="line">	...</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>唯一约束特点是不能重复！！(允许为空)</p>
+<p>3、非空(not null)</p>
+<p>保证所约束的列必须是不为空的，即在插入记录时，该列必须要赋值，例如：用户注册时，保存的密码不能为空。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">--创建user表, 指定密码不能为空</span><br><span class="line">create table user(</span><br><span class="line">	id int primary key auto_increament,</span><br><span class="line">	username varchar(50) unique,</span><br><span class="line">	password varchar(50) not null,</span><br><span class="line">	...</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>非空约束的特点是： 不能为空值， 即插入数据时该列必须得有值！！</p>
+<p>4、外键约束</p>
+<p>外键是用于表和表之间关系的列，后面在表关系中说明</p>
+<h2 id="MySQL建库、建表"><a href="#MySQL建库、建表" class="headerlink" title="MySQL建库、建表"></a>MySQL建库、建表</h2><h3 id="查看数据库、查看数据表"><a href="#查看数据库、查看数据表" class="headerlink" title="查看数据库、查看数据表"></a>查看数据库、查看数据表</h3><p>1、查看mysql服务器中所有数据库</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure>
+<p>2、进入某一数据库</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">use <span class="built_in">test</span>;</span><br></pre></td></tr></table></figure>
+<p>提示，查看已进入的库：select database();</p>
+<p>3、查看当前库中的所有表</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">show tables;</span><br></pre></td></tr></table></figure>
+<p>提示：mysql数据库不区分大小写</p>
+<h3 id="创建数据库、创建数据表"><a href="#创建数据库、创建数据表" class="headerlink" title="创建数据库、创建数据表"></a>创建数据库、创建数据表</h3><p>1、创建数据库</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 删除mydb1库(如果存在)</span><br><span class="line">drop database <span class="keyword">if</span> exists mydb1;</span><br><span class="line">-- 重新创建mydb1库</span><br><span class="line">create database mydb1 charset utf8;</span><br><span class="line">-- 查看、进入mydb1库</span><br><span class="line">show databases;</span><br><span class="line">use mydb1;</span><br></pre></td></tr></table></figure>
+<p>提示：创建库时，要记得指定编码</p>
+<p>2、创建数据表</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 删除stu学生表(如果存在)</span><br><span class="line">drop table <span class="keyword">if</span> exists stu;</span><br><span class="line">-- 创建stu学生表</span><br><span class="line">create table stu(</span><br><span class="line">	id int,				-- 学生编号</span><br><span class="line">	name varchar(20),	-- 学生姓名</span><br><span class="line">	gender char(1),	-- 学生性别</span><br><span class="line">	birthday date,		-- 出生年月</span><br><span class="line">	score double		-- 考试成绩</span><br><span class="line">);</span><br><span class="line">-- 查看表结构</span><br><span class="line">desc stu;</span><br></pre></td></tr></table></figure>
+<p>提示：# 和 – 是sql语句的注释符号</p>
+<h3 id="更新表记录（insert-update-delete）"><a href="#更新表记录（insert-update-delete）" class="headerlink" title="更新表记录（insert/update/delete）"></a>更新表记录（insert/update/delete）</h3><p>1、insert–插入表记录</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">insert into 表名(列1,列2...)  values(值1, 值2...);</span><br><span class="line">-- insert用于向指定的表中插入哪些列, 以及给予哪些值</span><br><span class="line">-- 如果要为所有的列插入值, 可以省略表名后面的列列表，例如：</span><br><span class="line">insert into 表名 values(值1, 值2...);</span><br></pre></td></tr></table></figure>
+<p>注意: (1)只能在给所有列插入值时, 才可以省略列列表, 否则会报错</p>
+<p>​         (2)在插入值时, 如果没有省略列列表, 那么列列表和值列表要一一对应</p>
+<p>​         (3)在插入值时, 如果省略了列列表, 那么值列表中值的顺序要和声明列的顺序一致</p>
+<p>​         (4)在插入字符串和日期时, 字符串和日期要用单引号引起来。</p>
+<p>解决中文的乱码：在通过CMD访问数据库时，最好一登录就设置 “set names gbk”，即可避免在插入数据时或者查询数据时数据乱码</p>
+<p>2、update–修改表记录</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 修改stu表中王的成绩，加10分特长分。</span><br><span class="line">update stu <span class="built_in">set</span> score=score+10 <span class="built_in">where</span> name=<span class="string">&#x27;王&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>注意: null值和任何值计算结果还是null, 因此, 可以通过ifnull函数将null置为零对待</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">update stu <span class="built_in">set</span> score=ifnull(score, 0)+10;</span><br></pre></td></tr></table></figure>
+<p>3、delete–删除表记录</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 删除stu表中的王信息</span><br><span class="line">delete from stu <span class="built_in">where</span> name=<span class="string">&#x27;王&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>若没有where子句, 则默认删除所有记录</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-- 删除emp表中的所有信息</span><br><span class="line">delete from stu;</span><br></pre></td></tr></table></figure>
+<h3 id="查询表记录（select）"><a href="#查询表记录（select）" class="headerlink" title="查询表记录（select）"></a>查询表记录（select）</h3><p>1、基础查询</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 查询emp表中的所有员工，显示员工姓名、薪资、奖金</span><br><span class="line">select name,sal,bonus from emp;</span><br><span class="line">-- 查询emp表中的所有员工，显示所有列。</span><br><span class="line">select * from emp;</span><br></pre></td></tr></table></figure>
+<p>提示： distinct关键字，用于剔除指定列中的重复值，例如：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 查询emp表中的所有部门，剔除重复的部门</span><br><span class="line">select distinct dept from emp; </span><br></pre></td></tr></table></figure>
+<p>2、where子句查询</p>
+<p>对表中的所有记录进行筛选、过滤使用where子句</p>
+<p>下面的运算符可以在 WHERE 子句中使用：</p>
+<p><img src="/screenshot/where%E5%AD%90%E5%8F%A5%E6%9F%A5%E8%AF%A2.png" alt="图片"></p>
+<p>SQL练习：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 查询emp表中薪资大于3000的所有员工，显示员工姓名、薪资</span><br><span class="line">select name,sal from emp <span class="built_in">where</span> sal&gt;3000; </span><br><span class="line">-- 查询emp表中总薪资(薪资+奖金)大于3500的所有员工，显示员工姓名、总薪资</span><br><span class="line">select name, sal+bonus from emp <span class="built_in">where</span> (sal+bonus)&gt;3000; </span><br><span class="line">-- 或</span><br><span class="line">select name, sal+bonus as 总薪资 from emp <span class="built_in">where</span> (sal+bonus)&gt;3000;</span><br></pre></td></tr></table></figure>
+<p>提示：(1)as用于定义别名(仅在查询的结果中作为列的表头显示)，也可以省略as<br>            (2)where子句中不能使用列别名（但是可以使用表别名）</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 查询emp表中薪资在3000和4500之间的员工，显示员工姓名和薪资</span><br><span class="line">select name,sal from emp <span class="built_in">where</span> sal between 3000 and 4500; </span><br><span class="line">-- 查询emp表中姓名中以<span class="string">&quot;刘&quot;</span>开头的员工，显示员工姓名。</span><br><span class="line">select name,sal from emp <span class="built_in">where</span> name like <span class="string">&#x27;刘%&#x27;</span>;</span><br><span class="line">-- 查询emp表中姓名以<span class="string">&quot;刘&quot;</span>开头，字数为两个字的员工，显示员工姓名。</span><br><span class="line">select * from emp <span class="built_in">where</span> name like <span class="string">&#x27;刘_&#x27;</span>;</span><br><span class="line">-- 查询emp表中姓名中包含<span class="string">&quot;涛&quot;</span>字的员工，显示员工姓名。</span><br><span class="line">select * from emp <span class="built_in">where</span> name like <span class="string">&#x27;%涛%&#x27;</span>;</span><br><span class="line">-- 提示：<span class="string">&quot;%&quot;</span> 表示任意0或多个字符。<span class="string">&quot;_&quot;</span> 表示任意一个字符</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-- 查询emp表中薪资为1400、1600、1800的员工，显示员工姓名和薪资</span><br><span class="line">select name,sal from emp <span class="built_in">where</span> sal <span class="keyword">in</span>(1400,1600,1800);</span><br><span class="line">-- 查询emp表中薪资小于2000和薪资大于4000的员工，显示员工姓名、薪资。</span><br><span class="line">select name,sal from emp <span class="built_in">where</span> sal&lt;2000 or sal &gt;4000;</span><br><span class="line">-- 查询emp表中薪资大于3000并且奖金小于600的员工，显示姓名、薪资、奖金。</span><br><span class="line">select name,sal,bonus from emp <span class="built_in">where</span> sal&gt;3000 and bonus&lt;600;</span><br></pre></td></tr></table></figure>
+<p>3、排序查询</p>
+<p>对查询的结果进行排序使用 order by关键字。<br>order by 排序的列 asc    升序 ↑<br>order by 排序的列 asc    降序 ↓</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 对emp表中所有员工的薪资进行升序(从低到高)排序，显示姓名、薪资。</span><br><span class="line">select name,sal from emp order by sal asc;</span><br><span class="line">-- 对emp表中所有员工的总薪资进行降序(从高到低)排序，显示姓名、总薪资。</span><br><span class="line">select name, sal+bonus as 总薪资 from emp order by (sal+bonus) desc;</span><br></pre></td></tr></table></figure>
+<p>4、分组查询</p>
+<p>对所查询的记录可以根据某一列进行分组, 分组使用group by。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 将员工按照部门进行分组</span><br><span class="line">select * from emp group by dept;</span><br><span class="line">-- 对emp表按照部门进行分组, 并统计每个部门的人数, 显示部门和对应人数</span><br><span class="line">select dept 部门名称, count(*) 部门人数 from emp group by dept;</span><br><span class="line">-- 对emp表按照部门进行分组, 求每个部门的最高薪资(不包含奖金)</span><br><span class="line">select max(sal) 总薪资 from emp group by dept;</span><br></pre></td></tr></table></figure>
+<p>注意：分组之前使用聚合函数表示对查询的所有记录进行统计计算</p>
+<p>分组之后使用聚合函数表示对每一个组中的所有记录进行统计计算。</p>
+<p>5、聚合函数查询</p>
+<p>1、max()或min() – 返回某列的最大值或最小值<br>2、count() – 返回某列的行数<br>3、sum() – 返回某列值之和<br>4、avg() – 返回某列的平均值</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 查询emp表中最高薪资</span><br><span class="line">select max(sal) as 最高薪资 from emp;</span><br><span class="line">-- 查询emp表中最高总薪资(薪资加奖金)</span><br><span class="line">select max(sal+bonus) as 最高薪资 from emp;</span><br><span class="line">-- 统计emp表中薪资大于3000的员工人数</span><br><span class="line">select count(*) from emp <span class="built_in">where</span> sal&gt;3000;</span><br><span class="line">-- 统计emp表中所有员工的总薪资(不包含奖金)</span><br><span class="line">select sum(sal) as 员工总薪资 from emp;</span><br><span class="line">-- 统计emp表员工的平均薪资(不包含奖金)</span><br><span class="line">select avg(sal) as 员工总薪资 from emp;</span><br></pre></td></tr></table></figure>
+<p><strong>!!重要提示：</strong></p>
+<p>a) 可以使用count(*)统计记录行数<br>b) 多个聚合函数可以一起查询</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 例如:根据部门进行分组，统计每个部门员工人数和平均薪资</span><br><span class="line">select dept, count(*) 员工人数, avg(sal) 平均薪资 from emp group by dept; </span><br></pre></td></tr></table></figure>
+<p>c) 聚合函数不能用在where子句中<br>d) 在没有分组的情况下，聚合函数不能和其他普通字段一起查询</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 例如: 查询emp表中薪资最高的员工姓名, 下面的写法是错的:</span><br><span class="line">select name, max(sal) from emp;--结果是错的</span><br><span class="line">-- 正确的查询：</span><br><span class="line">select name, sal from emp <span class="built_in">where</span> sal=(</span><br><span class="line">	select max(sal) from emp</span><br><span class="line">);-- 子查询</span><br></pre></td></tr></table></figure>
+<p>6、其他函数</p>
+<p>1、数值函数<br>(1)ceil(数值) – 向上取整<br>(2)floor(数值) – 向下取整<br>(3)round(数值) – 向下取整<br>(4)rand(数值) – 随机数</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- emp表中所有员工薪资上涨15.47%, 向上取整。</span><br><span class="line">select name,sal, ceil(sal*1.1547) from emp;</span><br></pre></td></tr></table></figure>
+<p>2、日期函数<br>(1)curdate() – 返回当前日期(年月日)<br>(2)curtime() – 返回当前时间(时分秒)<br>(3)now() – 返回当前日期+时间(年月日 时分秒)<br>(4)date_add()、date_sub() – 增加/减少日期<br>(5)year()、month()、day()、hour()、minute()、second()，分别用来获取日期中的年、月、日、时、分、秒</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 查询系统当前时间</span><br><span class="line">select now();</span><br><span class="line">-- 查询emp表中所有员工的年龄，显示姓名、年龄</span><br><span class="line">select name,year(curdate()) - year(birthday) 年龄 from emp;</span><br><span class="line">-- 查询emp表中所有在1993和1995年出生的，显示姓名、出生日期。</span><br><span class="line">select name,birthday from emp <span class="built_in">where</span> year(birthday) between 1993 and 1995;</span><br></pre></td></tr></table></figure>
+<h2 id="外键和表关系"><a href="#外键和表关系" class="headerlink" title="外键和表关系"></a>外键和表关系</h2><h3 id="外键"><a href="#外键" class="headerlink" title="外键"></a>外键</h3><p>外键：唯一标识其他表中的一条记录，用来通知数据库两张表列与列之间的对应关系, 并让数据库帮我们维护这样关系的键就叫做外键。</p>
+<p><img src="/screenshot/%E5%A4%96%E9%94%AE.png" alt="图片"></p>
+<p>例如：员工表的部门id列（dept_id）和部门表的id列具有一 一对应的关系, 其中dept_id就是外键。</p>
+<p>​    外键作用: 确保数据库数据的完整性和一致性</p>
+<p>​    添加外键: 例如：foreign key(dept_id) references dept(id)</p>
+<h3 id="表关系"><a href="#表关系" class="headerlink" title="表关系"></a>表关系</h3><p>1、一对多</p>
+<p>一对多，反过来就是多对一，以班级和学生为例：</p>
+<p>(1)一个班级中可能会有多个学生(1~*)</p>
+<p>(2)一个学生只能属于一个班级(1<del>1)，两者合并结果还是1</del>*</p>
+<p>因此，班级表和学生表是一对多的关系</p>
+<p>对于一对多的两张表，可以在多的一方添加列，保存一的一方的主键，从而保存两张表之间的关系</p>
+<p><img src="/screenshot/%E4%B8%80%E5%AF%B9%E5%A4%9A.png" alt="图片"></p>
+<p>2、一对一</p>
+<p>以班级和教室为例：</p>
+<p>(1)一个班级对应一个教室(1~1)</p>
+<p>(2)一个教室也只对应一个班级(1<del>1)，两者合并结果还是1</del>1</p>
+<p>因此，班级表和教室表是一对一的关系</p>
+<p>对于一对一关系的两张表，可以在任意一张表中添加列，保存另一张表的主键，从而保存两张表之间的关系</p>
+<p><img src="/screenshot/%E4%B8%80%E5%AF%B9%E4%B8%80.png" alt="图片"></p>
+<p>3、多对多</p>
+<p>以学生和老师为例：</p>
+<p>(1)一个学生对应多个老师(1~*)</p>
+<p>(2)一个老师也对应多个学生(1<del><em>)，两者合并结果是</em></del>*</p>
+<p>因此，学生表和老师表是多对多的关系</p>
+<p>对于多对多的关系，可以拆分成两张一对多的关系，无法在两张表中添加列保存关系，但我们可以添加一张第三方的表（专门保存两张表的关系），保存两张表的主键，从而保存两张表的关系。</p>
+<p><img src="/screenshot/%E5%A4%9A%E5%AF%B9%E5%A4%9A.png" alt="图片"></p>
+<h2 id="多表连接查询"><a href="#多表连接查询" class="headerlink" title="多表连接查询"></a>多表连接查询</h2><h3 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h3><p>连接查询：将两张或者两张以上的表，按照指定条件查询，将结果显示在一张表中。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">多张表查询的语法：</span><br><span class="line">select... </span><br><span class="line">from A, B... </span><br><span class="line"><span class="built_in">where</span>...</span><br><span class="line"></span><br><span class="line">如果表名过长，可以为表添加别名以方便书写</span><br><span class="line">select... </span><br><span class="line">from A a, B b...</span><br><span class="line"><span class="built_in">where</span>...</span><br><span class="line">上面小写的a和b就是A和B表的别名:</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 查询部门和部门下的员工。</span><br><span class="line">select * </span><br><span class="line">from dept d,emp e </span><br><span class="line"><span class="built_in">where</span> d.id=e.dept_id;</span><br><span class="line">或</span><br><span class="line">select * </span><br><span class="line">from dept d inner join emp e on d.id=e.dept_id;</span><br><span class="line">上面的查询(inner join...on...)方式也叫做内连接查询</span><br></pre></td></tr></table></figure>
+<h3 id="外连接查询"><a href="#外连接查询" class="headerlink" title="外连接查询"></a>外连接查询</h3><p>1、左外连接查询</p>
+<p>显示左侧表中的所有记录，如果在右侧表中没有对应的记录，则显示为null</p>
+<p>语法：</p>
+<p>select …</p>
+<p>from a <strong>left</strong> <strong>join</strong> b <strong>on</strong> (a.id=b.xid)</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 查询所有部门和部门下的员工，如果部门下没有员工，显示null</span><br><span class="line">select * </span><br><span class="line">from dept d left join emp e on d.id=e.dept_id;</span><br></pre></td></tr></table></figure>
+<p>以上结果会显示（左侧表）所有部门，如果某部门下没有员工，（右侧表）则显示为null</p>
+<p>2、右外连接查询</p>
+<p>显示右侧表中的所有记录，如果在左侧表中没有对应的记录，则显示为null</p>
+<p>语法：</p>
+<p>select …<br>from a right join b on (a.id=b.xid)</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 查询部门和所有员工，如果员工没有所属部门，显示null</span><br><span class="line">select * </span><br><span class="line">from dept d right join emp e on d.id=e.dept_id;</span><br></pre></td></tr></table></figure>
+<p>以上结果会显示（右侧表）所有员工，如果员工没有所属部门，（左侧表）则显示为null</p>
+<h3 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h3><p>所谓的子查询，其实就是将一个查询得出的结果，作为另外一个查询的条件。<br>格式：</p>
+<p>select…<br>from…<br>where…(select…from…)</p>
+<p>1、列出薪资比’王海涛’高的所有员工，显示姓名、薪资</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 先查询出<span class="string">&#x27;王&#x27;</span>的薪资</span><br><span class="line">select sal from emp <span class="built_in">where</span> name=<span class="string">&#x27;王&#x27;</span>;</span><br><span class="line">-- 再查询比王薪资高的员工</span><br><span class="line">select name, sal </span><br><span class="line">from emp </span><br><span class="line"><span class="built_in">where</span> sal&gt;( select sal from emp <span class="built_in">where</span> name=<span class="string">&#x27;王&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>2、列出与’刘’从事相同职位的所有员工，显示姓名、职位、部门。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 先关联, 查询员工及员工对应的部门</span><br><span class="line">select e.name, e.job, d.name from emp e, dept d <span class="built_in">where</span> e.dept_id=d.id;</span><br><span class="line">-- 再查询<span class="string">&#x27;刘&#x27;</span>的职位</span><br><span class="line">select name, job from emp <span class="built_in">where</span> name=<span class="string">&#x27;刘&#x27;</span>;</span><br><span class="line">-- 最后筛选, 筛选出和<span class="string">&#x27;刘&#x27;</span>相同职位的员工</span><br><span class="line">select e.name, e.job, d.name from emp e, dept d <span class="built_in">where</span> e.dept_id=d.id and job=(select job from emp <span class="built_in">where</span> name=<span class="string">&#x27;刘&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>3、列出薪资高于在’大数据部’(已知部门编号为30)就职的所有员工的薪资的员工姓名和薪资、部门名称。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 查询出<span class="string">&#x27;大数据部&#x27;</span>的最高薪资</span><br><span class="line">select max(sal) from emp <span class="built_in">where</span> dept_id=30;</span><br><span class="line">-- 关联查询, 查询员工的姓名,薪资, 部门名称</span><br><span class="line">select e.name, e.sal, d.name from emp e, dept d <span class="built_in">where</span> e.dept_id=d.id and sal&gt;(select max(sal) from emp <span class="built_in">where</span> dept_id=30);</span><br></pre></td></tr></table></figure>
+<h3 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h3><p>1、（左外连接）列出所有部门和部门下的员工，如果部门下没有员工, 显示为null。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">select d.id, d.name, e.name, e.dept_id </span><br><span class="line">from dept d left join emp e on e.dept_id=d.id;</span><br></pre></td></tr></table></figure>
+<p>2、（关联查询）列出在’培优部’任职的员工，假定不知道’培优部’的部门编号。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 先查询员工及员工所属部门</span><br><span class="line">select e.name, e.dept_id, d.id, d.name </span><br><span class="line">from emp e, dept d </span><br><span class="line"><span class="built_in">where</span> e.dept_id=d.id;</span><br><span class="line">-- 再筛选过滤，查询部门名称为<span class="string">&#x27;培优部&#x27;</span>的员工</span><br><span class="line">select e.name, d.id, d.name </span><br><span class="line">from emp e, dept d </span><br><span class="line"><span class="built_in">where</span> e.dept_id=d.id and d.name=<span class="string">&#x27;培优部&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>3、（自连接查询）列出所有员工及其直接上级，显示员工姓名、上级编号，上级姓名</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 先查询员工表（emp e1）</span><br><span class="line">select name, topid from emp e1;</span><br><span class="line">-- 再查询上级表（还是员工表，emp e2）</span><br><span class="line">select id, name from emp e2;</span><br><span class="line">-- 最后查询员工及其员工的直接上级</span><br><span class="line">select e1.name,e1.topid, e2.id, e2.name </span><br><span class="line">from emp e1, emp e2 </span><br><span class="line"><span class="built_in">where</span> e1.topid = e2.id;</span><br></pre></td></tr></table></figure>
+<p>4、（分组、聚合函数）列出最低薪资大于1500的各种职位，显示职位和该职位最低薪资</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 先查询出各种职位的最低薪资</span><br><span class="line">select job, min(sal) 最低薪资 </span><br><span class="line">from emp group by job;</span><br><span class="line">提示：对分组后的记录筛选过滤请使用having替换<span class="built_in">where</span>，并且having书写在最后</span><br><span class="line">-- 再查询出最低薪资&gt;1500的职位</span><br><span class="line">select job, min(sal) 最低薪资 </span><br><span class="line">from emp group by job </span><br><span class="line">having min(sal)&gt;1500;</span><br></pre></td></tr></table></figure>
+<p>5、（分组、聚合函数查询）列出在每个部门就职的员工数量、平均工资。显示部门编号、员工数量，平均薪资。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">select dept_id, count(*) 员工数量, avg(sal) 平均薪资 </span><br><span class="line">from emp group by dept_id;</span><br></pre></td></tr></table></figure>
+<p>6、（分组、关联、聚合函数查询）查出至少有一个员工的部门。显示部门编号、部门名称、部门位置、部门人数。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 先关联查询, 查询出员工和员工对应的部门</span><br><span class="line">select d.id, d.name, d.loc, e.name</span><br><span class="line">from emp e, dept d </span><br><span class="line"><span class="built_in">where</span> e.dept_id=d.id;</span><br><span class="line">-- 再根据部门进行分组, 统计每个部门的员工数量</span><br><span class="line">select d.id, d.name, d.loc, count(*) 员工数量 </span><br><span class="line">from emp e, dept d </span><br><span class="line"><span class="built_in">where</span> e.dept_id=d.id group by e.dept_id;</span><br></pre></td></tr></table></figure>
+<p>7、（自连接查询）列出受雇日期早于直接上级的所有员工的编号、姓名、部门名称。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 关联查询</span><br><span class="line">select e1.id, e1.name, d.name </span><br><span class="line">from emp e1, emp e2, dept d </span><br><span class="line"><span class="built_in">where</span> e1.dept_id=d.id and e1.topid=e2.id and e1.hdate &lt; e2.hdate;</span><br></pre></td></tr></table></figure>
+<h2 id="扩展内容"><a href="#扩展内容" class="headerlink" title="扩展内容"></a>扩展内容</h2><h3 id="备份和恢复数据库"><a href="#备份和恢复数据库" class="headerlink" title="备份和恢复数据库"></a>备份和恢复数据库</h3><p>1、打开CMD窗口(不要登录)，通过命令备份mydb1数据库<br>    备份命令: mysqldump -u用户名 -p 数据库名字 &gt; 数据文件的位置<br>    例如: mysqldump -uroot -p mydb1 &gt; d:/mydb1.sql</p>
+<p>​    输入密码, 如果没有提示错误, 即备份成功, 查询d盘的mydb1.sql文件<br>​    提示: (1)备份数据库的命令后面不要添加分号(;)<br>​    (2)备份数据库只是备份数据库中的表, 不会备份数据库本身</p>
+<p>2、登录到MySQL客户端，删除mydb1库<br>    – 删除mydb1库<br>    drop database mydb1;<br>    – 查询所有库, 是否还存在mydb1库<br>    show databases;</p>
+<p>​    由于备份时, 没有备份数据库本身, 所以在恢复库中的数据前, 需要先创建好要恢复的库<br>​    – 创建mydb1数据库<br>​    create database mydb1 charset utf8;<br>​    提示: 此时的mydb1库是空的, 没有任何表</p>
+<p>3、在CMD窗口中(不要登录)，通过命令恢复mydb1数据库<br>    – 在CMD窗口中(不要登录)<br>    恢复命令: mysql -u用户名 -p 数据库名字 &lt; 数据文件的位置<br>    例如: mysql -uroot -p mydb1 &lt; d:/mydb1.sql</p>
+<p>​    输入密码, 如果没有提示错误, 即恢复成功, 下面进行验证</p>
+<p>​    – 在登录状态下, 选择mydb1库, 查询其中的表是否恢复了回来<br>​    use mydb1;<br>​    show tables;</p>
+<h3 id="取消SQL语句的执行—-c"><a href="#取消SQL语句的执行—-c" class="headerlink" title="取消SQL语句的执行—\c"></a>取消SQL语句的执行—\c</h3><p>当在cmd中书写了SQL语句，又想取消执行，在SQL语句的后面添加一个 \c 可以取消当前SQL语句的执行!!</p>
+<h3 id="修改表操作"><a href="#修改表操作" class="headerlink" title="修改表操作"></a>修改表操作</h3><p>现创建学生表：</p>
+<p>use test; – 进入test库</p>
+<p>drop table if exists stu; – 删除学生表(如果存在)</p>
+<p>create table stu( – 创建学生表</p>
+<p>​    id int,             – 学生id</p>
+<p>​    name varchar(20),    – 学生姓名</p>
+<p>​    gender char(1),    – 学生性别</p>
+<p>​    birthday date        – 出生年月</p>
+<p>);</p>
+<p>1、新增列</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 往stu表中添加score列，double类型</span><br><span class="line">alter table stu add score double;</span><br></pre></td></tr></table></figure>
+<p>2、修改列</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 修改id列，将id设置为主键</span><br><span class="line">alter table stu modify id int primary key;</span><br><span class="line">-- 修改id列，将id主键设置为自动增长</span><br><span class="line">alter table stu modify id int auto_increment;</span><br></pre></td></tr></table></figure>
+<p>3、删除列</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 删除stu表中的score列</span><br><span class="line">alter table stu drop score;</span><br></pre></td></tr></table></figure>
+<h3 id="添加或删除主键及自增长"><a href="#添加或删除主键及自增长" class="headerlink" title="添加或删除主键及自增长"></a>添加或删除主键及自增长</h3><p>a) 在建表时，如何为id指定主键约束和自增?<br>b) 建好的表，如何通过修改添加主键约束和自增?<br>c) 如何删除表中的主键约束和自增?</p>
+<p>1、创建stu学生表, 不添加主键自增, 查看表结果</p>
+<p>use mydb1; – 切换到mydb1库<br>drop table if exists stu; – 删除stu学生表(如果存在)<br>create table stu( – 重建stu学生表, 没有主键自增<br>    id int,<br>    name varchar(20),<br>    gender char(1),<br>    birthday date<br>);<br>desc stu; – 查看表结构</p>
+<p>表结构如下: 没有主键约束和自增</p>
+<p><img src="/screenshot/%E6%B2%A1%E6%9C%89%E4%B8%BB%E9%94%AE%E7%BA%A6%E6%9D%9F%E5%92%8C%E8%87%AA%E5%A2%9E.png" alt="图片"></p>
+<p>​    </p>
+<p>2、如果表没有创建, 或者要删除重建, 在创建时可以指定主键或主键自增</p>
+<p>drop table if exists stu; – 删除stu表<br>create table stu( – 重新创建stu表时, 指定主键自增<br>    id int primary key auto_increment,<br>    name varchar(20),<br>    gender char(1),<br>    birthday date<br>);<br>desc stu; – 查看表结构</p>
+<p>表结构如下: 已经添加了主键约束和自增</p>
+<p><img src="/screenshot/%E5%B7%B2%E7%BB%8F%E6%B7%BB%E5%8A%A0%E4%BA%86%E4%B8%BB%E9%94%AE%E7%BA%A6%E6%9D%9F%E5%92%8C%E8%87%AA%E5%A2%9E.png" alt="图片"></p>
+<p>​    </p>
+<p>3、如果不想删除重建表，也可以通过修改表添加主键或主键自增 </p>
+<p>再次执行第1步, 创建stu学生表, 不添加主键自增, 查看表结果</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 例如: 将stu学生表中的id设置为主键和自动增长</span><br><span class="line">alter table stu modify id int primary key auto_increment;</span><br><span class="line">desc stu; -- 查看表结构</span><br></pre></td></tr></table></figure>
+<p><img src="/screenshot/%E5%B7%B2%E7%BB%8F%E6%B7%BB%E5%8A%A0%E4%BA%86%E4%B8%BB%E9%94%AE%E7%BA%A6%E6%9D%9F%E5%92%8C%E8%87%AA%E5%A2%9E.png" alt="图片"></p>
+<p>如果只添加主键约束, 不设置自增</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">alter table stu modify id int primary key;</span><br></pre></td></tr></table></figure>
+<p>如果已经添加主键约束, 仅仅设置自增，但需注意:</p>
+<p>(1)如果没有设置主键, 不可添加自增</p>
+<p>(2)只有当主键是数值时, 才可以添加自增</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">alter table stu modify id int auto_increment;</span><br></pre></td></tr></table></figure>
+<p>​    </p>
+<p>4、如果想删除主键自增</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 删除主键自增时, 要先删除自增</span><br><span class="line">alter table stu modify id int;</span><br><span class="line">-- 再删除主键约束</span><br><span class="line">alter table stu drop primary key;</span><br><span class="line">desc stu; -- 查看表结构</span><br></pre></td></tr></table></figure>
+<p><img src="/screenshot/%E6%B2%A1%E6%9C%89%E4%B8%BB%E9%94%AE%E7%BA%A6%E6%9D%9F%E5%92%8C%E8%87%AA%E5%A2%9E.png" alt="图片"></p>
+<h3 id="添加或删除外键约束"><a href="#添加或删除外键约束" class="headerlink" title="添加或删除外键约束"></a>添加或删除外键约束</h3><p>添加外键方式一：建表时添加外键</p>
+<p>现有部门表如下：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 创建部门表</span><br><span class="line">create table dept(</span><br><span class="line">	id int primary key auto_increment,	-- 部门编号</span><br><span class="line">	name varchar(20)					-- 部门名称</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>要求创建员工表，并在员工表中添加外键关联部门主键</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 创建员工表</span><br><span class="line">create table emp(</span><br><span class="line">	id int primary key auto_increment,	-- 员工编号</span><br><span class="line">	name varchar(20),					-- 员工姓名</span><br><span class="line">	dept_id int,						-- 部门编号</span><br><span class="line">	foreign key(dept_id) references dept(id) -- 指定dept_id为外键</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>​    </p>
+<p>添加外键方式二：建表后添加外键</p>
+<p>现有部门表和员工表：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 创建部门表</span><br><span class="line">create table dept(</span><br><span class="line">	id int primary key auto_increment,	-- 部门编号</span><br><span class="line">	name varchar(20)					-- 部门名称</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">-- 创建员工表</span><br><span class="line">create table emp(</span><br><span class="line">	id int primary key auto_increment,	-- 员工编号</span><br><span class="line">	name varchar(20),					-- 员工姓名</span><br><span class="line">	dept_id int							-- 部门编号</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>如果表已存在，可以使用下面这种方式：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">alter table emp add constraint fk_dept_id foreign key(dept_id) references dept(id);</span><br></pre></td></tr></table></figure>
+<p>其中 add constraint fk_dept_id 表示新增列，列名为fk_dept_id (名字由自己定义)</p>
+<p>foreign key(dept_id)中的dept_id为外键</p>
+<p>​    </p>
+<p>删除外键</p>
+<p>首先通过 “show create table 表名”语法，查询含有外键表的建表语句，例如：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">show create table emp;</span><br></pre></td></tr></table></figure>
+<p>显示结果如下：</p>
+<p><img src="/screenshot/%E6%9F%A5%E8%AF%A2%E5%90%AB%E6%9C%89%E5%A4%96%E9%94%AE%E8%A1%A8%E7%9A%84%E5%BB%BA%E8%A1%A8%E8%AF%AD%E5%8F%A5.png" alt="图片"></p>
+<p>其中，emp_ibfk_1是在创建表时，数据库为外键指定的一个名字，删除这个名字即可删除外键关系，例如：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">alter table emp drop foreign key emp_ibfk_1;</span><br></pre></td></tr></table></figure>
+<p><img src="/screenshot/%E5%A4%96%E9%94%AE%E5%88%A0%E9%99%A4.png" alt="图片"></p>
+<p>外键删除成功！</p>
+]]></content>
+      <categories>
+        <category>javaEE</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
   </entry>
 </search>
